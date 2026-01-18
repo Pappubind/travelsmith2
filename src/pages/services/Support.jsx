@@ -1,0 +1,59 @@
+import { Shield, Car, Hotel, Globe, CheckCircle, Headphones } from 'lucide-react';
+
+export default function Support() {
+    return (
+        <div className="service-detail-page">
+            <section className="service-hero support-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/travel_support_hero_premium.png") no-repeat center/cover' }}>
+                <div className="container">
+                    <h1>Travel Support</h1>
+                    <p>End-to-End Assistance for a Seamless Journey</p>
+                </div>
+            </section>
+
+            <section className="section-light">
+                <div className="container">
+                    <div className="grid grid-2">
+                        <div className="detail-image" style={{ background: 'url("/images/luxury_fleet_tracking_1768320542714.png") center/cover rounded', height: '400px', borderRadius: '1rem' }}></div>
+                        <div className="detail-text">
+                            <h2>Expert Travel Assistance</h2>
+                            <p>
+                                At TravelSmith, we understand that travel requires meticulous planning and
+                                reliable support. Our dedicated support team is available to handle all
+                                your ancillary travel needs with professional care.
+                            </p>
+                            <ul className="check-list">
+                                <li><CheckCircle size={18} /> Global Visa Assistance</li>
+                                <li><CheckCircle size={18} /> Comprehensive Travel Insurance</li>
+                                <li><CheckCircle size={18} /> 24/7 Concierge Support</li>
+                                <li><CheckCircle size={18} /> Luxury Fleet on Request</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="section-gray">
+                <div className="container">
+                    <h2 className="text-center mb-5">Support Pillars</h2>
+                    <div className="grid grid-3">
+                        <div className="card p-4">
+                            <Car size={40} className="text-primary mb-3" />
+                            <h3>Fleet Services</h3>
+                            <p>From luxury sedans to large coaches for groups of any size.</p>
+                        </div>
+                        <div className="card p-4">
+                            <Globe size={40} className="text-primary mb-3" />
+                            <h3>Documentation</h3>
+                            <p>Expert handling of visa, passports, and travel documentation.</p>
+                        </div>
+                        <div className="card p-4">
+                            <Headphones size={40} className="text-primary mb-3" />
+                            <h3>VIP Support</h3>
+                            <p>Personalized concierge and dedicated travel advisors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}

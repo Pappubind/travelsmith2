@@ -1,0 +1,126 @@
+.services-page .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero_dmc_operations_1768320541503.png') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.services-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-hub-card {
+    display: flex;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    height: 300px;
+}
+
+.service-hub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.hub-card-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.hub-card-content {
+    flex: 1.2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hub-icon {
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.hub-card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hub-card-content p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.btn-text:hover {
+    color: var(--primary-orange);
+    gap: 0.75rem;
+}
+
+/* Service Detail Page Styles */
+.service-detail-page .service-hero {
+    padding: 120px 0;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.service-detail-page h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.check-list svg {
+    color: var(--primary-orange);
+}
+
+.detail-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mice-icon {
+    color: var(--primary-orange);
+}
+
+@media (max-width: 768px) {
+    .service-hub-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hub-card-image {
+        height: 200px;
+    }
+
+    .service-detail-page h1 {
+        font-size: 2.5rem;
+    }
+}

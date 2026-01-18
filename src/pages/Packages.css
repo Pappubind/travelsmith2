@@ -1,0 +1,129 @@
+.packages-grid-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.package-card-detailed {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.package-card-detailed:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.package-card-hero {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.kashmir-hero {
+    background-image: url('/images/india_ground_operations_1768320571583.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.goa-hero {
+    background-image: url('/images/cruise_port_excellence_1768320594638.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hyderabad-hero {
+    background-image: url('/images/mice_corporate_events_1768320621666.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.rajasthan-hero {
+    background-image: url('/images/india_destinations_operations_1768319141419.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.package-card-body {
+    padding: var(--spacing-xl);
+}
+
+.package-duration {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.package-card-body h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.package-card-body>p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.package-highlights {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.package-highlights h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary-blue);
+}
+
+.package-highlights ul {
+    list-style: none;
+}
+
+.package-highlights li {
+    color: var(--gray-700);
+    padding: 0.5rem 0;
+}
+
+/* Custom Package CTA */
+.custom-package-cta {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--white);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.custom-package-cta h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.custom-package-cta p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .packages-grid-main {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-package-cta h2 {
+        font-size: 1.75rem;
+    }
+}

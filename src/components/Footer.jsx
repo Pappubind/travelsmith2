@@ -1,0 +1,100 @@
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import './Footer.css';
+
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="footer">
+            <div className="container">
+                <div className="footer-grid">
+                    {/* Company Description */}
+                    <div className="footer-section">
+                        <h3 className="footer-logo">Travel<span className="logo-highlight">Smith</span></h3>
+                        <p className="footer-description">
+                            Your trusted Destination Management Company crafting safe, personalized,
+                            and premium travel experiences across Goa, India, and international destinations since 2012.
+                        </p>
+
+                        {/* Recognition Logos */}
+                        <div className="recognition-section">
+                            <h4>Recognized By:</h4>
+                            <div className="recognition-logos">
+                                <div className="recognition-badge">Dept. of Tourism Goa</div>
+                                <div className="recognition-badge">IATO</div>
+                                <div className="recognition-badge">TTAG</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="footer-section">
+                        <h4 className="footer-title">Quick Links</h4>
+                        <ul className="footer-links">
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/packages">Packages</Link></li>
+                            <li><Link to="/testimonials">Testimonials</Link></li>
+                            <li><Link to="/gallery">Gallery</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Destinations */}
+                    <div className="footer-section">
+                        <h4 className="footer-title">Destinations</h4>
+                        <ul className="footer-links">
+                            <li><Link to="/destinations/goa">Goa</Link></li>
+                            <li><Link to="/destinations/india">India Premium Tours</Link></li>
+                            <li><Link to="/destinations/international">International</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Services */}
+                    <div className="footer-section">
+                        <h4 className="footer-title">Services</h4>
+                        <ul className="footer-links">
+                            <li><Link to="/services#dmc">DMC Services</Link></li>
+                            <li><Link to="/services#mice">M.I.C.E Management</Link></li>
+                            <li><Link to="/services#weddings">Destination Weddings</Link></li>
+                            <li><Link to="/services#travel">Travel Support</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Details */}
+                    <div className="footer-section">
+                        <h4 className="footer-title">Contact Us</h4>
+                        <ul className="footer-contact">
+                            <li>
+                                <MapPin size={18} />
+                                <span>Madgaon, Goa 403601, India</span>
+                            </li>
+                            <li>
+                                <Phone size={18} />
+                                <span>0832 273 1438</span>
+                            </li>
+                            <li>
+                                <Mail size={18} />
+                                <span>info@travelsmith.com</span>
+                            </li>
+                        </ul>
+
+                        {/* Social Media */}
+                        <div className="social-media">
+                            <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
+                            <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
+                            <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
+                            <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Copyright */}
+                <div className="footer-bottom">
+                    <p>&copy; {currentYear} TravelSmith. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    );
+}

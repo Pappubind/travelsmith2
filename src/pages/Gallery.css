@@ -1,0 +1,154 @@
+.gallery-category {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.gallery-category:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-category-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--primary-orange);
+    padding-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.gallery-item {
+    height: 250px;
+    border-radius: var(--radius-md);
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Goa Gradients */
+.goa-1 {
+    background-image: url('/images/goa_cruise_operations_1768319162428.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.goa-2 {
+    background-image: url('/images/cruise_port_excellence_1768320594638.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.goa-3 {
+    background-image: url('/images/transport_fleet_management_1768319247924.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.goa-4 {
+    background-image: url('/images/luxury_fleet_tracking_1768320649638.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* India Gradients */
+.india-1 {
+    background-image: url('/images/india_destinations_operations_1768319141419.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.india-2 {
+    background-image: url('/images/india_ground_operations_1768320571583.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.india-3 {
+    background-image: url('/images/quality_safety_protocols_1768319268208.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.india-4 {
+    background-image: url('/images/dmc_process_workflow_1768319189365.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* International Gradients */
+.international-1 {
+    background-image: url('/images/hero_global_operations_1768319114233.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.international-2 {
+    background-image: url('/images/global_partnerships_1768320676845.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.international-3 {
+    background-image: url('/images/partner_collaboration_1768319292176.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.international-4 {
+    background-image: url('/images/luxury_fleet_tracking_1768320649638.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Events Gradients */
+.events-1 {
+    background-image: url('/images/mice_events_coordination_1768319228484.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.events-2 {
+    background-image: url('/images/mice_corporate_events_1768320621666.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.events-3 {
+    background-image: url('/images/partner_collaboration_1768319292176.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.events-4 {
+    background-image: url('/images/global_partnerships_1768320676845.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+}

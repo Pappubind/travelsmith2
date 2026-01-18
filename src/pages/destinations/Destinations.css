@@ -1,0 +1,258 @@
+/* Destination Hero */
+.dest-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.goa-hero {
+    background-image: url('/images/goa_hero_premium.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.india-hero {
+    background-image: url('/images/india_hero_premium.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.international-hero {
+    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+}
+
+.dest-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.dest-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.dest-hero h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dest-hero p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Destination Features */
+.dest-features {
+    margin-top: var(--spacing-xl);
+}
+
+.dest-feature-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    border-top: 4px solid var(--primary-orange);
+}
+
+.dest-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.dest-feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.dest-feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.dest-feature-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+/* Attractions Grid */
+.attraction-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.attraction-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.beach-bg {
+    background-image: url('/images/cruise_port_excellence_1768320594638.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.heritage-bg {
+    background-image: url('/images/india_destinations_operations_1768319141419.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.nature-bg {
+    background-image: url('/images/transport_fleet_management_1768319247924.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.attraction-card h3 {
+    padding: var(--spacing-md) var(--spacing-md) 0;
+    font-size: 1.5rem;
+}
+
+.attraction-card ul {
+    list-style: none;
+    padding: var(--spacing-md);
+}
+
+.attraction-card li {
+    padding: 0.5rem 0;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.attraction-card li:last-child {
+    border-bottom: none;
+}
+
+/* India & International Regions */
+.india-regions,
+.international-regions {
+    margin-top: var(--spacing-xl);
+}
+
+.region-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    border-left: 4px solid var(--primary-blue);
+}
+
+.region-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-xl);
+    border-left-color: var(--primary-orange);
+}
+
+.region-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-blue);
+}
+
+.region-content ul {
+    list-style: none;
+}
+
+.region-content li {
+    padding: 0.75rem 0;
+    color: var(--gray-700);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.region-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+/* Feature Highlights */
+.feature-highlight {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.feature-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-highlight h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-highlight p {
+    color: var(--gray-600);
+}
+
+/* Destination CTA */
+.dest-cta {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--white);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.dest-cta h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.dest-cta p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dest-hero h1 {
+        font-size: 2rem;
+    }
+
+    .dest-hero p {
+        font-size: 1.125rem;
+    }
+
+    .dest-cta h2 {
+        font-size: 1.75rem;
+    }
+}
