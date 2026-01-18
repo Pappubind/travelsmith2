@@ -52,6 +52,7 @@ export default function Header() {
             {/* Destinations Mega Menu */}
             <li className={`dropdown mega-dropdown ${activeDropdown === 'destinations' ? 'open' : ''}`}>
               <button
+                type="button"
                 className="dropdown-toggle"
                 onClick={() => handleDropdown('destinations')}
               >
@@ -72,6 +73,7 @@ export default function Header() {
             {/* Services Mega Menu */}
             <li className={`dropdown mega-dropdown ${activeDropdown === 'services' ? 'open' : ''}`}>
               <button
+                type="button"
                 className="dropdown-toggle"
                 onClick={() => handleDropdown('services')}
               >
