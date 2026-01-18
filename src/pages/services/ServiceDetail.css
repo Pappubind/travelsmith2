@@ -1,0 +1,100 @@
+/* Service Detail Pages - Additional Responsive Styles */
+
+.service-detail-page .detail-image {
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 1rem;
+    min-height: 300px;
+}
+
+.service-detail-page .p-4 {
+    padding: var(--spacing-lg);
+}
+
+.service-detail-page .mb-3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-detail-page .mb-5 {
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-detail-page .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-detail-page .text-primary {
+    color: var(--primary-orange);
+}
+
+/* Responsive overrides for service detail pages */
+@media (max-width: 1024px) {
+    .service-detail-page .detail-image {
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-detail-page .detail-image {
+        height: 300px !important;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .service-detail-page .grid-2 {
+        gap: var(--spacing-lg);
+    }
+
+    .service-detail-page .p-4 {
+        padding: var(--spacing-md);
+    }
+
+    .service-detail-page .card h3,
+    .service-detail-page .card h4 {
+        font-size: 1.25rem;
+    }
+
+    .service-detail-page .card p {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-detail-page .detail-image {
+        height: 250px !important;
+    }
+
+    .service-detail-page .service-hero h1 {
+        padding: 0 1rem;
+    }
+
+    .service-detail-page .service-hero p {
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .service-detail-page .p-4 {
+        padding: 1rem;
+    }
+
+    .service-detail-page .card h3,
+    .service-detail-page .card h4 {
+        font-size: 1.125rem;
+    }
+
+    .service-detail-page .check-list li {
+        gap: 0.75rem;
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .service-detail-page .detail-image {
+        height: 220px !important;
+    }
+
+    .service-detail-page .service-hero {
+        padding: 80px 0;
+    }
+}

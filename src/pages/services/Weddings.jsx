@@ -1,11 +1,12 @@
 import { Heart, Camera, Music, Utensils, CheckCircle } from 'lucide-react';
+import './ServiceDetail.css';
 
 export default function Weddings() {
     return (
         <div className="service-detail-page">
             <section className="service-hero wedding-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/weddings_hero_premium.png") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>Destination Weddings</h1>
+                    <h1 style={{ color: "white" }}>Destination Weddings</h1>
                     <p>Turning Your Dream Celebration into an Eternal Reality</p>
                 </div>
             </section>

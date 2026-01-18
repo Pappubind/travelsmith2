@@ -77,6 +77,72 @@ export default function India() {
                 </div>
             </section>
 
+            {/* Featured Destinations Gallery */}
+            <section className="section-dark" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', padding: 'var(--spacing-3xl) 0' }}>
+                <div className="container">
+                    <h2 className="section-title" style={{ color: 'white' }}>Iconic India Experiences</h2>
+                    <p className="section-subtitle" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                        Discover the most breathtaking destinations across India
+                    </p>
+
+                    <div className="grid grid-3" style={{ marginTop: 'var(--spacing-xl)' }}>
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Taj Mahal, Agra</h3>
+                                    <p>Monument of Eternal Love</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Kerala Backwaters</h3>
+                                    <p>Tranquil Tropical Paradise</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Jaipur Palaces</h3>
+                                    <p>Royal Rajasthan Heritage</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Varanasi Ghats</h3>
+                                    <p>Spiritual Heart of India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Himalayan Mountains</h3>
+                                    <p>Majestic Snow Peaks</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="destination-photo-card">
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1580492516014-4a28466d55df?auto=format&fit=crop&q=80&w=1200)' }}>
+                                <div className="destination-photo-overlay">
+                                    <h3>Mumbai Skyline</h3>
+                                    <p>India's Financial Capital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Luxury Highlights */}
             <section className="section-gray">
                 <div className="container">

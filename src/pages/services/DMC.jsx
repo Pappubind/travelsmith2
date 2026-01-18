@@ -1,11 +1,12 @@
 import { Plane, Car, Hotel, Shield, Anchor, MapPin, CheckCircle } from 'lucide-react';
+import './ServiceDetail.css';
 
 export default function DMC() {
     return (
         <div className="service-detail-page">
             <section className="service-hero dmc-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hero_dmc_operations_1768320541503.png") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>DMC Services</h1>
+                    <h1 style={{ color: "white" }}>DMC Services</h1>
                     <p>India's Leading Destination Management Company with Premium Local Expertise</p>
                 </div>
             </section>

@@ -1,11 +1,12 @@
 import { Shield, Car, Hotel, Globe, CheckCircle, Headphones } from 'lucide-react';
+import './ServiceDetail.css';
 
 export default function Support() {
     return (
         <div className="service-detail-page">
             <section className="service-hero support-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/travel_support_hero_premium.png") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>Travel Support</h1>
+                    <h1 style={{ color: "white" }}>Travel Support</h1>
                     <p>End-to-End Assistance for a Seamless Journey</p>
                 </div>
             </section>

@@ -1,11 +1,12 @@
 import { Briefcase, Users, Monitor, BarChart, CheckCircle } from 'lucide-react';
+import './ServiceDetail.css';
 
 export default function MICE() {
     return (
         <div className="service-detail-page">
             <section className="service-hero mice-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/mice_hero_premium_1768746289905.png") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>M.I.C.E Management</h1>
+                    <h1 style={{ color: "white" }}>M.I.C.E Management</h1>
                     <p>Meetings, Incentives, Conferences, and Corporate Events</p>
                 </div>
             </section>
