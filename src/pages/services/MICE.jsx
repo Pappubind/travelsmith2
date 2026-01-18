@@ -14,7 +14,13 @@ export default function MICE() {
             <section className="section-light">
                 <div className="container">
                     <div className="grid grid-2">
-                        <div className="detail-image" style={{ background: 'url("/images/mice_events_coordination_1768320542385.png") center/cover rounded', height: '400px', borderRadius: '1rem' }}></div>
+                        <div className="detail-image-container">
+                            <img
+                                src="/images/mice_corporate_events_1768320621666.png"
+                                alt="MICE Events Coordination"
+                                className="detail-image-fixed"
+                            />
+                        </div>
                         <div className="detail-text">
                             <h2>Strategic Event Planning</h2>
                             <p>

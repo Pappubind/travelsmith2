@@ -29,7 +29,13 @@ export default function DMC() {
                                 <li><CheckCircle size={18} /> VIP Meet & Greet Services</li>
                             </ul>
                         </div>
-                        <div className="detail-image" style={{ background: 'url("/images/dmc_process_workflow_1768320543666.png") center/cover rounded', height: '400px', borderRadius: '1rem' }}></div>
+                        <div className="detail-image-container">
+                            <img
+                                src="/images/dmc_process_workflow_1768319189365.png"
+                                alt="DMC Operations"
+                                className="detail-image-fixed"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

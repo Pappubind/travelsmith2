@@ -14,7 +14,13 @@ export default function Support() {
             <section className="section-light">
                 <div className="container">
                     <div className="grid grid-2">
-                        <div className="detail-image" style={{ background: 'url("/images/luxury_fleet_tracking_1768320542714.png") center/cover rounded', height: '400px', borderRadius: '1rem' }}></div>
+                        <div className="detail-image-container">
+                            <img
+                                src="/images/luxury_fleet_tracking_1768320649638.png"
+                                alt="Travel Support Services"
+                                className="detail-image-fixed"
+                            />
+                        </div>
                         <div className="detail-text">
                             <h2>Expert Travel Assistance</h2>
                             <p>

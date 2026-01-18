@@ -28,7 +28,13 @@ export default function Weddings() {
                                 <li><CheckCircle size={18} /> Entertainment & Catering Coordination</li>
                             </ul>
                         </div>
-                        <div className="detail-image" style={{ background: 'url("/images/india_destinations_operations_1768320541708.png") center/cover rounded', height: '400px', borderRadius: '1rem' }}></div>
+                        <div className="detail-image-container">
+                            <img
+                                src="/images/india_destinations_operations_1768319141419.png"
+                                alt="Wedding Planning Operations"
+                                className="detail-image-fixed"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
