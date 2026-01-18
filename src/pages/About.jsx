@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div className="about-page">
             {/* Hero Section */}
-            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/dmc_hero_premium.png")' }}>
+            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/award_recognition.png")' }}>
                 <div className="container">
                     <h1>About TravelSmith</h1>
                     <p>Your Trusted DMC Partner Since 2012</p>
