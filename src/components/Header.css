@@ -58,7 +58,7 @@
 
 .nav-menu a {
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--gray-700);
     transition: var(--transition-fast);
     padding: 0.5rem 0;
@@ -200,6 +200,10 @@
 }
 
 @media (max-width: 768px) {
+    .logo-image {
+        height: 45px;
+    }
+
     .menu-toggle {
         display: block;
     }
