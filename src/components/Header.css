@@ -167,6 +167,102 @@
     color: var(--primary-blue);
 }
 
+/* Sub-dropdown Menu */
+.mega-item-container {
+    position: relative;
+    width: 100%;
+}
+
+.sub-menu-arrow {
+    margin-left: auto;
+    transition: var(--transition-fast);
+}
+
+.mega-item:hover .sub-menu-arrow,
+.mega-item-container.open .sub-menu-arrow {
+    transform: rotate(180deg);
+}
+
+.sub-dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: var(--white);
+    min-width: 220px;
+    padding: 0.5rem 0;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-sm);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-base);
+    z-index: 1002;
+    margin-left: 0.5rem;
+    border: 1px solid var(--gray-100);
+}
+
+.mega-item-container:hover .sub-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-dropdown-item {
+    display: block !important;
+    padding: 0.8rem 1.25rem !important;
+    color: var(--gray-700) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    transition: var(--transition-fast) !important;
+    border-bottom: 1px solid var(--gray-50);
+}
+
+.sub-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.sub-dropdown-item:hover {
+    background: var(--gray-50);
+    color: var(--primary-orange) !important;
+}
+
+/* Specific item highlight (like "Meetings" in image) */
+.sub-dropdown-item:first-child {
+    color: var(--primary-blue) !important;
+}
+
+/* Mobile adjustments for sub-dropdown */
+@media (max-width: 1200px) {
+    .sub-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        box-shadow: none;
+        padding: 0 0 0 2rem;
+        min-width: 100%;
+        margin-left: 0;
+        display: none;
+    }
+
+    .mega-item-container.open .sub-dropdown-menu {
+        display: block;
+    }
+
+    .sub-dropdown-item {
+        color: var(--gray-600) !important;
+        border-bottom: none;
+        padding: 0.5rem 0 !important;
+    }
+
+    .sub-dropdown-item:first-child {
+        color: var(--primary-blue) !important;
+    }
+
+    .sub-dropdown-item:hover {
+        background: transparent;
+        color: var(--primary-orange) !important;
+    }
+}
+
 /* Desktop CTA */
 .desktop-cta {
     display: inline-flex;
@@ -343,5 +439,15 @@
 
     .nav-menu {
         padding: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-image {
+        height: 30px;
+    }
+
+    .nav-menu {
+        padding: 0.75rem;
     }
 }

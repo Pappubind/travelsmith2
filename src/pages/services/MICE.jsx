@@ -1,4 +1,4 @@
-import { Briefcase, Users, Monitor, BarChart, CheckCircle } from 'lucide-react';
+import { Briefcase, Users, Monitor, BarChart, CheckCircle, Presentation, Building2, Globe } from 'lucide-react';
 import './ServiceDetail.css';
 
 export default function MICE() {
@@ -41,27 +41,27 @@ export default function MICE() {
 
             <section className="section-gray">
                 <div className="container">
-                    <h2 className="text-center mb-5">Our MICE Pillars</h2>
-                    <div className="grid grid-4">
+                    <h2 className="text-center mb-5">Our MICE Specialties</h2>
+                    <div className="grid grid-4 mice-grid-expanded">
                         <div className="card p-4 text-center">
-                            <Briefcase size={40} className="text-primary mb-3 mx-auto" />
-                            <h4>Meetings</h4>
-                            <p>Productive environments for high-level discussions.</p>
+                            <Presentation size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Meetings</h3>
+                            <p>Executive board meetings and corporate retreats in premier venues.</p>
                         </div>
                         <div className="card p-4 text-center">
                             <Users size={40} className="text-primary mb-3 mx-auto" />
-                            <h4>Incentives</h4>
-                            <p>Motivational travel that rewards excellence.</p>
+                            <h3>Incentive Travel</h3>
+                            <p>Reward programs and team-building trips that inspire and motivate.</p>
                         </div>
                         <div className="card p-4 text-center">
-                            <Monitor size={40} className="text-primary mb-3 mx-auto" />
-                            <h4>Conferences</h4>
-                            <p>Seamless execution of large scale congresses.</p>
+                            <Building2 size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Conferences</h3>
+                            <p>Large-scale conventions and seminars with end-to-end management.</p>
                         </div>
                         <div className="card p-4 text-center">
-                            <BarChart size={40} className="text-primary mb-3 mx-auto" />
-                            <h4>Events</h4>
-                            <p>Brand launches and corporate galas.</p>
+                            <Globe size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Exhibitions</h3>
+                            <p>Trade fairs and product launches with complete logistics and setup.</p>
                         </div>
                     </div>
                 </div>

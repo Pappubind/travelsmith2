@@ -25,19 +25,19 @@
 }
 
 .kashmir-hero {
-    background-image: url('/images/india_ground_operations_1768320571583.png');
+    background-image: url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&q=80&w=800');
     background-size: cover;
     background-position: center;
 }
 
 .goa-hero {
-    background-image: url('/images/cruise_port_excellence_1768320594638.png');
+    background-image: url('/images/goa_hero_premium_1768747320920.png');
     background-size: cover;
     background-position: center;
 }
 
 .hyderabad-hero {
-    background-image: url('/images/mice_corporate_events_1768320621666.png');
+    background-image: url('https://images.unsplash.com/photo-1612049974550-9d0b67329598?auto=format&fit=crop&q=80&w=800');
     background-size: cover;
     background-position: center;
 }

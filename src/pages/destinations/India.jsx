@@ -132,7 +132,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1580492516014-4a28466d55df?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(https://www.freepik.com/free-photo/mumbai-skyline-seen-from-marine-drive-south-mumbai_16589553.htm#fromView=keyword&page=1&position=1&uuid=f1151879-5718-4fdc-9456-9eab6008cfac&query=Mumbai+skyline)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Mumbai Skyline</h3>
                                     <p>India's Financial Capital</p>

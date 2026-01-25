@@ -18,7 +18,7 @@ export default function Services() {
             description: 'Professional handling of Meetings, Incentives, Conferences, and Corporate Events.',
             icon: <Users size={32} />,
             link: '/services/mice',
-            image: '/images/mice_corporate_events_1768320542152.png'
+            image: '/images/mice_corporate_events_1768320621666.png'
         },
         {
             id: 'weddings',
@@ -26,7 +26,7 @@ export default function Services() {
             description: 'Flawless execution of dream weddings at India\'s most stunning beach and heritage venues.',
             icon: <Heart size={32} />,
             link: '/services/weddings',
-            image: '/images/goa_cruise_operations_1768320541604.png'
+            image: '/images/weddings_hero_premium.png'
         },
         {
             id: 'support',
@@ -34,7 +34,7 @@ export default function Services() {
             description: '24/7 assistance including luxury fleet rentals, visa services, and travel insurance.',
             icon: <Shield size={32} />,
             link: '/services/support',
-            image: '/images/transport_fleet_management_1768320542562.png'
+            image: '/images/travel_support_hero_premium.png'
         }
     ];
 

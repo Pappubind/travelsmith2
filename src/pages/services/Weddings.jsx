@@ -43,20 +43,20 @@ export default function Weddings() {
                 <div className="container">
                     <h2 className="text-center mb-5">Wedding Services</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4">
-                            <Heart size={40} className="text-orange mb-3" />
-                            <h3>Thematic Design</h3>
-                            <p>Creative concepts that reflect your personal love story.</p>
+                        <div className="card p-4 text-center">
+                            <MapPin size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Venue Selection</h3>
+                            <p>Handpicked luxury resorts and heritage palaces for your special day.</p>
                         </div>
-                        <div className="card p-4">
-                            <Utensils size={40} className="text-orange mb-3" />
-                            <h3>Culinary Excellence</h3>
-                            <p>Gourmet catering that delights every palate.</p>
+                        <div className="card p-4 text-center">
+                            <Users size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Guest Management</h3>
+                            <p>Seamless hospitality and logistics for all your wedding attendees.</p>
                         </div>
-                        <div className="card p-4">
-                            <Camera size={40} className="text-orange mb-3" />
-                            <h3>Media & Memories</h3>
-                            <p>Professional photography to capture every precious moment.</p>
+                        <div className="card p-4 text-center">
+                            <Heart size={40} className="text-primary mb-3 mx-auto" />
+                            <h3>Event Coordination</h3>
+                            <p>Flawless execution of all ceremonies from Mehendi to Reception.</p>
                         </div>
                     </div>
                 </div>

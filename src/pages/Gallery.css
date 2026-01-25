@@ -106,7 +106,7 @@
 }
 
 .international-4 {
-    background-image: url('/images/luxury_fleet_tracking_1768320649638.png');
+    background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800');
     background-size: cover;
     background-position: center;
 }
@@ -125,13 +125,13 @@
 }
 
 .events-3 {
-    background-image: url('/images/partner_collaboration_1768319292176.png');
+    background-image: url('/images/mice_hero_premium_1768746289905.png');
     background-size: cover;
     background-position: center;
 }
 
 .events-4 {
-    background-image: url('/images/global_partnerships_1768320676845.png');
+    background-image: url('/images/hero_dmc_operations_1768320541503.png');
     background-size: cover;
     background-position: center;
 }

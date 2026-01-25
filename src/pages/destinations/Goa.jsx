@@ -61,7 +61,7 @@ export default function Goa() {
                     <div className="grid grid-2" style={{ marginTop: 'var(--spacing-xl)', gap: 'var(--spacing-md)' }}>
                         {/* Large featured image */}
                         <div className="destination-photo-card" style={{ gridColumn: 'span 2' }}>
-                            <div className="destination-photo destination-photo-large" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=1600)', height: '400px' }}>
+                            <div className="destination-photo destination-photo-large" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=1200)', height: '400px' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Golden Beaches of Goa</h3>
                                     <p>Paradise on the Arabian Sea</p>
