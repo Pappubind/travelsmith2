@@ -17,7 +17,7 @@ export default function Kashmir() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1566416045373-c6001090333b?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/dal_lake.jpg"
                                 alt="Dal Lake Srinagar"
                                 className="detail-image-fixed"
                             />

@@ -96,7 +96,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/kerala_backwaters.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Kerala Backwaters</h3>
                                     <p>Tranquil Tropical Paradise</p>
@@ -114,7 +114,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/banaras.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Varanasi Ghats</h3>
                                     <p>Spiritual Heart of India</p>
@@ -132,7 +132,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://www.freepik.com/free-photo/mumbai-skyline-seen-from-marine-drive-south-mumbai_16589553.htm#fromView=keyword&page=1&position=1&uuid=f1151879-5718-4fdc-9456-9eab6008cfac&query=Mumbai+skyline)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/mumbai_skyline.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Mumbai Skyline</h3>
                                     <p>India's Financial Capital</p>

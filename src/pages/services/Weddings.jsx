@@ -1,4 +1,4 @@
-import { Heart, Camera, Music, Utensils, CheckCircle } from 'lucide-react';
+import { Heart, Camera, Music, Utensils, CheckCircle, MapPin, Users } from 'lucide-react';
 import './ServiceDetail.css';
 
 export default function Weddings() {

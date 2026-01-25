@@ -17,7 +17,7 @@ export default function SplendourUttarakhand() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1622308644420-96f21bc989cc?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/Mussoorie-2.avif"
                                 alt="Mussoorie Hills"
                                 className="detail-image-fixed"
                             />

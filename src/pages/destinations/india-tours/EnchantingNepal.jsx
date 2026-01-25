@@ -35,7 +35,7 @@ export default function EnchantingNepal() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1526481280693-3bfa75618079?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/kathmandu.webp"
                                 alt="Kathmandu Temple"
                                 className="detail-image-fixed"
                             />

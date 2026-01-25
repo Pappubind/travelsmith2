@@ -35,7 +35,7 @@ export default function Rajasthan() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1477584165583-f44e69144449?auto=format&fit=crop&q=80&w=1200"
+                                src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&q=80&w=1200"
                                 alt="Udaipur Palace"
                                 className="detail-image-fixed"
                             />

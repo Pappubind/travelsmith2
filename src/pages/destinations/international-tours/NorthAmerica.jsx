@@ -5,7 +5,12 @@ import '../Destinations.css';
 export default function NorthAmerica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1508814436484-77af3497e82f?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1508814436484-77af3497e82f?auto=format&fit=crop&q=80&w=1920")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
                 <div className="container dest-hero-content">
                     <h1>The Best of North America</h1>
                     <p>Scale the New York skyline and explore the natural wonders of the West Coast.</p>

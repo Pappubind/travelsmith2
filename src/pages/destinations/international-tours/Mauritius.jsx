@@ -5,8 +5,12 @@ import '../Destinations.css';
 export default function Mauritius() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1589979485637-be9bc9f7e52a?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
-                <div className="container dest-hero-content">
+            <section className="dest-hero" style={{
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/maritius.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}><div className="container dest-hero-content">
                     <h1>Mauritius</h1>
                     <p>A tropical paradise in the Indian Ocean, where luxury meets the azure sea.</p>
                 </div>
@@ -17,7 +21,7 @@ export default function Mauritius() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1551632432-074051a89668?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/Mauritius_Main-2-730x410.jpg"
                                 alt="Mauritius Beach"
                                 className="detail-image-fixed"
                             />

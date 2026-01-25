@@ -5,7 +5,12 @@ import '../Destinations.css';
 export default function SouthAfrica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1549417235-95079a835a83?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/south-africa-safari.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
                 <div className="container dest-hero-content">
                     <h1>Spectacular South Africa Safari</h1>
                     <p>A diverse journey from the Kruger wildlife to the shores of Cape Town.</p>
@@ -35,7 +40,7 @@ export default function SouthAfrica() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1523805081446-99b251f1f118?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/Cape-Town.webp"
                                 alt="Cape Town"
                                 className="detail-image-fixed"
                             />

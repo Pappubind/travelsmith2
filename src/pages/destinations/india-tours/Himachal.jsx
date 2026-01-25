@@ -5,7 +5,12 @@ import '../Destinations.css';
 export default function Himachal() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=75&w=1600")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
                 <div className="container dest-hero-content">
                     <h1>Scenic Himachal</h1>
                     <p>From the Ridge of Shimla to the heights of Rohtang.</p>
@@ -34,7 +39,7 @@ export default function Himachal() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1605649440417-44d88e202611?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/manali.jpg"
                                 alt="Manali Mountains"
                                 className="detail-image-fixed"
                             />

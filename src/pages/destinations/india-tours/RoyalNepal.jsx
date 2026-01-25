@@ -6,7 +6,7 @@ export default function RoyalNepal() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1518148146124-71e46950293d?auto=format&fit=crop&q=80&w=1920")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nepal-prayer-flags.avif")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -22,7 +22,7 @@ export default function RoyalNepal() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1624026363065-9856a9359e19?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/mount-everest.jpg"
                                 alt="Himalayan Flight"
                                 className="detail-image-fixed"
                             />
