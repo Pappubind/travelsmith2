@@ -6,13 +6,13 @@ export default function Conferences() {
     return (
         <div className="service-detail-page">
             <section className="service-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=75&w=1600")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/conferences_hero.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="container">
-                    <h1>World-Class Conferences</h1>
+                    <h1 style={{ color: 'white' }}>World-Class Conferences</h1>
                     <p>End-to-end management for professional congresses, seminars, and corporate conventions.</p>
                 </div>
             </section>
@@ -22,7 +22,7 @@ export default function Conferences() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1505373676632-6a690226c483?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/blog_mice_conference.png"
                                 alt="Conference Hall"
                                 className="detail-image-fixed"
                             />

@@ -10,7 +10,7 @@ export default function Blog() {
             excerpt: "How TravelSmith is redefining MICE experiences with sustainable practices and local immersion.",
             date: "Jan 15, 2024",
             author: "Deepak Lotlikar",
-            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
+            image: "/images/blog_mice_hero.png",
             category: "MICE"
         },
         {
@@ -19,7 +19,7 @@ export default function Blog() {
             excerpt: "Exploring the most romantic beach-front venues and heritage properties for your special day.",
             date: "Jan 10, 2024",
             author: "Staff Writer",
-            image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=800",
+            image: "/images/blog_wedding_hero.png",
             category: "Weddings"
         },
         {
@@ -28,7 +28,7 @@ export default function Blog() {
             excerpt: "A deep dive into the Chardham Yatra and the transformative power of Indian pilgrimage.",
             date: "Jan 05, 2024",
             author: "Travel Expert",
-            image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=800",
+            image: "/images/chardham-yatra.jpg",
             category: "Destinations"
         },
         {
@@ -37,14 +37,14 @@ export default function Blog() {
             excerpt: "How we craft personalized itineraries that balance luxury with authentic local experiences.",
             date: "Dec 20, 2023",
             author: "Deepak Lotlikar",
-            image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800",
+            image: "/images/india_hero_premium.png",
             category: "Insights"
         }
     ];
 
     return (
         <div className="blog-page">
-            <section className="page-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1499750310117-5995802b09ef?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="page-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/goa_hero_premium_1768747320920.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1>The TravelSmith Blog</h1>
                     <p>Insights, Stories, and Inspiration for the Discerning Traveler</p>

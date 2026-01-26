@@ -6,7 +6,7 @@ export default function IncentiveTravel() {
     return (
         <div className="service-detail-page">
             <section className="service-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=1920")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/incentive_travel_hero.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -39,7 +39,7 @@ export default function IncentiveTravel() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/blog_mice_teambuilding.png"
                                 alt="Luxury Incentive Travel"
                                 className="detail-image-fixed"
                             />

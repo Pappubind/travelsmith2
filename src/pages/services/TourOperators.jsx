@@ -4,7 +4,7 @@ import './ServiceDetail.css';
 export default function TourOperators() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero tourop-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1557426282-2d8d8d27a1e0?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="service-hero tourop-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/india_ground_operations_1768320571583.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Tour Operators Representation</h1>
                     <p>Your Trusted Local Partner for Professional Representation in India</p>
@@ -31,7 +31,7 @@ export default function TourOperators() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800"
+                                src="/images/tour_group.jpg"
                                 alt="Professional Representation"
                                 className="detail-image-fixed"
                             />

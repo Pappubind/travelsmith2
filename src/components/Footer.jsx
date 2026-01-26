@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import logo from '../assets/logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -11,7 +12,9 @@ export default function Footer() {
                 <div className="footer-grid">
                     {/* Company Description */}
                     <div className="footer-section">
-                        <h3 className="footer-logo">Travel<span className="logo-highlight">Smith</span></h3>
+                        <Link to="/" className="footer-logo-link">
+                            <img src={logo} alt="TravelSmith Logo" className="footer-logo-img" style={{ maxHeight: '50px', marginBottom: '1rem' }} />
+                        </Link>
                         <p className="footer-description">
                             Your trusted Destination Management Company crafting safe, personalized,
                             and premium travel experiences across Goa, India, and international destinations since 2012.

@@ -5,9 +5,9 @@ import '../ServiceDetail.css';
 export default function Exhibitions() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/exhibitions_hero.jpg") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>Trade Shows & Exhibitions</h1>
+                    <h1 style={{ color: 'white' }}>Trade Shows & Exhibitions</h1>
                     <p>Dynamic product launches, trade fairs, and exhibit design that captures attention.</p>
                 </div>
             </section>
@@ -34,7 +34,7 @@ export default function Exhibitions() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/exhibition_booth.jpg"
                                 alt="Exhibition Hall"
                                 className="detail-image-fixed"
                             />

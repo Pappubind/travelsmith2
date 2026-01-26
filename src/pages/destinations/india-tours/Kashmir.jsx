@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function Kashmir() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/Kashmir-Tourism-Best-of-Kashmir.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Glorious Kashmir</h1>
                     <p>Experience Paradise on Earth with our premium luxury tours.</p>

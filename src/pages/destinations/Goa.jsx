@@ -61,7 +61,7 @@ export default function Goa() {
                     <div className="grid grid-2" style={{ marginTop: 'var(--spacing-xl)', gap: 'var(--spacing-md)' }}>
                         {/* Large featured image */}
                         <div className="destination-photo-card" style={{ gridColumn: 'span 2' }}>
-                            <div className="destination-photo destination-photo-large" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80&w=1200)', height: '400px' }}>
+                            <div className="destination-photo destination-photo-large" style={{ backgroundImage: 'url(/images/goa_wedding.jpg)', height: '400px' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Golden Beaches of Goa</h3>
                                     <p>Paradise on the Arabian Sea</p>
@@ -70,7 +70,7 @@ export default function Goa() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/goa_beach.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Beach Shacks & Sunsets</h3>
                                     <p>Relaxation at its finest</p>
@@ -79,7 +79,7 @@ export default function Goa() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1544413660-299165566b1d?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/goa_culture.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Water Sports & Adventure</h3>
                                     <p>Thrills on the waves</p>
@@ -88,7 +88,7 @@ export default function Goa() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/goa_church.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Portuguese Heritage</h3>
                                     <p>Historic churches & forts</p>
@@ -97,7 +97,7 @@ export default function Goa() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/goa_waterfall.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Spice Plantations</h3>
                                     <p>Lush green landscapes</p>

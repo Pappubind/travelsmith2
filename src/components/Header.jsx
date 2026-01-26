@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MapPin, Globe, TreePalm, Building2, Users, Heart, ShieldCheck, Anchor, Presentation, Car, Hotel } from 'lucide-react';
+import {
+  Menu, X, ChevronDown, MapPin, Globe, TreePalm, Building2, Users, Heart,
+  ShieldCheck, Anchor, Presentation, Car, Hotel,
+  Mountain, Snowflake, Trees, Compass, Camera, Ticket, Gift, Mic,
+  Flag, Landmark, Bird, Ship, Waves, Search, Binoculars
+} from 'lucide-react';
+import logo from '../assets/logo.png';
 import './Header.css';
 
 export default function Header() {
@@ -36,16 +42,16 @@ export default function Header() {
       path: '/destinations/india',
       icon: <MapPin size={18} />,
       subItems: [
-        { name: 'Glorious Kashmir', path: '/destinations/india/kashmir' },
-        { name: 'Scenic Himachal', path: '/destinations/india/himachal' },
-        { name: 'Splendour of Uttarakhand', path: '/destinations/india/splendour-uttarakhand' },
-        { name: 'Heritage of Uttarakhand', path: '/destinations/india/heritage-uttarakhand' },
-        { name: 'Chardham Yatra', path: '/destinations/india/chardham-yatra' },
-        { name: 'Heartland of Rajasthan', path: '/destinations/india/rajasthan' },
-        { name: 'The Golden Quadrangle', path: '/destinations/india/golden-quadrangle' },
-        { name: 'Enchanting Nepal', path: '/destinations/india/enchanting-nepal' },
-        { name: 'Royal Nepal', path: '/destinations/india/royal-nepal' },
-        { name: 'Bhutan The Land of Dragon', path: '/destinations/india/bhutan' },
+        { name: 'Glorious Kashmir', path: '/destinations/india/kashmir', icon: <Mountain size={14} /> },
+        { name: 'Scenic Himachal', path: '/destinations/india/himachal', icon: <Snowflake size={14} /> },
+        { name: 'Splendour of Uttarakhand', path: '/destinations/india/splendour-uttarakhand', icon: <Trees size={14} /> },
+        { name: 'Heritage of Uttarakhand', path: '/destinations/india/heritage-uttarakhand', icon: <Landmark size={14} /> },
+        { name: 'Chardham Yatra', path: '/destinations/india/chardham-yatra', icon: <Compass size={14} /> },
+        { name: 'Heartland of Rajasthan', path: '/destinations/india/rajasthan', icon: <Camera size={14} /> },
+        { name: 'The Golden Quadrangle', path: '/destinations/india/golden-quadrangle', icon: <Flag size={14} /> },
+        { name: 'Enchanting Nepal', path: '/destinations/india/enchanting-nepal', icon: <Mountain size={14} /> },
+        { name: 'Royal Nepal', path: '/destinations/india/royal-nepal', icon: <Landmark size={14} /> },
+        { name: 'Bhutan The Land of Dragon', path: '/destinations/india/bhutan', icon: <Waves size={14} /> },
       ]
     },
     {
@@ -53,13 +59,13 @@ export default function Header() {
       path: '/destinations/international',
       icon: <Globe size={18} />,
       subItems: [
-        { name: 'Spectacular Kenya & Tanzania Tour', path: '/destinations/international/kenya-tanzania' },
-        { name: 'Spectacular South Africa Safari Tour', path: '/destinations/international/south-africa' },
-        { name: 'Mauritius', path: '/destinations/international/mauritius' },
-        { name: 'Greece', path: '/destinations/international/greece' },
-        { name: 'North America', path: '/destinations/international/north-america' },
-        { name: 'South America', path: '/destinations/international/south-america' },
-        { name: 'Australia', path: '/destinations/international/australia' },
+        { name: 'Kenya & Tanzania Tour', path: '/destinations/international/kenya-tanzania', icon: <Bird size={14} /> },
+        { name: 'South Africa Safari Tour', path: '/destinations/international/south-africa', icon: <Binoculars size={14} /> },
+        { name: 'Mauritius', path: '/destinations/international/mauritius', icon: <TreePalm size={14} /> },
+        { name: 'Greece', path: '/destinations/international/greece', icon: <Landmark size={14} /> },
+        { name: 'North America', path: '/destinations/international/north-america', icon: <Flag size={14} /> },
+        { name: 'South America', path: '/destinations/international/south-america', icon: <Trees size={14} /> },
+        { name: 'Australia', path: '/destinations/international/australia', icon: <Waves size={14} /> },
       ]
     },
   ];
@@ -67,16 +73,16 @@ export default function Header() {
   const services = [
     { name: 'DMC Services', path: '/services/dmc', icon: <Building2 size={18} /> },
     { name: 'Tour Operators Representation', path: '/services/tour-operators', icon: <Users size={18} /> },
-    { name: 'Cruise Liner Ground Handling', path: '/services/cruise-handling', icon: <Anchor size={18} /> },
+    { name: 'Cruise Liner Ground Handling', path: '/services/cruise-handling', icon: <Ship size={18} /> },
     {
       name: 'M.I.C.E Management',
       path: '/services/mice',
       icon: <Presentation size={18} />,
       subItems: [
-        { name: 'Meetings', path: '/services/mice/meetings' },
-        { name: 'Incentive Travel', path: '/services/mice/incentive-travel' },
-        { name: 'Conferences / Conventions', path: '/services/mice/conferences' },
-        { name: 'Events & Exhibitions', path: '/services/mice/exhibitions' },
+        { name: 'Meetings', path: '/services/mice/meetings', icon: <Users size={14} /> },
+        { name: 'Incentive Travel', path: '/services/mice/incentive-travel', icon: <Gift size={14} /> },
+        { name: 'Conferences / Conventions', path: '/services/mice/conferences', icon: <Mic size={14} /> },
+        { name: 'Events & Exhibitions', path: '/services/mice/exhibitions', icon: <Ticket size={14} /> },
       ]
     },
     { name: 'Destination Weddings', path: '/services/weddings', icon: <Heart size={18} /> },
@@ -92,7 +98,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="logo" onClick={closeMenu}>
             <img
-              src="/images/logo.png"
+              src={logo}
               alt="TravelSmith DMC"
               className="logo-image"
             />
@@ -138,7 +144,8 @@ export default function Header() {
                               className="sub-dropdown-item"
                               onClick={closeMenu}
                             >
-                              {sub.name}
+                              <span className="sub-mega-icon">{sub.icon}</span>
+                              <span>{sub.name}</span>
                             </Link>
                           ))}
                         </div>
@@ -184,7 +191,8 @@ export default function Header() {
                               className="sub-dropdown-item"
                               onClick={closeMenu}
                             >
-                              {sub.name}
+                              <span className="sub-mega-icon">{sub.icon}</span>
+                              <span>{sub.name}</span>
                             </Link>
                           ))}
                         </div>

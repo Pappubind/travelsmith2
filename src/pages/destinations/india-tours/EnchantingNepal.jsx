@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function EnchantingNepal() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/nepal_valley.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Enchanting Nepal</h1>
                     <p>A journey through the spiritual peaks and vibrant cultures of the Himalayas.</p>

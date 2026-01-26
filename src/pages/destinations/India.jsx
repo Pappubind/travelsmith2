@@ -87,7 +87,7 @@ export default function India() {
 
                     <div className="grid grid-3" style={{ marginTop: 'var(--spacing-xl)' }}>
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/taj_mahal.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Taj Mahal, Agra</h3>
                                     <p>Monument of Eternal Love</p>
@@ -105,7 +105,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/jaipur_palace.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Jaipur Palaces</h3>
                                     <p>Royal Rajasthan Heritage</p>
@@ -123,7 +123,7 @@ export default function India() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/himalaya_mountains.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Himalayan Mountains</h3>
                                     <p>Majestic Snow Peaks</p>

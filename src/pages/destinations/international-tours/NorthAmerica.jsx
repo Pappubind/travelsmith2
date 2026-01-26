@@ -6,7 +6,7 @@ export default function NorthAmerica() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1508814436484-77af3497e82f?auto=format&fit=crop&q=80&w=1920")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/new_york.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -22,7 +22,7 @@ export default function NorthAmerica() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/new_york.jpg"
                                 alt="New York City"
                                 className="detail-image-fixed"
                             />

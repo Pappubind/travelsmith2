@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function Bhutan() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/bhutan_tigers_nest.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Bhutan: The Land of Dragon</h1>
                     <p>Experience the magic and mysticism of the last Shangri-La.</p>
@@ -35,7 +35,7 @@ export default function Bhutan() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/bhutan_tigers_nest.jpg"
                                 alt="Bhutan Monastery"
                                 className="detail-image-fixed"
                             />

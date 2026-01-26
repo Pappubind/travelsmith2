@@ -34,7 +34,7 @@ export default function Contact() {
     return (
         <div className="contact-page">
             {/* Hero */}
-            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1920")' }}>
+            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/contact_hero.jpg")' }}>
                 <div className="container">
                     <h1>Contact Us</h1>
                     <p>Let's Start Planning Your Perfect Journey</p>

@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function SouthAmerica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/south-america.webp") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Mystical South America</h1>
                     <p>Ancient civilizations, lush rainforests, and vibrant Latin rhythms.</p>
@@ -35,7 +35,7 @@ export default function SouthAmerica() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1587589391928-09916694cca2?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/machu-picchu-ruins.webp"
                                 alt="Machu Picchu"
                                 className="detail-image-fixed"
                             />

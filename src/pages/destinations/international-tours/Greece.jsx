@@ -6,7 +6,7 @@ export default function Greece() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=75&w=1600")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/santorini.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -40,7 +40,7 @@ export default function Greece() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/santorini.jpg"
                                 alt="Santorini View"
                                 className="detail-image-fixed"
                             />

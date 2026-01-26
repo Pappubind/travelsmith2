@@ -6,7 +6,7 @@ export default function HeritageUttarakhand() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("https://images.unsplash.com/photo-1590393802679-0da00808a3d5?auto=format&fit=crop&q=75&w=1600")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/images/rishikesh_hero.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -39,7 +39,7 @@ export default function HeritageUttarakhand() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/hardwar_detail.jpg"
                                 alt="Ganga Aarti"
                                 className="detail-image-fixed"
                             />

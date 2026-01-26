@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function Australia() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/sydney.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>The Great Australian Tour</h1>
                     <p>From the urban wonders of Sydney to the pristine colors of the Great Barrier Reef.</p>
@@ -17,7 +17,7 @@ export default function Australia() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/sydney.jpg"
                                 alt="Sydney Opera House"
                                 className="detail-image-fixed"
                             />

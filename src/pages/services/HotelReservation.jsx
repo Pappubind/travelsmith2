@@ -4,7 +4,7 @@ import './ServiceDetail.css';
 export default function HotelReservation() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero hotel-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="service-hero hotel-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hotel_hero.jpg") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Worldwide Hotel Reservation</h1>
                     <p>Exclusive Rates and Seamless Bookings at Premier Properties Globally</p>
@@ -31,7 +31,7 @@ export default function HotelReservation() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800"
+                                src="/images/luxury_hotel.jpg"
                                 alt="Luxury Hotel Stay"
                                 className="detail-image-fixed"
                             />

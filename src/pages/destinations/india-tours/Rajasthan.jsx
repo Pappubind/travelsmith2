@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function Rajasthan() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/jaipur_palace.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container dest-hero-content">
                     <h1>Heartland of Rajasthan</h1>
                     <p>Relive the royal history in the land of kings, forts, and palaces.</p>
@@ -35,7 +35,7 @@ export default function Rajasthan() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/udaipur.jpeg"
                                 alt="Udaipur Palace"
                                 className="detail-image-fixed"
                             />

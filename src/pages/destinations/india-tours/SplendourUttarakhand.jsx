@@ -5,7 +5,7 @@ import '../Destinations.css';
 export default function SplendourUttarakhand() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1581791534721-e599df4417f7?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/mussoorie_hero.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Splendour of Uttarakhand</h1>
                     <p>Nature's grand design in the Queen of Hills and beyond.</p>

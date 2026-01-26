@@ -90,7 +90,7 @@ export default function International() {
 
                     <div className="grid grid-3" style={{ marginTop: 'var(--spacing-xl)' }}>
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/Cape-Town.webp)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Eiffel Tower, Paris</h3>
                                     <p>Romance in the City of Light</p>
@@ -99,7 +99,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/south-africa-safari.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Swiss Alps</h3>
                                     <p>Breathtaking Mountain Beauty</p>
@@ -108,7 +108,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/kathmandu.webp)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Santorini, Greece</h3>
                                     <p>Azure Waters & White Villas</p>
@@ -117,7 +117,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/mount-everest.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Maldives Paradise</h3>
                                     <p>Luxury Overwater Resorts</p>
@@ -126,7 +126,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/maritius.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Tokyo, Japan</h3>
                                     <p>Ancient Meets Modern</p>
@@ -135,7 +135,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/international_hero.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Dubai Skyline</h3>
                                     <p>Futuristic Arabian Luxury</p>
@@ -144,7 +144,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/Cape-Town.webp)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>New York City</h3>
                                     <p>The City That Never Sleeps</p>
@@ -153,7 +153,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/kathmandu.webp)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Bali, Indonesia</h3>
                                     <p>Tropical Island Escape</p>
@@ -162,7 +162,7 @@ export default function International() {
                         </div>
 
                         <div className="destination-photo-card">
-                            <div className="destination-photo" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?auto=format&fit=crop&q=80&w=1200)' }}>
+                            <div className="destination-photo" style={{ backgroundImage: 'url(/images/maritius.jpg)' }}>
                                 <div className="destination-photo-overlay">
                                     <h3>Sydney Opera House</h3>
                                     <p>Australian Icon</p>

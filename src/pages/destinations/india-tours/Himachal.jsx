@@ -6,7 +6,7 @@ export default function Himachal() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=75&w=1600")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/himachal_peaks.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'

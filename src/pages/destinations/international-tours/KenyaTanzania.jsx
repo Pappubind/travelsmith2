@@ -6,7 +6,7 @@ export default function KenyaTanzania() {
     return (
         <div className="destinations-page">
             <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=75&w=1600")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/safari.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -22,7 +22,7 @@ export default function KenyaTanzania() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/safari.jpg"
                                 alt="African Safari"
                                 className="detail-image-fixed"
                             />

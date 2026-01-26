@@ -5,7 +5,7 @@ import '../ServiceDetail.css';
 export default function Meetings() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1517457373958-b7bdd458ad20?auto=format&fit=crop&q=80&w=1920") no-repeat center/cover' }}>
+            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/meeting_room.jpg") no-repeat center/cover' }}>
                 <div className="container">
                     <h1>Executive Meetings</h1>
                     <p>High-stakes board meetings, corporate retreats, and strategic planning sessions.</p>
@@ -17,7 +17,7 @@ export default function Meetings() {
                     <div className="grid grid-2">
                         <div className="detail-image-container">
                             <img
-                                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+                                src="/images/meeting_room.jpg"
                                 alt="Modern Meeting Room"
                                 className="detail-image-fixed"
                             />

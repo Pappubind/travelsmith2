@@ -50,7 +50,7 @@ export default function Testimonials() {
     return (
         <div className="testimonials-page">
             {/* Hero */}
-            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1920")' }}>
+            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/testimonials_hero.jpg")' }}>
                 <div className="container">
                     <h1>Client Testimonials</h1>
                     <p>Hear What Our Happy Travelers Say</p>

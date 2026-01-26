@@ -22,7 +22,7 @@
 }
 
 .international-hero {
-    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1920');
+    background-image: url('/images/international_hero.jpg');
     background-size: cover;
     background-position: center;
 }

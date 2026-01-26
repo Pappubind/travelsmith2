@@ -21,6 +21,10 @@ import Testimonials from './pages/Testimonials';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import BlogPost1 from './pages/blog/BlogPost1';
+import BlogPost2 from './pages/blog/BlogPost2';
+import BlogPost3 from './pages/blog/BlogPost3';
+import BlogPost4 from './pages/blog/BlogPost4';
 
 // MICE Sub-pages
 import Meetings from './pages/services/mice/Meetings';
@@ -107,6 +111,10 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/1" element={<BlogPost1 />} />
+            <Route path="/blog/2" element={<BlogPost2 />} />
+            <Route path="/blog/3" element={<BlogPost3 />} />
+            <Route path="/blog/4" element={<BlogPost4 />} />
           </Routes>
         </main>
         <Footer />
