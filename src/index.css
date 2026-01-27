@@ -136,6 +136,31 @@ img {
   display: block;
 }
 
+/* Hero Overrides - Center Align All Hero Text */
+.hero,
+.page-hero,
+.service-hero,
+.dest-hero,
+.hero-content,
+.dest-hero-content {
+  text-align: center !important;
+}
+
+.hero p,
+.page-hero p,
+.service-hero p,
+.dest-hero p,
+.hero-description,
+.hero-subtitle {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  justify-content: center !important;
+}
+
 /* Container */
 main {
   padding-top: 90px;
