@@ -1,9 +1,15 @@
 import { Heart, Camera, Music, Utensils, CheckCircle, MapPin, Users } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function Weddings() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Destination Weddings Goa"
+                description="Plan your dream beach wedding in Goa with TravelSmith. Full-service wedding planning including venue selection, decor, and guest management."
+                keywords="Destination Wedding Goa, Wedding Planner Goa, Beach Wedding India, Marriage in Goa"
+            />
             <section className="service-hero wedding-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/weddings_hero_premium.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Destination Weddings</h1>

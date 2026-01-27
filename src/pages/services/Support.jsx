@@ -1,9 +1,15 @@
 import { Shield, Car, Hotel, Globe, CheckCircle, Headphones } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function Support() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Travel Support Services"
+                description="Comprehensive travel support services in Goa and across India. Expert assistance with visas, insurance, concierge, and luxury transport for a seamless journey."
+                keywords="Travel Support India, Visa Assistance Goa, Travel Concierge India, TravelSmith Support"
+            />
             <section className="service-hero support-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/travel_support_hero_premium.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Travel Support</h1>

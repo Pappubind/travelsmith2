@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './Destinations.css';
 
 export default function Goa() {
     return (
         <div className="destinations-page">
+            <SEO
+                title="Explore Goa"
+                description="Discover the beauty of Goa with TravelSmith. From pristine beaches and historic churches to vibrant nightlife and spice plantations. Your ultimate Goa travel guide."
+                keywords="Goa Tourism, Visit Goa, Beaches of Goa, Goa Travel Guide, TravelSmith Goa"
+            />
             {/* Hero */}
             <section className="dest-hero goa-hero">
                 <div className="dest-hero-overlay" />

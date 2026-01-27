@@ -1,9 +1,15 @@
 import { Car, Shield, Clock, Users, CheckCircle, MapPin } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function VehicleRental() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Car & Coach Rental Goa"
+                description="Premium car and coach rental services in Goa. From luxury sedans to large capacity coaches, we provide safe and comfortable logistics for all group sizes."
+                keywords="Car Rental Goa, Coach Rental Goa, Luxury Car Hire Goa, TravelSmith Transport"
+            />
             <section className="service-hero vehicle-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/transport_fleet_management_1768319247924.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Car & Coach Rental</h1>

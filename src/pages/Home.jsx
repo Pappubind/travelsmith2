@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Plane, Shield, DollarSign, Award, Users, Heart, Star } from 'lucide-react';
+import SEO from '../components/SEO';
 import './Home.css';
 
 export default function Home() {
     return (
         <div className="home">
+            <SEO
+                title="Home"
+                description="TravelSmith is your trusted Destination Management Company (DMC) in Goa, India. We specialize in personalized travel, MICE, and cruise handling."
+                keywords="TravelSmith, DMC Goa, India Travel, Luxury Tours, MICE Management"
+            />
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-overlay" />

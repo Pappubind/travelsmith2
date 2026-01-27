@@ -1,9 +1,15 @@
 import { Hotel, Star, Globe, DollarSign, CheckCircle, Headphones } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function HotelReservation() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Hotel Reservations Worldwide"
+                description="Secure the best rates for luxury hotels and boutique resorts in Goa and globally. Exclusive deals and seamless booking service for corporate and leisure travel."
+                keywords="Hotel Booking Goa, Luxury Resorts Goa, TravelSmith Reservations, Hotel Deals India"
+            />
             <section className="service-hero hotel-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hotel_hero.jpg") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Worldwide Hotel Reservation</h1>

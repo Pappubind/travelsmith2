@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -57,69 +58,71 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <ScrollToTop />
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/destinations/goa" element={<Goa />} />
-            <Route path="/destinations/india" element={<India />} />
-            <Route path="/destinations/international" element={<International />} />
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <ScrollToTop />
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/destinations/goa" element={<Goa />} />
+              <Route path="/destinations/india" element={<India />} />
+              <Route path="/destinations/international" element={<International />} />
 
-            {/* India Tours Sub-routes */}
-            <Route path="/destinations/india/kashmir" element={<Kashmir />} />
-            <Route path="/destinations/india/himachal" element={<Himachal />} />
-            <Route path="/destinations/india/splendour-uttarakhand" element={<SplendourUttarakhand />} />
-            <Route path="/destinations/india/heritage-uttarakhand" element={<HeritageUttarakhand />} />
-            <Route path="/destinations/india/chardham-yatra" element={<ChardhamYatra />} />
-            <Route path="/destinations/india/rajasthan" element={<Rajasthan />} />
-            <Route path="/destinations/india/golden-quadrangle" element={<GoldenQuadrangle />} />
-            <Route path="/destinations/india/enchanting-nepal" element={<EnchantingNepal />} />
-            <Route path="/destinations/india/royal-nepal" element={<RoyalNepal />} />
-            <Route path="/destinations/india/bhutan" element={<Bhutan />} />
+              {/* India Tours Sub-routes */}
+              <Route path="/destinations/india/kashmir" element={<Kashmir />} />
+              <Route path="/destinations/india/himachal" element={<Himachal />} />
+              <Route path="/destinations/india/splendour-uttarakhand" element={<SplendourUttarakhand />} />
+              <Route path="/destinations/india/heritage-uttarakhand" element={<HeritageUttarakhand />} />
+              <Route path="/destinations/india/chardham-yatra" element={<ChardhamYatra />} />
+              <Route path="/destinations/india/rajasthan" element={<Rajasthan />} />
+              <Route path="/destinations/india/golden-quadrangle" element={<GoldenQuadrangle />} />
+              <Route path="/destinations/india/enchanting-nepal" element={<EnchantingNepal />} />
+              <Route path="/destinations/india/royal-nepal" element={<RoyalNepal />} />
+              <Route path="/destinations/india/bhutan" element={<Bhutan />} />
 
-            {/* International Tours Sub-routes */}
-            <Route path="/destinations/international/kenya-tanzania" element={<KenyaTanzania />} />
-            <Route path="/destinations/international/south-africa" element={<SouthAfrica />} />
-            <Route path="/destinations/international/mauritius" element={<Mauritius />} />
-            <Route path="/destinations/international/greece" element={<Greece />} />
-            <Route path="/destinations/international/north-america" element={<NorthAmerica />} />
-            <Route path="/destinations/international/south-america" element={<SouthAmerica />} />
-            <Route path="/destinations/international/australia" element={<Australia />} />
+              {/* International Tours Sub-routes */}
+              <Route path="/destinations/international/kenya-tanzania" element={<KenyaTanzania />} />
+              <Route path="/destinations/international/south-africa" element={<SouthAfrica />} />
+              <Route path="/destinations/international/mauritius" element={<Mauritius />} />
+              <Route path="/destinations/international/greece" element={<Greece />} />
+              <Route path="/destinations/international/north-america" element={<NorthAmerica />} />
+              <Route path="/destinations/international/south-america" element={<SouthAmerica />} />
+              <Route path="/destinations/international/australia" element={<Australia />} />
 
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/dmc" element={<DMC />} />
-            <Route path="/services/tour-operators" element={<TourOperators />} />
-            <Route path="/services/cruise-handling" element={<CruiseHandling />} />
-            <Route path="/services/mice" element={<MICE />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/dmc" element={<DMC />} />
+              <Route path="/services/tour-operators" element={<TourOperators />} />
+              <Route path="/services/cruise-handling" element={<CruiseHandling />} />
+              <Route path="/services/mice" element={<MICE />} />
 
-            {/* MICE Sub-routes */}
-            <Route path="/services/mice/meetings" element={<Meetings />} />
-            <Route path="/services/mice/incentive-travel" element={<IncentiveTravel />} />
-            <Route path="/services/mice/conferences" element={<Conferences />} />
-            <Route path="/services/mice/exhibitions" element={<Exhibitions />} />
+              {/* MICE Sub-routes */}
+              <Route path="/services/mice/meetings" element={<Meetings />} />
+              <Route path="/services/mice/incentive-travel" element={<IncentiveTravel />} />
+              <Route path="/services/mice/conferences" element={<Conferences />} />
+              <Route path="/services/mice/exhibitions" element={<Exhibitions />} />
 
-            <Route path="/services/weddings" element={<Weddings />} />
-            <Route path="/services/vehicle-rental" element={<VehicleRental />} />
-            <Route path="/services/hotel-reservation" element={<HotelReservation />} />
-            <Route path="/services/support" element={<Support />} />
-            <Route path="/packages" element={<Packages />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/1" element={<BlogPost1 />} />
-            <Route path="/blog/2" element={<BlogPost2 />} />
-            <Route path="/blog/3" element={<BlogPost3 />} />
-            <Route path="/blog/4" element={<BlogPost4 />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+              <Route path="/services/weddings" element={<Weddings />} />
+              <Route path="/services/vehicle-rental" element={<VehicleRental />} />
+              <Route path="/services/hotel-reservation" element={<HotelReservation />} />
+              <Route path="/services/support" element={<Support />} />
+              <Route path="/packages" element={<Packages />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/1" element={<BlogPost1 />} />
+              <Route path="/blog/2" element={<BlogPost2 />} />
+              <Route path="/blog/3" element={<BlogPost3 />} />
+              <Route path="/blog/4" element={<BlogPost4 />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

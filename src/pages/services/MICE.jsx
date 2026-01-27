@@ -1,9 +1,15 @@
 import { Briefcase, Users, Monitor, BarChart, CheckCircle, Presentation, Building2, Globe } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function MICE() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="M.I.C.E Management Goa"
+                description="Expert management for Meetings, Incentives, Conferences, and Exhibitions in Goa. We provide strategic event planning and comprehensive logistics for corporate groups."
+                keywords="MICE Goa, Corporate Events Goa, Conference Management India, Incentive Travel Goa"
+            />
             <section className="service-hero mice-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/mice_hero_premium_1768746289905.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>M.I.C.E Management</h1>

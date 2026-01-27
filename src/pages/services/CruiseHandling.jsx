@@ -1,9 +1,15 @@
 import { Anchor, Shield, Ship, Users, CheckCircle, Navigation } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function CruiseHandling() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Cruise Liner Ground Handling India"
+                description="Premier ground handling services for international cruise liners at major Indian ports. Specializing in shore excursions, turnaround operations, and port logistics."
+                keywords="Cruise Handling India, Shore Excursions Goa, Cruise Port Services India, TravelSmith Cruise"
+            />
             <section className="service-hero cruise-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/cruise-1-1024x545.jpg") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Cruise Liner Ground Handling</h1>

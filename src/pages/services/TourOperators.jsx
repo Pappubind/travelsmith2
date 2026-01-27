@@ -1,9 +1,15 @@
 import { Users, Shield, Globe, Star, CheckCircle } from 'lucide-react';
+import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function TourOperators() {
     return (
         <div className="service-detail-page">
+            <SEO
+                title="Tour Operators Representation"
+                description="Professional local representation for international tour operators in Goa and India. Expert ground handling and logistics management."
+                keywords="Tour Operator Representation India, Ground Handling Goa, TravelSmith DMC"
+            />
             <section className="service-hero tourop-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/india_ground_operations_1768320571583.png") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Tour Operators Representation</h1>
