@@ -4,7 +4,7 @@ import './ServiceDetail.css';
 export default function CruiseHandling() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero cruise-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/ cruise_port_excellence_1768320594638.png") no-repeat center/cover' }}>
+            <section className="service-hero cruise-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/cruise-1-1024x545.jpg") no-repeat center/cover' }}>
                 <div className="container">
                     <h1 style={{ color: "white" }}>Cruise Liner Ground Handling</h1>
                     <p>Premier Port Services and Shore Excursions at Major Indian Harbors</p>
@@ -17,10 +17,13 @@ export default function CruiseHandling() {
                         <div className="detail-text">
                             <h2>Excellence in Port Operations</h2>
                             <p>
-                                Since our inception, TravelSmith has been a leader in managing ground handling
-                                for international cruise liners. We understand the unique requirements and
-                                strict schedules of the cruise industry, delivering flawless logistics
-                                and memorable shore excursions.
+                                The Travelsmith Cruise Services team work side by side cruise ship representatives to deliver an efficient, professional and customer focused experience from shore to ship and vice versa. Every member of the team has been selected to deliver exceptional customer service, have excellent local knowledge and contacts and is very resourceful. With thorough planning and preparation and being able to work creatively and calmly when faced with the unexpected, we are confident that you will be delighted with our services.
+                            </p>
+                            <p>
+                                Our local, in-depth knowledge and experience truly enables us to design and deliver a tailor-made program of shore excursions and activities for all tastes, ages and interests.
+                            </p>
+                            <p>
+                                As well as offering the popular and traditional excursions, we believe it’s important to offer something that’s a little bit different. Our intimate, local knowledge allows us to create memorable experiences ashore and we are constantly investing resources in developing new and interesting excursion opportunities.
                             </p>
                             <ul className="check-list">
                                 <li><CheckCircle size={18} /> Seamless Shore Excursions</li>
@@ -62,6 +65,28 @@ export default function CruiseHandling() {
                     </div>
                 </div>
             </section>
-        </div>
+
+            <section className="section-light">
+                <div className="container">
+                    <h2 className="text-center mb-5">Cruises Handled By Us</h2>
+                    <div className="grid grid-3 text-center">
+                        <div className="p-2 border rounded">Rhapsody of the Seas</div>
+                        <div className="p-2 border rounded">Mariner of the Seas</div>
+                        <div className="p-2 border rounded">Celebrity Constellation</div>
+                        <div className="p-2 border rounded">MSC Lirica</div>
+                        <div className="p-2 border rounded">Queen Mary 2</div>
+                        <div className="p-2 border rounded">Explorer of The Seas</div>
+                        <div className="p-2 border rounded">Rotterdam</div>
+                        <div className="p-2 border rounded">Azamara</div>
+                        <div className="p-2 border rounded">Celebrity Century</div>
+                        <div className="p-2 border rounded">Aidaaura</div>
+                        <div className="p-2 border rounded">Aida Diwa</div>
+                        <div className="p-2 border rounded">AIDA SOL</div>
+                        <div className="p-2 border rounded">Costa Deliziosa</div>
+                        <div className="p-2 border rounded">Costa Atlatica</div>
+                    </div>
+                </div>
+            </section>
+        </div >
     );
 }

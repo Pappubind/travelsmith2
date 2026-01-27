@@ -7,7 +7,7 @@ export default function Meetings() {
         <div className="service-detail-page">
             <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/meeting_room.jpg") no-repeat center/cover' }}>
                 <div className="container">
-                    <h1>Executive Meetings</h1>
+                    <h1 style={{ color: "white" }}>Executive Meetings</h1>
                     <p>High-stakes board meetings, corporate retreats, and strategic planning sessions.</p>
                 </div>
             </section>
@@ -25,21 +25,15 @@ export default function Meetings() {
                         <div className="detail-text">
                             <h2>Strategic Corporate Meetings</h2>
                             <p>
-                                At TravelSmith, we understand that executive meetings require a perfect balance of professional infrastructure
-                                andInspiring environments. We curate exclusive venues that foster productivity and high-level decision making.
+                                Goa is one of the most preferred destinations for MICE tourism and it is much more than just a beach holiday destination. The new integrated airport terminal, latest technologies, the superb resorts, the best of the venues and state of the art business facilities meet the global standards which welcomes large events, incentive groups, conferences & exhibitions etc. Travelsmith is specialist in MICE services and will create a lasting impression on every meeting, incentive, convention and event handled by us. Our dedicated team will work with specific objectives and will ensure that you have an amazing experience by providing end to end services.
                             </p>
-                            <p>
-                                Whether it's a confidential board meeting or a critical management retreat, we handle all logistics to ensure
-                                your team can focus entirely on the agenda.
-                            </p>
-                            <ul className="check-list">
-                                <li><CheckCircle size={18} /> Exclusive Boardroom Sourcing</li>
-                                <li><CheckCircle size={18} /> Secure & Private Environments</li>
-                                <li><CheckCircle size={18} /> High-End Audio-Visual Support</li>
-                                <li><CheckCircle size={18} /> Gourmet Catering & Hospitality</li>
-                            </ul>
                         </div>
                     </div>
+                    <br></br>
+                    <p>
+                        Travelsmith team purely understands the value of time for an individual participating in a meeting travelling miles away. We will provide complete assistance on arranging meetings at the destination for different category of people, for example – clients to customers; dealers to agents or retailers, zonal gathering etc which will serve multiple needs. The services start from day one while carefully selecting the appropriate hotel / resort, venue and activities fallowed by holding accurate meeting agenda. Start to end event assistance will be provided right from the arrival services at the airport with personalized desk and special welcome. To hold the meeting with the best interest of every delegate is the key role of our experts and that’s where we step in to maximize the delegate presence by creating innovative, ideal and an elegant ambience and state of the art audio / video equipment which even can transform a boring meeting into a stimulating brainstorming and interesting session.<br></br>
+                        <br></br> Special pre-post tours around Goa are organized by the active team of the Travelsmith desk at venue for spouse and delegates. Excellent customer service and every minute attention, tastefully designed delegate kits, an elegant ambience, immaculately attired chauffeurs in comfortable cars will add a special touch to every delegate attending the meeting. Through our exceptional relationship with airlines, airport authorities, chain resorts, celebrity artist and local vendors, we are able to handle your entire project with great care and at leading price.
+                    </p>
                 </div>
             </section>
 

@@ -18,19 +18,8 @@ export default function Exhibitions() {
                         <div className="detail-text">
                             <h2>Impactful Brand Presence</h2>
                             <p>
-                                At exhibitions, standing out is everything. We provide comprehensive design and build solutions
-                                that translate your brand values into immersive physical spaces.
+                                Goa is one of the most preferred destinations for MICE tourism and it is much more than just a beach holiday destination. The new integrated airport terminal, latest technologies, the superb resorts, the best of the venues and state of the art business facilities meet the global standards which welcomes large events, incentive groups, conferences & exhibitions etc. Travelsmith is specialist in MICE services and will create a lasting impression on every meeting, incentive, convention and event handled by us. Our dedicated team will work with specific objectives and will ensure that you have amazing experiences by providing end to end services.
                             </p>
-                            <p>
-                                From custom stall fabrication to large-scale floor management, we ensure your presence
-                                at trade fairs is professional, engaging, and result-oriented.
-                            </p>
-                            <ul className="check-list">
-                                <li><CheckCircle size={18} /> Custom Stand Design & Build</li>
-                                <li><CheckCircle size={18} /> Exhibition Floor Management</li>
-                                <li><CheckCircle size={18} /> Logistics & Material Handling</li>
-                                <li><CheckCircle size={18} /> Onsite Staffing & Support</li>
-                            </ul>
                         </div>
                         <div className="detail-image-container">
                             <img
@@ -40,6 +29,10 @@ export default function Exhibitions() {
                             />
                         </div>
                     </div>
+                    <br></br><br></br>
+                    <p>
+                        We at Travelsmith will be able to assist you in handling all kinds of events ranging from trade show, exhibition, product launch, award ceremonies or family events. A successful event closes with an exceptional impression on pleasant memories spent and it is all carefully crafted by our team in style for you. The team of highly creative and skilled professionals undertake the task of meticulously conceptualizing, planning and executing each event. Complete arrangements of the event can be handled under one umbrella starting from conceptualizing the theme, selecting appropriate venue, designing the complete set, certification and approvals from various authorities, registrations of participation, logistics and accommodation etc. and all these elements can be provided by Travelsmith for exceptional price for holding good relations with industry partners. Every minute detail will be taken care of, leaving no room for mistakes is assurance from Travelsmith team.
+                    </p>
                 </div>
             </section>
 

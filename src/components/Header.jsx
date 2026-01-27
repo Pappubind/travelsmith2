@@ -71,7 +71,6 @@ export default function Header() {
   ];
 
   const services = [
-    { name: 'DMC Services', path: '/services/dmc', icon: <Building2 size={18} /> },
     { name: 'Tour Operators Representation', path: '/services/tour-operators', icon: <Users size={18} /> },
     { name: 'Cruise Liner Ground Handling', path: '/services/cruise-handling', icon: <Ship size={18} /> },
     {
@@ -88,7 +87,6 @@ export default function Header() {
     { name: 'Destination Weddings', path: '/services/weddings', icon: <Heart size={18} /> },
     { name: 'Car & Coach Rental', path: '/services/vehicle-rental', icon: <Car size={18} /> },
     { name: 'Worldwide Hotel Reservation', path: '/services/hotel-reservation', icon: <Hotel size={18} /> },
-    { name: 'Travel Support', path: '/services/support', icon: <ShieldCheck size={18} /> },
   ];
 
   return (

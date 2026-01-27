@@ -58,10 +58,8 @@ export default function Footer() {
                     <div className="footer-section">
                         <h4 className="footer-title">Services</h4>
                         <ul className="footer-links">
-                            <li><Link to="/services#dmc">DMC Services</Link></li>
                             <li><Link to="/services#mice">M.I.C.E Management</Link></li>
                             <li><Link to="/services#weddings">Destination Weddings</Link></li>
-                            <li><Link to="/services#travel">Travel Support</Link></li>
                         </ul>
                     </div>
 

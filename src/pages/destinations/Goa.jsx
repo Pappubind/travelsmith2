@@ -19,7 +19,11 @@ export default function Goa() {
                 <div className="container">
                     <h2 className="section-title">Why Choose Goa?</h2>
                     <p className="section-subtitle">
-                        India's beach paradise offering the perfect blend of relaxation, adventure, and culture
+                        A beautiful land blessed with Sun, Sea and Surf, nested on the west coast of India with swaying Palms, fabulous beaches and a laid back lifestyle of the warmhearted Goans make it an unique holiday destination. Goa’s 120 kms coastline boasts of exotic Restaurants, rustic Beach Shacks with serve Sumptuous Cuisine and give you a front row view of the Arabian Sea brimming with Water Sports and Pleasure Trips, with Night clubs in near distance.
+
+
+
+                        The hinterland too beckons visitors to Spice Gardens, Serene Lakes, Waterfalls and Jungle Safaris at the Mollem and Cotigaon Sanctuaries where the wild play hide and seek. Goa also has some fabulous Portuguese – Goan Heritage Mansions and Forts dating back to the 1700s. There is much to explore in Goa besides relaxing on the white sandy beaches. Discover the most amazing Goan experience, indulge in exciting adventures and exotic excursions in and around Goa with Travelsmith.
                     </p>
 
                     <div className="grid grid-4 dest-features">

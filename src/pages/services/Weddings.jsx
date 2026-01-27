@@ -17,9 +17,8 @@ export default function Weddings() {
                         <div className="detail-text">
                             <h2>Full-Service Wedding Planning</h2>
                             <p>
-                                We believe every wedding should be as unique as the couple. Our dedicated
-                                wedding specialists work tirelessly to ensure that every flower, every
-                                guest, and every moment is perfect.
+                                The sun and sand of Goa have been the objects of affection for many and over the years the destination has evolved from a hippie haven to lover’s heaven. This journey has been smooth and full of promise as hopeful brides and dashing grooms are flocking to the State and Goa stands on the edge of becoming one of the India’s most preferred wedding destinations.
+                                We at Travelsmith comprise exclusive team to handle the complexities that go along with planning of wedding arrangements with efficiency. The team will assist you every minute to plan a perfect 3 days grand wedding, exclusive beach wedding for couple only on quiet white sand beach or renewal of vows. Our range of services starts from selecting an appropriate accommodation and the theme set-up, venue choosing, handling celebrity artist, Bollywood star performance and presenting timely ritual ceremony.
                             </p>
                             <ul className="check-list">
                                 <li><CheckCircle size={18} /> Bespoke Theme & Decor Design</li>

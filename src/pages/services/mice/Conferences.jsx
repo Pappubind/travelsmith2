@@ -30,21 +30,14 @@ export default function Conferences() {
                         <div className="detail-text">
                             <h2>Expert Conference Management</h2>
                             <p>
-                                Managing a conference involves thousands of details. Our team acts as your extended events department,
-                                handling everything from site selection and abstracts to registration and technical production.
+                                Goa is one of the most preferred destinations for MICE tourism and it is much more than just a beach holiday destination. The new integrated airport terminal, latest technologies, the superb resorts, the best of the venues and state of the art business facilities meet the global standards which welcomes large events, incentive groups, conferences, exhibitions etc. Travelsmith is specialist in MICE services and will create a lasting impression on every meeting, incentive, convention and event handled by us. Our dedicated team will work with specific objectives and will ensure that you have an amazing experience by providing end to end services.
                             </p>
-                            <p>
-                                We have a proven track record of handling international congresses with over 1000 delegates,
-                                ensuring seamless execution and professional branding throughout the event.
-                            </p>
-                            <ul className="check-list">
-                                <li><CheckCircle size={18} /> Venue & Hotel Contracting</li>
-                                <li><CheckCircle size={18} /> Full Technical & AV Production</li>
-                                <li><CheckCircle size={18} /> Online & On-site Registration Systems</li>
-                                <li><CheckCircle size={18} /> Speaker & VIP Management</li>
-                            </ul>
+
                         </div>
                     </div>
+                    <br></br><br></br>
+                    <p>We at Travelsmith not just provide hassle free handling but ensure all time attention and smooth running of the show through the conference. The team is involved in assisting right from the planning stage till the last delegate departs at a successful conference. Complete information on the destination with excellent and hand in hand working relation with the industry partners allow us to share the best competitive prices and an exceptional large range of choices. Our unique fun and creative team building activities help you to address your team in a new way of inspiration. It is Travelsmith team’s mission and vision to deliver amazing experiences.
+                    </p>
                 </div>
             </section>
 
