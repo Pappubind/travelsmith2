@@ -128,17 +128,17 @@ export default function Home() {
                         </div>
                         <div className="about-intro-stats">
                             <div className="stat-card">
-                                <Award size={40} className="stat-icon" />
+                                <Award size={32} className="stat-icon" />
                                 <h3><Counter end={12} suffix="+" /> Years</h3>
                                 <p>Experience</p>
                             </div>
                             <div className="stat-card">
-                                <Users size={40} className="stat-icon" />
+                                <Users size={32} className="stat-icon" />
                                 <h3><Counter end={5000} suffix="+" /></h3>
                                 <p>Happy Clients</p>
                             </div>
                             <div className="stat-card">
-                                <Heart size={40} className="stat-icon" />
+                                <Heart size={32} className="stat-icon" />
                                 <h3><Counter end={100} suffix="%" /></h3>
                                 <p>Customer Satisfaction</p>
                             </div>

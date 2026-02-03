@@ -34,13 +34,14 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: var(--spacing-xl);
-    align-items: start;
+    align-items: center;
+    /* Center vertically */
 }
 
 .overview-content h2 {
     margin-bottom: var(--spacing-md);
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
 }
 
 .overview-content p {
@@ -106,43 +107,13 @@
     gap: var(--spacing-md);
 }
 
-/* Company Overview Section */
-.company-overview {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2xl);
-    align-items: center;
-    text-align: center;
-}
-
-.overview-content {
-    max-width: 900px;
-}
-
-.overview-content h2 {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--primary-blue);
-}
-
-.overview-content p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.overview-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-lg);
-    width: 100%;
-}
 
 .stat-box {
     background: var(--primary-blue);
     border: 1px solid var(--primary-blue-light);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    /* Reduced padding */
+    border-radius: var(--radius-lg);
     text-align: center;
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -166,10 +137,11 @@
 }
 
 .stat-box h3 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    /* Smaller font size */
     font-weight: 800;
     color: var(--white);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
 }
 
 .stat-box.glass-card h3 {
@@ -177,7 +149,8 @@
 }
 
 .stat-box p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    /* Smaller label */
     color: var(--blue-50);
     text-transform: uppercase;
     letter-spacing: 1px;
