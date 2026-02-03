@@ -130,17 +130,17 @@ export default function Home() {
                             <div className="stat-card">
                                 <Award size={40} className="stat-icon" />
                                 <h3><Counter end={12} suffix="+" /> Years</h3>
-                                <p style={{ textAlign: "-khtml-center" }}>Experience</p>
+                                <p>Experience</p>
                             </div>
                             <div className="stat-card">
                                 <Users size={40} className="stat-icon" />
                                 <h3><Counter end={5000} suffix="+" /></h3>
-                                <p style={{ textAlign: "-khtml-center" }}>Happy Clients</p>
+                                <p>Happy Clients</p>
                             </div>
                             <div className="stat-card">
                                 <Heart size={40} className="stat-icon" />
                                 <h3><Counter end={100} suffix="%" /></h3>
-                                <p style={{ textAlign: "-khtml-center" }}>Customer Satisfaction</p>
+                                <p>Customer Satisfaction</p>
                             </div>
                         </div>
                     </div>

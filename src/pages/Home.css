@@ -3,9 +3,9 @@
     height: 95vh;
     min-height: 700px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 40px;
-    justify-content: flex-start;
+    justify-content: center;
     background-image: url('/images/heronew.png');
     background-size: cover;
     background-position: center;
@@ -31,10 +31,13 @@
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 600px;
-    margin-left: 0 !important;
-    margin-right: auto !important;
+    max-width: 800px;
+    margin: 0 auto !important;
     width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero h1 {
@@ -60,7 +63,9 @@
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -68,24 +73,25 @@
     gap: 1.5rem;
     flex-wrap: wrap;
     padding: 0 1rem;
+    justify-content: center;
 }
 
-/* Home page specific overrides to align hero text to the right */
+/* Home page specific overrides to align hero text to the center */
 .home .hero-content {
-    text-align: left !important;
-    align-items: flex-start !important;
+    text-align: center !important;
+    align-items: center !important;
 }
 
 .home .hero h1,
 .home .hero-subtitle,
 .home .hero-description {
-    text-align: left !important;
-    margin-left: 0 !important;
+    text-align: center !important;
+    margin-left: auto !important;
     margin-right: auto !important;
 }
 
 .home .hero-buttons {
-    justify-content: flex-start !important;
+    justify-content: center !important;
 }
 
 .btn-outline {
@@ -116,6 +122,7 @@
 .about-intro-content h2 {
     margin-bottom: var(--spacing-md);
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .about-intro-content p {
@@ -123,7 +130,7 @@
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    text-align: left;
+    text-align: center;
 }
 
 .about-intro-stats {
@@ -165,7 +172,7 @@
     font-size: 1rem;
     color: var(--blue-50);
     margin: 0;
-    text-align: left !important;
+    text-align: center !important;
 }
 
 /* Destinations Grid */
@@ -276,7 +283,7 @@
 .feature-card p {
     color: var(--gray-600);
     line-height: 1.7;
-    text-align: left;
+    text-align: center;
 }
 
 /* Service Cards */
@@ -308,7 +315,7 @@
     color: var(--gray-600);
     margin-bottom: var(--spacing-md);
     line-height: 1.7;
-    text-align: left;
+    text-align: center;
 }
 
 .service-card a {
@@ -382,7 +389,7 @@
     color: var(--gray-600);
     font-size: 0.95rem;
     margin-bottom: var(--spacing-sm);
-    text-align: left;
+    text-align: center;
 }
 
 .package-link {
@@ -435,13 +442,14 @@
 
 .video-info-home {
     padding: var(--spacing-lg);
-    text-align: left;
+    text-align: center;
 }
 
 .video-rating {
     display: flex;
     gap: 0.25rem;
     margin-bottom: var(--spacing-xs);
+    justify-content: center;
 }
 
 .video-info-home h3 {
@@ -458,7 +466,7 @@
     line-height: 1.6;
     margin-bottom: 0;
     font-style: italic;
-    text-align: left;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -501,7 +509,7 @@
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-xl);
-    text-align: left;
+    text-align: center;
     max-width: 800px;
 }
 
