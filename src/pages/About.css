@@ -48,7 +48,7 @@
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .md-profile {
@@ -97,7 +97,7 @@
     margin-bottom: 0;
     font-style: italic;
     color: var(--gray-700);
-    text-align: center;
+    text-align: justify;
 }
 
 .overview-stats {
@@ -128,7 +128,7 @@
 .overview-content p {
     font-size: 1.15rem;
     line-height: 1.8;
-    text-align: center;
+    text-align: justify;
 }
 
 .overview-stats {
@@ -241,7 +241,7 @@
 .about-value-card p {
     color: var(--gray-700);
     line-height: 1.6;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Services Summary */
@@ -276,7 +276,7 @@
 .service-summary-card p {
     color: var(--gray-600);
     line-height: 1.6;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Why Choose Us Grid */
@@ -318,7 +318,7 @@
     color: var(--gray-600);
     font-size: 0.95rem;
     line-height: 1.6;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Recognition */
@@ -343,7 +343,7 @@
 .recognition-card p {
     font-size: 0.9rem;
     color: var(--gray-600);
-    text-align: center;
+    text-align: justify;
 }
 
 /* Responsive Design */

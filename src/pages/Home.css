@@ -63,7 +63,7 @@
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 700px;
-    text-align: center;
+    text-align: justify;
     margin-left: auto;
     margin-right: auto;
 }
@@ -130,7 +130,7 @@
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .about-intro-stats {
@@ -283,7 +283,7 @@
 .feature-card p {
     color: var(--gray-600);
     line-height: 1.7;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Service Cards */
@@ -315,7 +315,7 @@
     color: var(--gray-600);
     margin-bottom: var(--spacing-md);
     line-height: 1.7;
-    text-align: center;
+    text-align: justify;
 }
 
 .service-card a {
@@ -389,7 +389,7 @@
     color: var(--gray-600);
     font-size: 0.95rem;
     margin-bottom: var(--spacing-sm);
-    text-align: center;
+    text-align: justify;
 }
 
 .package-link {
@@ -466,7 +466,7 @@
     line-height: 1.6;
     margin-bottom: 0;
     font-style: italic;
-    text-align: center;
+    text-align: justify;
 }
 
 @media (max-width: 1024px) {
@@ -509,7 +509,7 @@
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-xl);
-    text-align: center;
+    text-align: justify;
     max-width: 800px;
 }
 
