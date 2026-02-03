@@ -177,7 +177,7 @@ export default function Home() {
                                         <li>🏊 Cool Spring Swim</li>
                                         <li>🐒 Jungle Experience</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#dudhsagar-waterfalls" className="btn btn-primary">
                                         Explore Falls <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -193,7 +193,7 @@ export default function Home() {
                                         <li>🔥 Catch & Grill Barbeque</li>
                                         <li>🌊 Arabian Sea Journey</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#fishing-trip" className="btn btn-primary">
                                         Explore Fishing <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -209,7 +209,7 @@ export default function Home() {
                                         <li>🌲 Lush Green Forests</li>
                                         <li>🦉 Rare Bird Species</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#dandeli-wildlife" className="btn btn-primary">
                                         Explore Dandeli <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -225,7 +225,7 @@ export default function Home() {
                                         <li>🗿 Stone Architecture</li>
                                         <li>🌅 Breathtaking Sunsets</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#hampi-tour" className="btn btn-primary">
                                         Explore Hampi <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -241,7 +241,7 @@ export default function Home() {
                                         <li>🦋 Backwater Life</li>
                                         <li>🛶 Quiet River Trails</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#kayaking-expeditions" className="btn btn-primary">
                                         Explore Kayaking <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -257,7 +257,7 @@ export default function Home() {
                                         <li>🚢 Ship Wreckages</li>
                                         <li>🛡️ Safe for Beginners</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#diving" className="btn btn-primary">
                                         Explore Diving <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -273,7 +273,7 @@ export default function Home() {
                                         <li>🏝️ Grande Island Visit</li>
                                         <li>🔥 Beach Barbeque</li>
                                     </ul>
-                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                    <Link to="/destinations/goa#island-fantasy" className="btn btn-primary">
                                         Explore Island <ArrowRight size={18} />
                                     </Link>
                                 </div>
