@@ -10,9 +10,10 @@ export default function MICE() {
                 description="Expert management for Meetings, Incentives, Conferences, and Exhibitions in Goa. We provide strategic event planning and comprehensive logistics for corporate groups."
                 keywords="MICE Goa, Corporate Events Goa, Conference Management India, Incentive Travel Goa"
             />
-            <section className="service-hero mice-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/mice_hero_premium_1768746289905.png") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>M.I.C.E Management</h1>
+            <section className="service-hero mice-hero" style={{ background: 'url("/images/mice_hero_premium_1768746289905.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>M.I.C.E Management</h1>
                     <p>Meetings, Incentives, Conferences, and Corporate Events</p>
                 </div>
             </section>
@@ -49,23 +50,31 @@ export default function MICE() {
                 <div className="container">
                     <h2 className="text-center mb-5">Our MICE Specialties</h2>
                     <div className="grid grid-4 mice-grid-expanded">
-                        <div className="card p-4 text-center">
-                            <Presentation size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Presentation size={32} />
+                            </div>
                             <h3>Meetings</h3>
                             <p>Executive board meetings and corporate retreats in premier venues.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Users size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Users size={32} />
+                            </div>
                             <h3>Incentive Travel</h3>
                             <p>Reward programs and team-building trips that inspire and motivate.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Building2 size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Building2 size={32} />
+                            </div>
                             <h3>Conferences</h3>
                             <p>Large-scale conventions and seminars with end-to-end management.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Exhibitions</h3>
                             <p>Trade fairs and product launches with complete logistics and setup.</p>
                         </div>

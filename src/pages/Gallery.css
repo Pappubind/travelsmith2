@@ -36,104 +36,72 @@
     box-shadow: var(--shadow-xl);
 }
 
-/* Goa Gradients */
+/* Goa */
 .goa-1 {
-    background-image: url('/images/goa_cruise_operations_1768319162428.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/diving_custom.png');
 }
 
 .goa-2 {
-    background-image: url('/images/cruise_port_excellence_1768320594638.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/dudhsagar_waterfalls_custom.png');
 }
 
 .goa-3 {
-    background-image: url('/images/transport_fleet_management_1768319247924.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/hot_air_balloon_goa.png');
 }
 
 .goa-4 {
-    background-image: url('/images/luxury_fleet_tracking_1768320649638.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/spice_plantation_goa.png');
 }
 
-/* India Gradients */
+/* India */
 .india-1 {
-    background-image: url('/images/india_destinations_operations_1768319141419.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/taj_mahal.jpg');
 }
 
 .india-2 {
-    background-image: url('/images/india_ground_operations_1768320571583.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/jaipur_palace.jpg');
 }
 
 .india-3 {
-    background-image: url('/images/quality_safety_protocols_1768319268208.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/banaras.jpg');
 }
 
 .india-4 {
-    background-image: url('/images/dmc_process_workflow_1768319189365.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/himalaya_mountains.jpg');
 }
 
-/* International Gradients */
+/* International */
 .international-1 {
-    background-image: url('/images/hero_global_operations_1768319114233.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/Cape-Town.webp');
 }
 
 .international-2 {
-    background-image: url('/images/global_partnerships_1768320676845.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/kathmandu.webp');
 }
 
 .international-3 {
-    background-image: url('/images/partner_collaboration_1768319292176.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/mount-everest.jpg');
 }
 
 .international-4 {
-    background-image: url('/images/international_hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/maritius.jpg');
 }
 
-/* Events Gradients */
+/* Events & MICE */
 .events-1 {
-    background-image: url('/images/mice_events_coordination_1768319228484.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/mice_hero_premium_1768746289905.png');
 }
 
 .events-2 {
-    background-image: url('/images/mice_corporate_events_1768320621666.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/weddings_hero_premium.png');
 }
 
 .events-3 {
-    background-image: url('/images/mice_hero_premium_1768746289905.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/mice_corporate_events_1768320621666.png');
 }
 
 .events-4 {
-    background-image: url('/images/hero_dmc_operations_1768320541503.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/wedding.jpg');
 }
 
 /* Responsive */

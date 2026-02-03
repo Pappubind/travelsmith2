@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function Rajasthan() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/jaipur_palace.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <section className="dest-hero rajasthan-hero" style={{ background: 'url("/images/jaipur_palace.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Heartland of Rajasthan</h1>
                     <p>Relive the royal history in the land of kings, forts, and palaces.</p>
@@ -48,18 +49,24 @@ export default function Rajasthan() {
                 <div className="container">
                     <h2 className="text-center mb-5">Royal Experiences</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Landmark className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Landmark size={32} />
+                            </div>
                             <h3>Forts & Palaces</h3>
                             <p>Explore UNESCO World Heritage forts like Amer and Mehrangarh.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Sun className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Sun size={32} />
+                            </div>
                             <h3>Desert Safaris</h3>
                             <p>Experience the golden sunset on the dunes of the Thar desert.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Palace Stays</h3>
                             <p>Live like royalty in restored 18th-century heritage properties.</p>
                         </div>

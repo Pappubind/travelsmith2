@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Goa from './pages/destinations/Goa';
@@ -22,6 +23,7 @@ import Testimonials from './pages/Testimonials';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import WhyTravelsmith from './pages/WhyTravelsmith';
 import BlogPost1 from './pages/blog/BlogPost1';
 import BlogPost2 from './pages/blog/BlogPost2';
 import BlogPost3 from './pages/blog/BlogPost3';
@@ -63,10 +65,12 @@ function App() {
         <div className="App">
           <ScrollToTop />
           <Header />
+          <ScrollToTopButton />
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/why-travelsmith" element={<WhyTravelsmith />} />
               <Route path="/destinations/goa" element={<Goa />} />
               <Route path="/destinations/india" element={<India />} />
               <Route path="/destinations/international" element={<International />} />

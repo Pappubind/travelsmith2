@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function HeritageUttarakhand() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/images/rishikesh_hero.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero heritage-hero" style={{ background: 'url("/images/rishikesh_hero.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Heritage of Uttarakhand</h1>
                     <p>The spiritual gateway and the heart of ancient traditions.</p>
@@ -52,18 +48,24 @@ export default function HeritageUttarakhand() {
                 <div className="container">
                     <h2 className="text-center mb-5">Spiritual Heritage</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Waves className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Waves size={32} />
+                            </div>
                             <h3>Sacred Ganges</h3>
                             <p>Deep spiritual connection at the source of ancient Indian traditions.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Target className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Target size={32} />
+                            </div>
                             <h3>Yoga Capital</h3>
                             <p>Learn from authentic masters in the Yoga Capital of the world.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Shield className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Shield size={32} />
+                            </div>
                             <h3>Ancient Ashrams</h3>
                             <p>Explore the history and philosophy of India's most influential Ashrams.</p>
                         </div>

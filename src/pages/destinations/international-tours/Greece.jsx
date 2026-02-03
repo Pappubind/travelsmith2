@@ -1,19 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
+import { Landmark, Waves, Sun, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Greece() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/santorini.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero greece-hero" style={{ background: 'url("/images/greece-santorini.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
-                    <h1>Magical Greece</h1>
-                    <p>Island hopping through the ancient history and sapphire waters of the Aegean.</p>
+                    <h1>Timeless Greece</h1>
+                    <p>From the ancient Acropolis to the blue vistas of Santorini.</p>
                 </div>
             </section>
 
@@ -53,20 +49,26 @@ export default function Greece() {
                 <div className="container">
                     <h2 className="text-center mb-5">Greek Odyssey</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
-                            <h3>Ancient Ruins</h3>
-                            <p>Step back in time at world-famous archaeological sites with expert guides.</p>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Landmark size={32} />
+                            </div>
+                            <h3>Ancient History</h3>
+                            <p>Private-access tours to the most influential ruins of Western civilization.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Waves size={32} />
+                            </div>
                             <h3>Island Hopping</h3>
-                            <p>Seamless luxury transfers between the Aegean's most beautiful islands.</p>
+                            <p>Luxury catamaran cruises across the turquoise waters of the Aegean.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
-                            <h3>Unbeatable Sunsets</h3>
-                            <p>Witness the world's most photographed sunsets from exclusive locations.</p>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Sun size={32} />
+                            </div>
+                            <h3>Aegean Luxury</h3>
+                            <p>Stay in world-class cave villas with infinity pools and caldera views.</p>
                         </div>
                     </div>
                 </div>

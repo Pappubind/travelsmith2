@@ -1,28 +1,22 @@
-/* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    height: 95vh;
+    min-height: 700px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/images/home_hero.jpg');
+    align-items: flex-start;
+    padding-top: 40px;
+    justify-content: flex-start;
+    background-image: url('/images/heronew.png');
     background-size: cover;
     background-position: center;
     color: var(--white);
     overflow: hidden;
+    border-bottom-left-radius: var(--radius-organic);
+    border-bottom-right-radius: var(--radius-organic);
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 0L100 50L50 100L0 50z" fill="rgba(255,255,255,0.03)"/></svg>');
-    background-size: 100px 100px;
-    opacity: 0.5;
+    content: none;
 }
 
 .hero-overlay {
@@ -31,55 +25,73 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: transparent;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    text-align: center;
-    max-width: 900px;
+    max-width: 600px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: 100%;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
-    color: var(--white);
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #051d2e;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
 }
 
 .hero-subtitle {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--white);
+    color: #051d2e;
     margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
 }
 
 .hero-description {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: #051d2e;
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
     flex-wrap: wrap;
     padding: 0 1rem;
 }
 
+/* Home page specific overrides to align hero text to the right */
+.home .hero-content {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+.home .hero h1,
+.home .hero-subtitle,
+.home .hero-description {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.home .hero-buttons {
+    justify-content: flex-start !important;
+}
+
 .btn-outline {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    border: 2px solid var(--white);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
     backdrop-filter: blur(10px);
 }
 
@@ -90,32 +102,42 @@
 
 /* About Intro Section */
 .about-intro {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
     align-items: center;
+    text-align: center;
+}
+
+.about-intro-content {
+    max-width: 900px;
 }
 
 .about-intro-content h2 {
     margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
 }
 
 .about-intro-content p {
-    color: var(--gray-600);
+    color: black;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 .about-intro-stats {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    width: 100%;
 }
 
 .stat-card {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    background: var(--primary-blue);
+    border: 1px solid var(--primary-blue-light);
     padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     text-align: center;
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -123,7 +145,7 @@
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
 }
 
@@ -141,8 +163,9 @@
 
 .stat-card p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--blue-50);
     margin: 0;
+    text-align: left !important;
 }
 
 /* Destinations Grid */
@@ -151,11 +174,16 @@
 }
 
 .destination-card {
+    flex: 0 0 350px;
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: var(--transition-base);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: grab;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .destination-card:hover {
@@ -164,25 +192,26 @@
 }
 
 .destination-image {
-    height: 250px;
+    height: 220px;
     background-size: cover;
     background-position: center;
+    width: 100%;
 }
 
 .goa-bg {
-    background-image: url('/images/goa_cruise_operations_1768319162428.png');
+    background-image: url('/images/goa_beach.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .india-bg {
-    background-image: url('/images/india_destinations_operations_1768319141419.png');
+    background-image: url('/images/chardham-yatra.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .international-bg {
-    background-image: url('/images/hero_global_operations_1768319114233.png');
+    background-image: url('/images/machu-picchu-ruins.webp');
     background-size: cover;
     background-position: center;
 }
@@ -210,23 +239,25 @@
 
 /* Feature Cards */
 .feature-card {
-    background: var(--white);
+    border-top: none;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
     padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     text-align: center;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--glass-shadow);
     transition: var(--transition-base);
-    border-top: 4px solid var(--primary-orange);
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    background: var(--white);
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 0 auto var(--spacing-md);
     display: flex;
     align-items: center;
@@ -234,6 +265,7 @@
     background: linear-gradient(135deg, var(--blue-50) 0%, var(--orange-50) 100%);
     border-radius: 50%;
     color: var(--primary-orange);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card h3 {
@@ -244,22 +276,22 @@
 .feature-card p {
     color: var(--gray-600);
     line-height: 1.7;
+    text-align: left;
 }
 
 /* Service Cards */
 .service-card {
     background: var(--white);
     padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
-    border-left: 4px solid var(--primary-blue);
+    border: 1px solid var(--gray-100);
 }
 
 .service-card:hover {
-    transform: translateX(5px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border-left-color: var(--primary-orange);
 }
 
 .service-icon {
@@ -276,6 +308,7 @@
     color: var(--gray-600);
     margin-bottom: var(--spacing-md);
     line-height: 1.7;
+    text-align: left;
 }
 
 .service-card a {
@@ -325,7 +358,7 @@
 }
 
 .hyderabad-bg {
-    background-image: url('/images/hyderabad.jpg');
+    background-image: url('/images/taj_mahal.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -349,6 +382,7 @@
     color: var(--gray-600);
     font-size: 0.95rem;
     margin-bottom: var(--spacing-sm);
+    text-align: left;
 }
 
 .package-link {
@@ -361,60 +395,98 @@
     color: var(--primary-orange);
 }
 
-/* Testimonials */
-.testimonials-grid {
+/* Video Testimonials on Home */
+.video-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
 }
 
-.testimonial-card {
+.video-card-home {
     background: var(--white);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
+    border: 1px solid var(--gray-100);
 }
 
-.testimonial-card:hover {
+.video-card-home:hover {
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
-    transform: translateY(-5px);
 }
 
-.testimonial-stars {
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info-home {
+    padding: var(--spacing-lg);
+    text-align: left;
+}
+
+.video-rating {
     display: flex;
     gap: 0.25rem;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
 }
 
-.testimonial-text {
-    color: var(--gray-700);
+.video-info-home h3 {
+    font-size: 1.25rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+.video-caption-home {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
     font-style: italic;
-    line-height: 1.7;
-    margin-bottom: var(--spacing-md);
+    text-align: left;
 }
 
-.testimonial-author {
-    display: flex;
-    flex-direction: column;
-    padding-top: var(--spacing-md);
-    border-top: 2px solid var(--gray-200);
+@media (max-width: 1024px) {
+    .video-grid-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.testimonial-author strong {
-    color: var(--gray-900);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.testimonial-author span {
-    color: var(--gray-500);
-    font-size: 0.9rem;
+@media (max-width: 640px) {
+    .video-grid-home {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    background: var(--primary-blue);
     color: var(--white);
     padding: var(--spacing-3xl) 0;
+    text-align: center;
+    border-top-left-radius: var(--radius-organic);
+    border-top-right-radius: var(--radius-organic);
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -422,12 +494,15 @@
     font-size: 2.5rem;
     color: var(--white);
     margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .cta-content p {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-xl);
+    text-align: left;
+    max-width: 800px;
 }
 
 .btn-lg {
@@ -462,7 +537,7 @@
     .hero {
         height: auto;
         min-height: 500px;
-        padding: var(--spacing-2xl) 0;
+        padding: 40px 0;
     }
 
     .hero h1 {
@@ -475,23 +550,31 @@
 
     .hero-description {
         font-size: 1rem;
-        padding: 0 1rem;
+        padding: 0;
+        text-align: left;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 1rem;
-        padding: 0 1rem;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0;
     }
 
     .hero-buttons .btn {
-        width: 100%;
-        max-width: 300px;
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+        min-width: 140px;
+        max-width: 100%;
         justify-content: center;
     }
 
     .stat-card h3 {
         font-size: 2rem;
+    }
+
+    .about-intro-stats {
+        grid-template-columns: 1fr;
     }
 
     .packages-grid {
@@ -515,15 +598,18 @@
 
     .hero h1 {
         font-size: 1.75rem;
-        padding: 0 0.5rem;
+        padding: 0;
+        margin-bottom: 0.5rem;
     }
 
     .hero-subtitle {
         font-size: 1.125rem;
+        margin-bottom: 0.75rem;
     }
 
     .hero-description {
         font-size: 0.9375rem;
+        margin-bottom: 1.25rem;
     }
 
     .hero-buttons .btn {
@@ -572,4 +658,183 @@
     .stat-card h3 {
         font-size: 1.5rem;
     }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .top-bar-item span {
+        font-size: 0.75rem;
+    }
+}
+
+/* Auto-Scrolling Tour Carousel */
+.auto-scroll-carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.auto-scroll-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-left 40s linear infinite;
+}
+
+.auto-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tour-carousel-card {
+    flex: 0 0 320px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: grab;
+    user-select: none;
+}
+
+.tour-carousel-card:active {
+    cursor: grabbing;
+}
+
+.tour-carousel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.tour-carousel-image {
+    height: 160px;
+    /* Reduced from 220px */
+    background-size: cover;
+    background-position: center;
+}
+
+.tour-carousel-content {
+    padding: 1rem;
+    /* Reduced from 1.5rem */
+}
+
+.tour-carousel-content h4 {
+    font-size: 1.15rem;
+    /* Slightly smaller */
+    color: var(--primary-blue);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.tour-carousel-content p {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    /* Slightly smaller */
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.tour-carousel-link {
+    color: var(--primary-orange);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.auto-scroll-carousel {
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 0;
+    scroll-behavior: auto;
+    /* Required for precise JS-driven infinite scroll */
+    cursor: grab;
+}
+
+.auto-scroll-carousel::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
+
+.auto-scroll-carousel:active {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    /* Disable smooth scroll during drag */
+}
+
+.auto-scroll-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    padding-right: 1.5rem;
+    /* Ensures total scrollWidth is exactly 2x the set width (11 cards + 11 gaps) */
+}
+
+/* Auto-scroll pause is now handled via JS props onMouseEnter/onMouseLeave */
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+    .tour-carousel-card {
+        flex: 0 0 260px;
+    }
+
+    .tour-carousel-image {
+        height: 140px;
+    }
+
 }

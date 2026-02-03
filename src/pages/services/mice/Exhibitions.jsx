@@ -5,9 +5,10 @@ import '../ServiceDetail.css';
 export default function Exhibitions() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/exhibitions_hero.jpg") no-repeat center/cover' }}>
+            <section className="service-hero exhibition-hero" style={{ background: 'url("/images/exhibitions_hero.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container">
-                    <h1 style={{ color: 'white' }}>Trade Shows & Exhibitions</h1>
+                    <h1>Trade Shows & Exhibitions</h1>
                     <p>Dynamic product launches, trade fairs, and exhibit design that captures attention.</p>
                 </div>
             </section>
@@ -40,18 +41,24 @@ export default function Exhibitions() {
                 <div className="container">
                     <h2 className="text-center mb-5">Our Exhibition Services</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Layout className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Layout size={32} />
+                            </div>
                             <h3>Design & Space</h3>
                             <p>Innovative stall designs that optimize flow and visitor engagement.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Rocket className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Rocket size={32} />
+                            </div>
                             <h3>Product Launches</h3>
                             <p>Strategic setup and production for high-impact product unveilings.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Users size={32} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Users size={32} />
+                            </div>
                             <h3>Lead Management</h3>
                             <p>Integration of tech solutions for visitor tracking and lead generation.</p>
                         </div>

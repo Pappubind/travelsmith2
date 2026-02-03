@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function EnchantingNepal() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/nepal_valley.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero nepal-hero" style={{ background: 'url("/images/nepal_valley.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Enchanting Nepal</h1>
                     <p>A journey through the spiritual peaks and vibrant cultures of the Himalayas.</p>
@@ -48,18 +49,24 @@ export default function EnchantingNepal() {
                 <div className="container">
                     <h2 className="text-center mb-5">Nepal Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Mountain className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
                             <h3>Himalayan Views</h3>
                             <p>Witness the world's highest peaks from exclusive vantage points.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <MapPin className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <MapPin size={32} />
+                            </div>
                             <h3>Sacred Temples</h3>
                             <p>Explore centuries-old architecture in Patan and Bhaktapur.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Wind className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Wind size={32} />
+                            </div>
                             <h3>Pokhara Retreat</h3>
                             <p>Complete relaxation in Nepal's primary adventure and leisure hub.</p>
                         </div>

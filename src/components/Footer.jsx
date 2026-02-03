@@ -13,7 +13,7 @@ export default function Footer() {
                     {/* Company Description */}
                     <div className="footer-section">
                         <Link to="/" className="footer-logo-link">
-                            <img src={logo} alt="TravelSmith Logo" className="footer-logo-img" style={{ maxHeight: '50px', marginBottom: '1rem' }} />
+                            <img src={logo} alt="TravelSmith Logo" className="footer-logo-img" style={{ maxHeight: '130px', marginBottom: '1.5rem', width: 'auto' }} />
                         </Link>
                         <p className="footer-description">
                             Your trusted Destination Management Company crafting safe, personalized,
@@ -37,6 +37,7 @@ export default function Footer() {
                         <ul className="footer-links">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/why-travelsmith">Why Travelsmith</Link></li>
                             <li><Link to="/packages">Packages</Link></li>
                             <li><Link to="/testimonials">Testimonials</Link></li>
                             <li><Link to="/gallery">Gallery</Link></li>
@@ -93,7 +94,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} TravelSmith. All rights reserved.</p>
+                    <p>&copy; {currentYear} TravelSmith. All rights reserved. | Developed by <a href="https://karmaveon.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-orange)', fontWeight: '600' }}>Karmaveon Technologies</a></p>
                 </div>
             </div>
         </footer>

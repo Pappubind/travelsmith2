@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Star } from 'lucide-react';
 import './Testimonials.css';
 
@@ -47,6 +48,30 @@ export default function Testimonials() {
         }
     ];
 
+    const videoTestimonials = [
+        {
+            id: 1,
+            title: "Expertly Planned Goa Vacation",
+            videoId: "dQw4w9WgXcQ",
+            rating: 5,
+            caption: "Our group had an amazing time exploring hidden gems in Goa. The logistics were flawless and the local guide was exceptional."
+        },
+        {
+            id: 2,
+            title: "A Dream Destination Wedding",
+            videoId: "dQw4w9WgXcQ",
+            rating: 5,
+            caption: "TravelSmith turned our wedding vision into reality. Every detail from the decor to guest comfort was handled with perfection."
+        },
+        {
+            id: 3,
+            title: "Seamless Corporate Conference",
+            videoId: "dQw4w9WgXcQ",
+            rating: 5,
+            caption: "Professional, efficient, and proactive. Our annual conference was a huge success thanks to the incredible team at TravelSmith."
+        },
+    ];
+
     return (
         <div className="testimonials-page">
             {/* Hero */}
@@ -69,7 +94,7 @@ export default function Testimonials() {
                                             key={idx}
                                             fill="var(--primary-orange)"
                                             stroke="var(--primary-orange)"
-                                            size={20}
+                                            size={18}
                                         />
                                     ))}
                                 </div>
@@ -86,12 +111,51 @@ export default function Testimonials() {
                 </div>
             </section>
 
+            {/* Video Testimonials */}
+            <section className="section-gray">
+                <div className="container">
+                    <h2 className="section-title">Video Stories</h2>
+                    <p className="section-subtitle text-center">Real experiences shared by our valued clients</p>
+                    <div className="video-grid">
+                        {videoTestimonials.map(video => (
+                            <div key={video.id} className="video-card">
+                                <div className="video-wrapper">
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${video.videoId}`}
+                                        title={video.title}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                                <div className="video-info">
+                                    <div className="video-rating">
+                                        {[...Array(video.rating)].map((_, idx) => (
+                                            <Star
+                                                key={idx}
+                                                fill="var(--primary-orange)"
+                                                stroke="var(--primary-orange)"
+                                                size={16}
+                                            />
+                                        ))}
+                                    </div>
+                                    <h3>{video.title}</h3>
+                                    <p className="video-caption">{video.caption}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="testimonials-cta">
                 <div className="container">
                     <h2>Ready to Create Your Own Story?</h2>
                     <p>Join thousands of happy travelers who trust TravelSmith</p>
-                    <a href="/contact" className="btn btn-primary btn-lg">Start Your Journey</a>
+                    <div className="hero-buttons">
+                        <Link to="/contact" className="btn btn-secondary">Talk to Our Team</Link>
+                        <Link to="/contact" className="btn btn-primary btn-lg">Get a Quote</Link>
+                    </div>
                 </div>
             </section>
         </div>

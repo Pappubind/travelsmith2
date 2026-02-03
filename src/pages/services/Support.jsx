@@ -10,9 +10,10 @@ export default function Support() {
                 description="Comprehensive travel support services in Goa and across India. Expert assistance with visas, insurance, concierge, and luxury transport for a seamless journey."
                 keywords="Travel Support India, Visa Assistance Goa, Travel Concierge India, TravelSmith Support"
             />
-            <section className="service-hero support-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/travel_support_hero_premium.png") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Travel Support</h1>
+            <section className="service-hero support-hero" style={{ background: 'url("/images/travel_support_hero_premium.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Travel Support</h1>
                     <p>End-to-End Assistance for a Seamless Journey</p>
                 </div>
             </section>
@@ -49,18 +50,24 @@ export default function Support() {
                 <div className="container">
                     <h2 className="text-center mb-5">Support Pillars</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4">
-                            <Car size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Car size={40} />
+                            </div>
                             <h3>Fleet Services</h3>
                             <p>From luxury sedans to large coaches for groups of any size.</p>
                         </div>
-                        <div className="card p-4">
-                            <Globe size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Globe size={40} />
+                            </div>
                             <h3>Documentation</h3>
                             <p>Expert handling of visa, passports, and travel documentation.</p>
                         </div>
-                        <div className="card p-4">
-                            <Headphones size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Headphones size={40} />
+                            </div>
                             <h3>VIP Support</h3>
                             <p>Personalized concierge and dedicated travel advisors.</p>
                         </div>

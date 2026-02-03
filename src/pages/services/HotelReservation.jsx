@@ -10,9 +10,10 @@ export default function HotelReservation() {
                 description="Secure the best rates for luxury hotels and boutique resorts in Goa and globally. Exclusive deals and seamless booking service for corporate and leisure travel."
                 keywords="Hotel Booking Goa, Luxury Resorts Goa, TravelSmith Reservations, Hotel Deals India"
             />
-            <section className="service-hero hotel-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/hotel_hero.jpg") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Worldwide Hotel Reservation</h1>
+            <section className="service-hero hotel-hero" style={{ background: 'url("/images/hotel_hero.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Worldwide Hotel Reservation</h1>
                     <p>Exclusive Rates and Seamless Bookings at Premier Properties Globally</p>
                 </div>
             </section>
@@ -47,18 +48,24 @@ export default function HotelReservation() {
                 <div className="container">
                     <h2 className="text-center mb-5">Why Book With Us?</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Globe size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Globe size={40} />
+                            </div>
                             <h3>Global Network</h3>
                             <p>Partnerships with leading hotel chains and boutique properties worldwide.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <DollarSign size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <DollarSign size={40} />
+                            </div>
                             <h3>Exclusive Rates</h3>
                             <p>Access to negotiated prices that are not available to the general public.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Headphones size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Headphones size={40} />
+                            </div>
                             <h3>24/7 Support</h3>
                             <p>Dedicated assistance for cancellations, modifications, and special requests.</p>
                         </div>

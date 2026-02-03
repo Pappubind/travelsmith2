@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function NorthAmerica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/new_york.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero north-america-hero" style={{ background: 'url("/images/new_york.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>The Best of North America</h1>
                     <p>Scale the New York skyline and explore the natural wonders of the West Coast.</p>
@@ -53,18 +49,24 @@ export default function NorthAmerica() {
                 <div className="container">
                     <h2 className="text-center mb-5">American Wonders</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Urban Luxury</h3>
                             <p>The best shopping, dining, and hospitality New York and LA have to offer.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Natural Giants</h3>
                             <p>Explore Yosemite, Yellowstone, and the Grand Canyon with expert guides.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Iconic Routes</h3>
                             <p>Drive the Pacific Coast Highway or Route 66 in premium vehicles.</p>
                         </div>

@@ -23,7 +23,7 @@ export default function India() {
 
                     <div className="grid grid-2 india-regions">
                         {/* North India */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>North India</h3>
                             <div className="region-content">
                                 <ul>
@@ -36,7 +36,7 @@ export default function India() {
                         </div>
 
                         {/* South India */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>South India</h3>
                             <div className="region-content">
                                 <ul>
@@ -49,7 +49,7 @@ export default function India() {
                         </div>
 
                         {/* West India */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>West India</h3>
                             <div className="region-content">
                                 <ul>
@@ -62,7 +62,7 @@ export default function India() {
                         </div>
 
                         {/* East & North-East */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>East & North-East India</h3>
                             <div className="region-content">
                                 <ul>
@@ -148,20 +148,20 @@ export default function India() {
                 <div className="container">
                     <h2 className="section-title">Luxury Experience Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">🏰</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>🏰</div>
                             <h3>Heritage Hotels</h3>
                             <p>Stay in palatial heritage properties and luxury resorts</p>
                         </div>
 
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">🚂</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>🚂</div>
                             <h3>Luxury Trains</h3>
                             <p>Royal journeys on Palace on Wheels & Maharaja Express</p>
                         </div>
 
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">🍽️</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>🍽️</div>
                             <h3>Fine Dining</h3>
                             <p>Gourmet experiences at Michelin-starred restaurants</p>
                         </div>

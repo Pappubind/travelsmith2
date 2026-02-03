@@ -128,6 +128,7 @@
     line-height: 1.9;
     color: var(--gray-700);
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .post-body ul {

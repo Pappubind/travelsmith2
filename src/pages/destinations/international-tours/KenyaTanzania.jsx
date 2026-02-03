@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function KenyaTanzania() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/safari.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero kenya-hero" style={{ background: 'url("/images/safari.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Spectacular Kenya & Tanzania</h1>
                     <p>Witness the Great Migration and the majestic wildlife of East Africa.</p>
@@ -53,18 +49,24 @@ export default function KenyaTanzania() {
                 <div className="container">
                     <h2 className="text-center mb-5">Safari Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>The Big Five</h3>
                             <p>High chances of spotting Lion, Leopard, Elephant, Buffalo, and Rhino.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Great Migration</h3>
                             <p>The spectacular movement of millions of wildebeest across the plains.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Landscape Views</h3>
                             <p>Infinite horizons and the iconic Acacia-dotted landscape of the Serengeti.</p>
                         </div>

@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function Kashmir() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/Kashmir-Tourism-Best-of-Kashmir.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero kashmir-hero" style={{ background: 'url("/images/Kashmir-Tourism-Best-of-Kashmir.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Glorious Kashmir</h1>
                     <p>Experience Paradise on Earth with our premium luxury tours.</p>
@@ -48,18 +49,24 @@ export default function Kashmir() {
                 <div className="container">
                     <h2 className="text-center mb-5">Tour Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Mountain className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
                             <h3>Gulmarg Peaks</h3>
                             <p>One of the world's highest cable car rides with stunning Himalayan views.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Luxury Houseboats</h3>
                             <p>Experience the heritage of staying on water with modern luxury amenities.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Scenic Meadows</h3>
                             <p>Perfect for photography enthusiasts and nature lovers alike.</p>
                         </div>

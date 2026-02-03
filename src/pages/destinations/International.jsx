@@ -23,7 +23,7 @@ export default function International() {
 
                     <div className="grid grid-2 international-regions">
                         {/* Europe */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>🇪🇺 Europe</h3>
                             <div className="region-content">
                                 <ul>
@@ -38,7 +38,7 @@ export default function International() {
                         </div>
 
                         {/* Asia */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>🌏 Asia</h3>
                             <div className="region-content">
                                 <ul>
@@ -52,7 +52,7 @@ export default function International() {
                         </div>
 
                         {/* Americas */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>🌎 Americas</h3>
                             <div className="region-content">
                                 <ul>
@@ -65,7 +65,7 @@ export default function International() {
                         </div>
 
                         {/* Other Regions */}
-                        <div className="region-card">
+                        <div className="region-card glass-card">
                             <h3>🌍 Australia & More</h3>
                             <div className="region-content">
                                 <ul>
@@ -178,20 +178,20 @@ export default function International() {
                 <div className="container">
                     <h2 className="section-title">Special International Experiences</h2>
                     <div className="grid grid-3">
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">🚢</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>🚢</div>
                             <h3>Luxury Cruises</h3>
                             <p>Mediterranean, Caribbean, and Alaskan cruise experiences</p>
                         </div>
 
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">🏝️</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>🏝️</div>
                             <h3>Island Getaways</h3>
                             <p>Maldives, Seychelles, Bali, and Caribbean islands</p>
                         </div>
 
-                        <div className="feature-highlight">
-                            <div className="highlight-icon">✈️</div>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box" style={{ fontSize: '2rem' }}>✈️</div>
                             <h3>Customized Itineraries</h3>
                             <p>Tailor-made tours designed to your preferences</p>
                         </div>

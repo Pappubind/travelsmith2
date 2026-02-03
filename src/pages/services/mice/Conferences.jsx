@@ -5,14 +5,10 @@ import '../ServiceDetail.css';
 export default function Conferences() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/conferences_hero.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="service-hero conferences-hero" style={{ background: 'url("/images/conferences_hero.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container">
-                    <h1 style={{ color: 'white' }}>World-Class Conferences</h1>
+                    <h1>World-Class Conferences</h1>
                     <p>End-to-end management for professional congresses, seminars, and corporate conventions.</p>
                 </div>
             </section>
@@ -45,18 +41,24 @@ export default function Conferences() {
                 <div className="container">
                     <h2 className="text-center mb-5">Conference Solutions</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Mic className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Mic size={32} />
+                            </div>
                             <h3>Audio Visual</h3>
                             <p>State-of-the-art sound, lighting, and presentation technology for high impact.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Global Reach</h3>
                             <p>Experience handling international delegations and multi-language requirements.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Building2 className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Building2 size={32} />
+                            </div>
                             <h3>Modern Venues</h3>
                             <p>Access to the newest convention centers and professional business hotels.</p>
                         </div>

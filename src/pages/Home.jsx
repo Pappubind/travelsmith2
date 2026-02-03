@@ -1,9 +1,83 @@
+import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Plane, Shield, DollarSign, Award, Users, Heart, Star } from 'lucide-react';
+import { Plane, Shield, DollarSign, Award, Users, Heart, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import Counter from '../components/Counter';
 import './Home.css';
 
 export default function Home() {
+    const scrollRef = useRef(null);
+    const isDragging = useRef(false);
+    const isHovered = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+
+    useEffect(() => {
+        const scrollContainer = scrollRef.current;
+        if (!scrollContainer) return;
+
+        let animationFrameId;
+
+        const autoScroll = () => {
+            if (!scrollContainer) return;
+
+            if (!isDragging.current && !isHovered.current) {
+                // Smooth constant increment
+                scrollContainer.scrollLeft += 0.5; // Reduced speed for a more relaxed feel
+
+                const totalWidth = scrollContainer.scrollWidth;
+                const halfWidth = totalWidth / 2;
+
+                if (halfWidth > 0 && scrollContainer.scrollLeft >= halfWidth) {
+                    scrollContainer.scrollLeft -= halfWidth;
+                }
+            }
+            animationFrameId = requestAnimationFrame(autoScroll);
+        };
+
+        animationFrameId = requestAnimationFrame(autoScroll);
+        return () => {
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        };
+    }, []);
+
+    const handleMouseDown = (e) => {
+        isDragging.current = true;
+        startX.current = e.pageX - scrollRef.current.offsetLeft;
+        scrollLeft.current = scrollRef.current.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+        isDragging.current = false;
+    };
+
+    const handleMouseUp = () => {
+        isDragging.current = false;
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging.current) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX.current) * 2;
+        const newScrollLeft = scrollLeft.current - walk;
+
+        const halfWidth = scrollRef.current.scrollWidth / 2;
+
+        // Handle wrapping during drag
+        if (newScrollLeft >= halfWidth) {
+            scrollRef.current.scrollLeft = newScrollLeft - halfWidth;
+            startX.current = e.pageX - scrollRef.current.offsetLeft; // Reset reference
+            scrollLeft.current = scrollRef.current.scrollLeft;
+        } else if (newScrollLeft < 0) {
+            scrollRef.current.scrollLeft = newScrollLeft + halfWidth;
+            startX.current = e.pageX - scrollRef.current.offsetLeft; // Reset reference
+            scrollLeft.current = scrollRef.current.scrollLeft;
+        } else {
+            scrollRef.current.scrollLeft = newScrollLeft;
+        }
+    };
+
     return (
         <div className="home">
             <SEO
@@ -22,8 +96,8 @@ export default function Home() {
                         and international destinations since 2012.
                     </p>
                     <div className="hero-buttons animate-fade-in">
-                        <Link to="/destinations/goa" className="btn btn-primary">Explore Destinations</Link>
-                        <Link to="/contact" className="btn btn-outline">Plan With Us</Link>
+                        <Link to="/destinations/goa" className="btn btn-primary">Get a Quote</Link>
+                        <Link to="/contact" className="btn btn-outline">Talk to Our Team</Link>
                     </div>
                 </div>
             </section>
@@ -37,31 +111,36 @@ export default function Home() {
                             <p>
                                 Established in <strong>2012</strong>, TravelSmith has emerged as a premier
                                 <strong> Destination Management Company (DMC)</strong> specializing in creating
-                                unforgettable travel experiences.
+                                unforgettable, safe, and personalized travel experiences. Based in the scenic heart of Goa,
+                                we bridge the gap between local nuances and global standards, ensuring every journey
+                                we curate is nothing short of extraordinary.
                             </p>
                             <p>
-                                We are recognized by the <strong>Department of Tourism Goa</strong>,
-                                members of <strong>IATO</strong> and <strong>TTAG</strong>, and pride ourselves
-                                on our expertise in <strong>cruise liner ground handling</strong> and delivering
-                                personalized service across corporate and leisure travel.
+                                We are officially recognized by the <strong>Department of Tourism Goa</strong> and hold
+                                prestigious memberships with <strong>IATO</strong> and <strong>TTAG</strong>. Our
+                                signature expertise in <strong>cruise liner ground handling</strong> and high-end
+                                <strong> M.I.C.E management</strong> has made us the trusted partner for international
+                                tour operators and corporate giants alike. Whether it's a bespoke leisure tour,
+                                a grand destination wedding, or seamless airport logistics, we deliver with
+                                unwavering precision and local flair.
                             </p>
                             <Link to="/about" className="btn btn-primary">Learn More About Us</Link>
                         </div>
                         <div className="about-intro-stats">
                             <div className="stat-card">
                                 <Award size={40} className="stat-icon" />
-                                <h3>12+ Years</h3>
-                                <p>Experience</p>
+                                <h3><Counter end={12} suffix="+" /> Years</h3>
+                                <p style={{ textAlign: "-khtml-center" }}>Experience</p>
                             </div>
                             <div className="stat-card">
                                 <Users size={40} className="stat-icon" />
-                                <h3>5000+</h3>
-                                <p>Happy Clients</p>
+                                <h3><Counter end={5000} suffix="+" /></h3>
+                                <p style={{ textAlign: "-khtml-center" }}>Happy Clients</p>
                             </div>
                             <div className="stat-card">
                                 <Heart size={40} className="stat-icon" />
-                                <h3>100%</h3>
-                                <p>Customer Satisfaction</p>
+                                <h3><Counter end={100} suffix="%" /></h3>
+                                <p style={{ textAlign: "-khtml-center" }}>Customer Satisfaction</p>
                             </div>
                         </div>
                     </div>
@@ -76,49 +155,337 @@ export default function Home() {
                         From pristine beaches to heritage wonders and global adventures
                     </p>
 
-                    <div className="grid grid-3 destinations-grid">
-                        {/* Goa */}
-                        <div className="destination-card">
-                            <div className="destination-image goa-bg"></div>
-                            <div className="destination-content">
-                                <h3>Goa</h3>
-                                <ul className="destination-features">
-                                    <li>🏖️ Pristine Beaches</li>
-                                    <li>⛪ Historic Temples & Churches</li>
-                                    <li>🌅 Scenic Beauty</li>
-                                    <li>🎉 Vibrant Nightlife</li>
-                                </ul>
-                                <Link to="/destinations/goa" className="btn btn-primary">Explore Goa</Link>
+                    <div
+                        className="auto-scroll-carousel"
+                        style={{ marginTop: '2rem' }}
+                        ref={scrollRef}
+                        onMouseDown={handleMouseDown}
+                        onMouseLeave={() => { handleMouseLeave(); isHovered.current = false; }}
+                        onMouseEnter={() => { isHovered.current = true; }}
+                        onMouseUp={handleMouseUp}
+                        onMouseMove={handleMouseMove}
+                    >
+                        <div className="auto-scroll-track">
+                            {/* Specified Destinations */}
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/dudhsagar_waterfalls_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Dudhsagar Waterfalls</h3>
+                                    <ul className="destination-features">
+                                        <li>🌊 Milky Splendor</li>
+                                        <li>🚜 Off-road Jeep Drive</li>
+                                        <li>🏊 Cool Spring Swim</li>
+                                        <li>🐒 Jungle Experience</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Falls <ArrowRight size={18} />
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* India */}
-                        <div className="destination-card">
-                            <div className="destination-image india-bg"></div>
-                            <div className="destination-content">
-                                <h3>India</h3>
-                                <ul className="destination-features">
-                                    <li>🏰 Premium Heritage Tours</li>
-                                    <li>⛰️ High-End Destinations</li>
-                                    <li>🕌 Cultural Experiences</li>
-                                    <li>✨ Luxury Circuits</li>
-                                </ul>
-                                <Link to="/destinations/india" className="btn btn-primary">Explore India</Link>
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/fishing_trip_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Fishing Trip</h3>
+                                    <ul className="destination-features">
+                                        <li>🎣 Deep Sea Trawling</li>
+                                        <li>🚢 Trawling Experience</li>
+                                        <li>🔥 Catch & Grill Barbeque</li>
+                                        <li>🌊 Arabian Sea Journey</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Fishing <ArrowRight size={18} />
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* International */}
-                        <div className="destination-card">
-                            <div className="destination-image international-bg"></div>
-                            <div className="destination-content">
-                                <h3>International</h3>
-                                <ul className="destination-features">
-                                    <li>🌍 Global Destinations</li>
-                                    <li>🏨 Luxury Accommodations</li>
-                                    <li>🚢 Cruise Experiences</li>
-                                    <li>✈️ Curated Itineraries</li>
-                                </ul>
-                                <Link to="/destinations/international" className="btn btn-primary">Explore International</Link>
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/dandeli_wildlife_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Dandeli Wildlife</h3>
+                                    <ul className="destination-features">
+                                        <li>🐆 Jungle Safari</li>
+                                        <li>🛶 White Water Rafting</li>
+                                        <li>🌲 Lush Green Forests</li>
+                                        <li>🦉 Rare Bird Species</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Dandeli <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/hampi_ruins_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Hampi Tour</h3>
+                                    <ul className="destination-features">
+                                        <li>🏛️ Ancient Ruins</li>
+                                        <li>🏰 Vijayanagara Legacy</li>
+                                        <li>🗿 Stone Architecture</li>
+                                        <li>🌅 Breathtaking Sunsets</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Hampi <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/kayaking_goa_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Kayaking</h3>
+                                    <ul className="destination-features">
+                                        <li>🚣‍♂️ Mangrove Expeditions</li>
+                                        <li>🌅 Solitude & Serenity</li>
+                                        <li>🦋 Backwater Life</li>
+                                        <li>🛶 Quiet River Trails</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Kayaking <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/diving_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Diving</h3>
+                                    <ul className="destination-features">
+                                        <li>🤿 Under Water World</li>
+                                        <li>🪸 Attractive Corals</li>
+                                        <li>🚢 Ship Wreckages</li>
+                                        <li>🛡️ Safe for Beginners</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Diving <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/island_fantasy_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Island Fantasy</h3>
+                                    <ul className="destination-features">
+                                        <li>🐬 Dolphin Spotting</li>
+                                        <li>🤿 Snorkeling Fun</li>
+                                        <li>🏝️ Grande Island Visit</li>
+                                        <li>🔥 Beach Barbeque</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Island <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image goa-bg"></div>
+                                <div className="destination-content">
+                                    <h3>Goa</h3>
+                                    <ul className="destination-features">
+                                        <li>🏖️ Pristine Beaches</li>
+                                        <li>⛪ Historic Temples & Churches</li>
+                                        <li>🌅 Scenic Beauty</li>
+                                        <li>🎉 Vibrant Nightlife</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Goa <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image india-bg"></div>
+                                <div className="destination-content">
+                                    <h3>India</h3>
+                                    <ul className="destination-features">
+                                        <li>🏰 Premium Heritage Tours</li>
+                                        <li>⛰️ High-End Destinations</li>
+                                        <li>🕌 Cultural Experiences</li>
+                                        <li>✨ Luxury Circuits</li>
+                                    </ul>
+                                    <Link to="/destinations/india" className="btn btn-primary">
+                                        Explore India <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image international-bg"></div>
+                                <div className="destination-content">
+                                    <h3>International</h3>
+                                    <ul className="destination-features">
+                                        <li>🌍 Global Destinations</li>
+                                        <li>🏨 Luxury Accommodations</li>
+                                        <li>🚢 Cruise Experiences</li>
+                                        <li>✈️ Curated Itineraries</li>
+                                    </ul>
+                                    <Link to="/destinations/international" className="btn btn-primary">
+                                        Explore International <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Duplicate set for seamless loop */}
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/dudhsagar_waterfalls_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Dudhsagar Waterfalls</h3>
+                                    <ul className="destination-features">
+                                        <li>🌊 Milky Splendor</li>
+                                        <li>🚜 Off-road Jeep Drive</li>
+                                        <li>🏊 Cool Spring Swim</li>
+                                        <li>🐒 Jungle Experience</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Falls <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/fishing_trip_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Fishing Trip</h3>
+                                    <ul className="destination-features">
+                                        <li>🎣 Deep Sea Trawling</li>
+                                        <li>🚢 Trawling Experience</li>
+                                        <li>🔥 Catch & Grill Barbeque</li>
+                                        <li>🌊 Arabian Sea Journey</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Fishing <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/dandeli_wildlife_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Dandeli Wildlife</h3>
+                                    <ul className="destination-features">
+                                        <li>🐆 Jungle Safari</li>
+                                        <li>🛶 White Water Rafting</li>
+                                        <li>🌲 Lush Green Forests</li>
+                                        <li>🦉 Rare Bird Species</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Dandeli <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/hampi_ruins_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Hampi Tour</h3>
+                                    <ul className="destination-features">
+                                        <li>🏛️ Ancient Ruins</li>
+                                        <li>🏰 Vijayanagara Legacy</li>
+                                        <li>🗿 Stone Architecture</li>
+                                        <li>🌅 Breathtaking Sunsets</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Hampi <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/kayaking_goa_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Kayaking</h3>
+                                    <ul className="destination-features">
+                                        <li>🚣‍♂️ Mangrove Expeditions</li>
+                                        <li>🌅 Solitude & Serenity</li>
+                                        <li>🦋 Backwater Life</li>
+                                        <li>🛶 Quiet River Trails</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Kayaking <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/diving_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Diving</h3>
+                                    <ul className="destination-features">
+                                        <li>🤿 Under Water World</li>
+                                        <li>🪸 Attractive Corals</li>
+                                        <li>🚢 Ship Wreckages</li>
+                                        <li>🛡️ Safe for Beginners</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Diving <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image" style={{ backgroundImage: 'url(/images/island_fantasy_custom.png)' }} />
+                                <div className="destination-content">
+                                    <h3>Island Fantasy</h3>
+                                    <ul className="destination-features">
+                                        <li>🐬 Dolphin Spotting</li>
+                                        <li>🤿 Snorkeling Fun</li>
+                                        <li>🏝️ Grande Island Visit</li>
+                                        <li>🔥 Beach Barbeque</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Island <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image goa-bg"></div>
+                                <div className="destination-content">
+                                    <h3>Goa</h3>
+                                    <ul className="destination-features">
+                                        <li>🏖️ Pristine Beaches</li>
+                                        <li>⛪ Historic Temples & Churches</li>
+                                        <li>🌅 Scenic Beauty</li>
+                                        <li>🎉 Vibrant Nightlife</li>
+                                    </ul>
+                                    <Link to="/destinations/goa" className="btn btn-primary">
+                                        Explore Goa <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image india-bg"></div>
+                                <div className="destination-content">
+                                    <h3>India</h3>
+                                    <ul className="destination-features">
+                                        <li>🏰 Premium Heritage Tours</li>
+                                        <li>⛰️ High-End Destinations</li>
+                                        <li>🕌 Cultural Experiences</li>
+                                        <li>✨ Luxury Circuits</li>
+                                    </ul>
+                                    <Link to="/destinations/india" className="btn btn-primary">
+                                        Explore India <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="destination-card">
+                                <div className="destination-image international-bg"></div>
+                                <div className="destination-content">
+                                    <h3>International</h3>
+                                    <ul className="destination-features">
+                                        <li>🌍 Global Destinations</li>
+                                        <li>🏨 Luxury Accommodations</li>
+                                        <li>🚢 Cruise Experiences</li>
+                                        <li>✈️ Curated Itineraries</li>
+                                    </ul>
+                                    <Link to="/destinations/international" className="btn btn-primary">
+                                        Explore International <ArrowRight size={18} />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,118 +577,82 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Featured Packages */}
-            <section className="section-light">
-                <div className="container">
-                    <h2 className="section-title">Featured Packages</h2>
-                    <p className="section-subtitle">Handpicked destinations for your next adventure</p>
-
-                    <div className="grid grid-4 packages-grid">
-                        <div className="package-card">
-                            <div className="package-image kashmir-bg"></div>
-                            <div className="package-content">
-                                <h3>Jammu & Kashmir</h3>
-                                <p>Experience heaven on earth with stunning valleys and serene lakes.</p>
-                                <Link to="/packages" className="package-link">Know More →</Link>
-                            </div>
-                        </div>
-
-                        <div className="package-card">
-                            <div className="package-image goa-package-bg"></div>
-                            <div className="package-content">
-                                <h3>Goa</h3>
-                                <p>Sun, sand, and sea with vibrant culture and historic charm.</p>
-                                <Link to="/packages" className="package-link">Know More →</Link>
-                            </div>
-                        </div>
-
-                        <div className="package-card">
-                            <div className="package-image hyderabad-bg"></div>
-                            <div className="package-content">
-                                <h3>Hyderabad</h3>
-                                <p>Discover the city of pearls with rich heritage and modern marvels.</p>
-                                <Link to="/packages" className="package-link">Know More →</Link>
-                            </div>
-                        </div>
-
-                        <div className="package-card">
-                            <div className="package-image rajasthan-bg"></div>
-                            <div className="package-content">
-                                <h3>Rajasthan</h3>
-                                <p>Royal palaces, desert safaris, and colorful cultural experiences.</p>
-                                <Link to="/packages" className="package-link">Know More →</Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="text-center mt-5">
-                        <Link to="/packages" className="btn btn-primary">View All Packages</Link>
-                    </div>
-                </div>
-            </section>
 
             {/* Testimonials */}
             <section className="section-gray">
                 <div className="container">
-                    <h2 className="section-title">What Our Clients Say</h2>
-                    <div className="grid grid-3 testimonials-grid">
-                        <div className="testimonial-card">
-                            <div className="testimonial-stars">
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
+                    <h2 className="section-title">Happy Travelers</h2>
+                    <p className="section-subtitle">Watch our clients share their TravelSmith journey</p>
+                    <div className="video-grid-home">
+                        <div className="video-card-home">
+                            <div className="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    title="Expertly Planned Goa Vacation"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
-                            <p className="testimonial-text">
-                                "TravelSmith made our Goa vacation absolutely unforgettable! Their attention to
-                                detail and personalized service exceeded all expectations."
-                            </p>
-                            <div className="testimonial-author">
-                                <strong>Amit Naik</strong>
-                                <span>Mumbai, India</span>
-                            </div>
-                        </div>
-
-                        <div className="testimonial-card">
-                            <div className="testimonial-stars">
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                            </div>
-                            <p className="testimonial-text">
-                                "Professional, reliable, and truly caring. Our destination wedding was flawlessly
-                                executed. Thank you TravelSmith!"
-                            </p>
-                            <div className="testimonial-author">
-                                <strong>Alisha Dias</strong>
-                                <span>Pune, India</span>
+                            <div className="video-info-home">
+                                <div className="video-rating">
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                </div>
+                                <h3>Expertly Planned Goa Vacation</h3>
+                                <p className="video-caption-home">"Our group had an amazing time exploring hidden gems in Goa. The logistics were flawless."</p>
                             </div>
                         </div>
 
-                        <div className="testimonial-card">
-                            <div className="testimonial-stars">
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
-                                <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={20} />
+                        <div className="video-card-home">
+                            <div className="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    title="A Dream Destination Wedding"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
-                            <p className="testimonial-text">
-                                "Outstanding MICE management for our corporate event. Every detail was handled
-                                with precision and professionalism."
-                            </p>
-                            <div className="testimonial-author">
-                                <strong>Ajay Kamat</strong>
-                                <span>Bangalore, India</span>
+                            <div className="video-info-home">
+                                <div className="video-rating">
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                </div>
+                                <h3>A Dream Destination Wedding</h3>
+                                <p className="video-caption-home">"TravelSmith turned our wedding vision into reality. Every detail was handled with perfection."</p>
+                            </div>
+                        </div>
+
+                        <div className="video-card-home">
+                            <div className="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    title="Seamless Corporate Conference"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="video-info-home">
+                                <div className="video-rating">
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                    <Star fill="var(--primary-orange)" stroke="var(--primary-orange)" size={16} />
+                                </div>
+                                <h3>Seamless Corporate Conference</h3>
+                                <p className="video-caption-home">"Professional, efficient, and proactive. Our annual conference was a huge success."</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="text-center mt-5">
-                        <Link to="/testimonials" className="btn btn-secondary">Read More Testimonials</Link>
+                        <Link to="/testimonials" className="btn btn-secondary">Watch All Stories</Link>
                     </div>
                 </div>
             </section>

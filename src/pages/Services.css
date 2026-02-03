@@ -1,28 +1,42 @@
 .services-page .page-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero_dmc_operations_1768320541503.png') no-repeat center center/cover;
-    padding: 100px 0;
-    text-align: center;
-    color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
-.services-page h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.services-page .page-hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.services-page .page-hero p {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .service-hub-card {
     display: flex;
     background: var(--white);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition-base);
-    height: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 320px;
+    border: 1px solid var(--gray-100);
 }
 
 .service-hub-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(11, 60, 93, 0.1);
+    border-color: var(--primary-orange);
 }
 
 .hub-card-image {
@@ -40,8 +54,23 @@
 }
 
 .hub-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--orange-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary-orange);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(234, 113, 37, 0.15);
+    transition: all 0.3s ease;
+}
+
+.service-hub-card:hover .hub-icon {
+    background: var(--primary-orange);
+    color: var(--white);
+    transform: rotateY(180deg);
 }
 
 .hub-card-content h3 {
@@ -53,6 +82,7 @@
     color: var(--gray-600);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    text-align: justify;
 }
 
 .btn-text {

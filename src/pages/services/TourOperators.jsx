@@ -10,9 +10,10 @@ export default function TourOperators() {
                 description="Professional local representation for international tour operators in Goa and India. Expert ground handling and logistics management."
                 keywords="Tour Operator Representation India, Ground Handling Goa, TravelSmith DMC"
             />
-            <section className="service-hero tourop-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/india_ground_operations_1768320571583.png") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Tour Operators Representation</h1>
+            <section className="service-hero tourop-hero" style={{ background: 'url("/images/india_ground_operations_1768320571583.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Tour Operators Representation</h1>
                     <p>Your Trusted Local Partner for Professional Representation in India</p>
                 </div>
             </section>
@@ -52,18 +53,24 @@ export default function TourOperators() {
                 <div className="container">
                     <h2 className="text-center mb-5">Our Value Proposition</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4">
-                            <Globe size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Globe size={40} />
+                            </div>
                             <h3>Market Knowledge</h3>
                             <p>Deep insights into the Indian tourism landscape to stay ahead of market trends.</p>
                         </div>
-                        <div className="card p-4">
-                            <Shield size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Shield size={40} />
+                            </div>
                             <h3>Risk Management</h3>
                             <p>Comprehensive safety protocols and emergency support for all travelers.</p>
                         </div>
-                        <div className="card p-4">
-                            <Star size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Star size={40} />
+                            </div>
                             <h3>Brand Alignment</h3>
                             <p>We work as an extension of your own team, following your specific guidelines.</p>
                         </div>

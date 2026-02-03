@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function ChardhamYatra() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/chardham-2025.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero chardham-hero" style={{ background: 'url("/images/chardham-2025.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Chardham Yatra</h1>
                     <p>The ultimate pilgrimage to the four sacred shrines of the Himalayas.</p>
@@ -53,19 +49,19 @@ export default function ChardhamYatra() {
                 <div className="container">
                     <h2 className="text-center mb-5">The Four Pillars</h2>
                     <div className="grid grid-4 text-center">
-                        <div className="card p-4">
+                        <div className="dest-highlight-card">
                             <h3>Yamunotri</h3>
                             <p>Source of River Yamuna, the first stop on the journey.</p>
                         </div>
-                        <div className="card p-4">
+                        <div className="dest-highlight-card">
                             <h3>Gangotri</h3>
                             <p>Seat of Goddess Ganga, nestled in the high Himalayas.</p>
                         </div>
-                        <div className="card p-4">
+                        <div className="dest-highlight-card">
                             <h3>Kedarnath</h3>
                             <p>One of the 12 Jyotirlingas, dedicated to Lord Shiva.</p>
                         </div>
-                        <div className="card p-4">
+                        <div className="dest-highlight-card">
                             <h3>Badrinath</h3>
                             <p>Sacred abode of Lord Vishnu, surrounded by mountain peaks.</p>
                         </div>

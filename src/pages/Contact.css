@@ -63,6 +63,7 @@
     color: var(--gray-600);
     line-height: 1.7;
     margin-bottom: var(--spacing-lg);
+    text-align: justify;
 }
 
 .contact-info-cards {
@@ -107,6 +108,7 @@
 .contact-info-card p {
     color: var(--gray-600);
     line-height: 1.7;
+    text-align: justify;
 }
 
 .contact-info-card a {
@@ -134,27 +136,24 @@
 .business-hours p {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
+    text-align: justify;
 }
 
 /* Map Section */
 .map-section {
-    background: var(--gray-100);
+    line-height: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--gray-200);
 }
 
-.map-placeholder {
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--blue-50) 0%, var(--gray-100) 100%);
-    color: var(--primary-blue);
+.map-section iframe {
+    display: block;
+    filter: grayscale(0.2) contrast(1.1);
+    transition: filter 0.3s ease;
 }
 
-.map-placeholder p {
-    margin-top: var(--spacing-md);
-    font-size: 1.125rem;
-    font-weight: 500;
+.map-section iframe:hover {
+    filter: none;
 }
 
 /* Responsive */
@@ -166,7 +165,7 @@
 }
 
 @media (max-width: 768px) {
-    .map-placeholder {
-        height: 300px;
+    .map-section iframe {
+        height: 350px;
     }
 }

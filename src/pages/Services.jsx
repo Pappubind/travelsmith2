@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Plane, Users, Heart, Shield, ArrowRight } from 'lucide-react';
+import { Plane, Users, Heart, Shield, ArrowRight, Anchor, Hotel } from 'lucide-react';
 import './Services.css';
 
 export default function Services() {
@@ -29,6 +29,22 @@ export default function Services() {
             image: '/images/weddings_hero_premium.png'
         },
         {
+            id: 'cruise',
+            title: 'Cruise Handling',
+            description: 'Premier port services and shore excursions for international cruise liners at major Indian harbors.',
+            icon: <Anchor size={32} />,
+            link: '/services/cruise-handling',
+            image: '/images/cruise-1-1024x545.jpg'
+        },
+        {
+            id: 'hotels',
+            title: 'Hotel Reservations',
+            description: 'Exclusive rates and seamless bookings at premier luxury properties and boutique resorts globally.',
+            icon: <Hotel size={32} />,
+            link: '/services/hotel-reservation',
+            image: '/images/hotel_hero.jpg'
+        },
+        {
             id: 'support',
             title: 'Travel Support',
             description: '24/7 assistance including luxury fleet rentals, visa services, and travel insurance.',
@@ -40,8 +56,9 @@ export default function Services() {
 
     return (
         <div className="services-page">
-            <section className="page-hero" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/mice_hero_premium.png")' }}>
-                <div className="container">
+            <section className="page-hero" style={{ background: 'url("/images/weddings_hero_premium.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content" style={{ margin: '0 auto' }}>
                     <h1>Our Expertise</h1>
                     <p>Unlock Extraordinary Experiences with TravelSmith's Signature Services</p>
                 </div>
@@ -51,7 +68,7 @@ export default function Services() {
                 <div className="container">
                     <div className="grid grid-2">
                         {serviceCategories.map((service) => (
-                            <div key={service.id} className="service-hub-card">
+                            <div key={service.id} className="service-hub-card glass-card">
                                 <div
                                     className="hub-card-image"
                                     style={{ backgroundImage: `url(${service.image})` }}

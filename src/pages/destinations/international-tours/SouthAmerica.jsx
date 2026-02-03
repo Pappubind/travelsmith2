@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function SouthAmerica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/south-america.webp") no-repeat center/cover' }}>
+            <section className="dest-hero south-america-hero" style={{ background: 'url("/images/south-america.webp") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Mystical South America</h1>
                     <p>Ancient civilizations, lush rainforests, and vibrant Latin rhythms.</p>
@@ -48,18 +49,24 @@ export default function SouthAmerica() {
                 <div className="container">
                     <h2 className="text-center mb-5">South American Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Ancient History</h3>
                             <p>Uncover the secrets of the Inca, Maya, and Aztec civilizations.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Amazon Wilds</h3>
                             <p>Premium eco-tourism in the world's largest rainforest.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Cultural Pulse</h3>
                             <p>Feel the energy of the world's most vibrant carnivals and festivals.</p>
                         </div>

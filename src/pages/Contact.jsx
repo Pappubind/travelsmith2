@@ -119,10 +119,10 @@ export default function Contact() {
 
                                 <button type="submit" className="btn btn-primary btn-full">
                                     <Send size={20} />
-                                    Send Message
+                                    Get a Quote
                                 </button>
                             </form>
-                            <br></br><br></br>
+                            <br />
                             <div className="business-hours">
                                 <h3>Business Hours</h3>
                                 <p>
@@ -148,9 +148,7 @@ export default function Contact() {
                                     </div>
                                     <h3>Office Address</h3>
                                     <p>
-                                        TravelSmith DMC<br />
-                                        No. AS-28, 2nd Floor<br />
-                                        L&L Correia's Pride, Fatorda<br />
+                                        AS-28, 2nd Floor <br /> L&L Correia's Pride, Fatorda<br />
                                         Madgaon, Goa 403601<br />
                                         India
                                     </p>
@@ -185,10 +183,16 @@ export default function Contact() {
 
             {/* Map Section */}
             <section className="map-section">
-                <div className="map-placeholder">
-                    <MapPin size={48} />
-                    <p>Location: Madgaon, Goa 403601, India</p>
-                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.658823529412!2d73.9529048148493!3d15.290022489366432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb15ee078eee5%3A0x957c7586aa5d57d0!2sTravelsmith%20Adventure%20(P)%20Ltd!5e0!3m2!1sen!2sin!4v1706782000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Travelsmith Adventure Location"
+                ></iframe>
             </section>
         </div>
     );

@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function Himachal() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/himachal_peaks.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero himachal-hero" style={{ background: 'url("/images/himachal_peaks.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Scenic Himachal</h1>
                     <p>From the Ridge of Shimla to the heights of Rohtang.</p>
@@ -52,18 +48,24 @@ export default function Himachal() {
                 <div className="container">
                     <h2 className="text-center mb-5">Himachal Experiences</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Mountain className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
                             <h3>High Altitudes</h3>
                             <p>Visit Rohtang Pass and Atal Tunnel for year-round snow experiences.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Wind className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Wind size={32} />
+                            </div>
                             <h3>Pure Air</h3>
                             <p>Retreat to remote valleys for a true digital detox in nature.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Cloud className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Cloud size={32} />
+                            </div>
                             <h3>Himalayan Cuisine</h3>
                             <p>Taste the local Siddu and mountain-to-table gourmet dining.</p>
                         </div>

@@ -5,12 +5,9 @@ import '../Destinations.css';
 export default function Mauritius() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/maritius.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}><div className="container dest-hero-content">
+            <section className="dest-hero mauritius-hero" style={{ background: 'url("/images/maritius.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="container dest-hero-content">
                     <h1>Mauritius</h1>
                     <p>A tropical paradise in the Indian Ocean, where luxury meets the azure sea.</p>
                 </div>
@@ -51,18 +48,24 @@ export default function Mauritius() {
                 <div className="container">
                     <h2 className="text-center mb-5">Island Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Waves className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Waves size={32} />
+                            </div>
                             <h3>Ocean Adventures</h3>
                             <p>From kite-surfing to peaceful lagoon snorkeling at Trou-aux-Biches.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Premium Comfort</h3>
                             <p>Access to top-tier international hotel chains with world-renowned service.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Anchor className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Anchor size={32} />
+                            </div>
                             <h3>Coastal Cruises</h3>
                             <p>Explore the surrounding islands like Ile aux Cerfs on private charters.</p>
                         </div>

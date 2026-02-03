@@ -1,28 +1,32 @@
-/* Page Hero */
 .page-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--white);
-    padding: var(--spacing-3xl) 0;
-    text-align: center;
-    min-height: 300px;
+    position: relative;
+    height: 60vh;
+    min-height: 450px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
 }
 
 .page-hero h1 {
-    font-size: 3.5rem;
-    color: var(--white);
-    margin-bottom: var(--spacing-sm);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+    text-align: center;
 }
 
 .page-hero p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 90%;
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Company Overview */
@@ -39,23 +43,26 @@
 }
 
 .overview-content p {
-    color: var(--gray-600);
+    color: black;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
+    text-align: left;
 }
 
 .md-profile {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--spacing-xl);
-    background: var(--blue-50);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
     padding: var(--spacing-2xl);
-    border-radius: var(--radius-lg);
-    border-left: 8px solid var(--primary-blue);
+    border-radius: var(--radius-xl);
     margin-top: var(--spacing-2xl);
     align-items: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--glass-shadow);
 }
 
 .team-image-container {
@@ -97,36 +104,138 @@
     gap: var(--spacing-md);
 }
 
-.stat-box {
-    background: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
+/* Company Overview Section */
+.company-overview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    align-items: center;
     text-align: center;
+}
+
+.overview-content {
+    max-width: 900px;
+}
+
+.overview-content h2 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
     color: var(--primary-blue);
-    box-shadow: var(--shadow-md);
+}
+
+.overview-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    width: 100%;
+}
+
+.stat-box {
+    background: var(--primary-blue);
+    border: 1px solid var(--primary-blue-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
     transition: var(--transition-base);
-    border: 1px solid var(--gray-200);
+}
+
+.stat-box.glass-card {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    color: var(--primary-blue);
 }
 
 .stat-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--primary-orange);
 }
 
 .stat-box h3 {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-orange);
+    font-weight: 800;
+    color: var(--white);
     margin-bottom: 0.25rem;
 }
 
+.stat-box.glass-card h3 {
+    color: var(--primary-blue);
+}
+
 .stat-box p {
-    font-size: 0.9rem;
-    color: var(--gray-600);
+    font-size: 0.95rem;
+    color: var(--blue-50);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 700;
+    text-align: left !important;
+}
+
+.stat-box.glass-card p {
+    color: var(--gray-700);
+}
+
+/* About Page Specific Cards */
+.about-value-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(234, 113, 37, 0.05);
+    /* Orange-tinted shadow */
+    transition: all 0.4s ease;
+    border: 1px solid var(--gray-100);
+    border-bottom: 4px solid var(--primary-orange);
+    /* About uses orange bottom border */
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(234, 113, 37, 0.1);
+}
+
+.about-icon-circle {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #ff8c42 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(234, 113, 37, 0.3);
+    transition: all 0.4s ease;
+}
+
+.about-value-card:hover .about-icon-circle {
+    transform: scale(1.1) rotateY(180deg);
+}
+
+.about-value-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.about-value-card p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    text-align: left;
 }
 
 /* Services Summary */
@@ -161,6 +270,7 @@
 .service-summary-card p {
     color: var(--gray-600);
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Why Choose Us Grid */
@@ -198,10 +308,11 @@
     color: var(--primary-blue);
 }
 
-.why-card p {
+.why-choose-grid-expanded p {
     color: var(--gray-600);
     font-size: 0.95rem;
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Recognition */
@@ -226,6 +337,7 @@
 .recognition-card p {
     font-size: 0.9rem;
     color: var(--gray-600);
+    text-align: left;
 }
 
 /* Responsive Design */

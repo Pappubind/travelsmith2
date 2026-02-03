@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function RoyalNepal() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nepal-prayer-flags.avif")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero royal-nepal-hero" style={{ background: 'url("/images/nepal-prayer-flags.avif") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Royal Nepal</h1>
                     <p>A premium high-end luxury journey through the Himalayan Kingdom.</p>
@@ -52,18 +48,24 @@ export default function RoyalNepal() {
                 <div className="container">
                     <h2 className="text-center mb-5">Royal Experiences</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Top-Tier Resorts</h3>
                             <p>Access to the most exclusive mountain retreats with world-class spas.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Private Access</h3>
                             <p>Special entry to restricted areas and exclusive community interaction.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Everest Expedition</h3>
                             <p>A safe, high-end mountain experience with zero compromises on comfort.</p>
                         </div>

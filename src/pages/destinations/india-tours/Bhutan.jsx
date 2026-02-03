@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function Bhutan() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/bhutan_tigers_nest.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero bhutan-hero" style={{ background: 'url("/images/bhutan_tigers_nest.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Bhutan: The Land of Dragon</h1>
                     <p>Experience the magic and mysticism of the last Shangri-La.</p>
@@ -48,18 +49,24 @@ export default function Bhutan() {
                 <div className="container">
                     <h2 className="text-center mb-5">Bhutanese Wonders</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Pristine Nature</h3>
                             <p>Explore the world's only carbon-negative country with untouched landscapes.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Mountain className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
                             <h3>Sacred Peaks</h3>
                             <p>Adventure through mountain passes with panoramic Himalayan vistas.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Cloud className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Cloud size={32} />
+                            </div>
                             <h3>Culture First</h3>
                             <p>Stay in authentic Dzong-inspired luxury resorts for total immersion.</p>
                         </div>

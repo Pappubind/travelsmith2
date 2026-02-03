@@ -10,9 +10,10 @@ export default function Weddings() {
                 description="Plan your dream beach wedding in Goa with TravelSmith. Full-service wedding planning including venue selection, decor, and guest management."
                 keywords="Destination Wedding Goa, Wedding Planner Goa, Beach Wedding India, Marriage in Goa"
             />
-            <section className="service-hero wedding-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/weddings_hero_premium.png") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Destination Weddings</h1>
+            <section className="service-hero wedding-hero" style={{ background: 'url("/images/weddings_hero_premium.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Destination Weddings</h1>
                     <p>Turning Your Dream Celebration into an Eternal Reality</p>
                 </div>
             </section>
@@ -35,7 +36,7 @@ export default function Weddings() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="/images/india_destinations_operations_1768319141419.png"
+                                src="/images/wedding.jpg"
                                 alt="Wedding Planning Operations"
                                 className="detail-image-fixed"
                             />
@@ -48,18 +49,24 @@ export default function Weddings() {
                 <div className="container">
                     <h2 className="text-center mb-5">Wedding Services</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <MapPin size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <MapPin size={40} />
+                            </div>
                             <h3>Venue Selection</h3>
                             <p>Handpicked luxury resorts and heritage palaces for your special day.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Users size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Users size={40} />
+                            </div>
                             <h3>Guest Management</h3>
                             <p>Seamless hospitality and logistics for all your wedding attendees.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Heart size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Heart size={40} />
+                            </div>
                             <h3>Event Coordination</h3>
                             <p>Flawless execution of all ceremonies from Mehendi to Reception.</p>
                         </div>

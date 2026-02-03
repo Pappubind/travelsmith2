@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
+import { Camera, Map, Star, Globe, CheckCircle, Mountain } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Australia() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/sydney.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero australia-hero" style={{ background: 'url("/images/australlia.jpeg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
-                    <h1>The Great Australian Tour</h1>
-                    <p>From the urban wonders of Sydney to the pristine colors of the Great Barrier Reef.</p>
+                    <h1>Magical Australia</h1>
+                    <p>Experience the spirit of the Outback and the glamour of Sydney.</p>
                 </div>
             </section>
 
@@ -48,20 +49,26 @@ export default function Australia() {
                 <div className="container">
                     <h2 className="text-center mb-5">Australian Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
-                            <h3>The Reef</h3>
-                            <p>Experience the world's largest coral reef with private diving and snorkeling.</p>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
+                            <h3>Outback Spirit</h3>
+                            <p>Adventure through the heart of the Australian Red Center.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
-                            <h3>Modern Cities</h3>
-                            <p>The best of Australian urban life, gourmet coffee, and fine dining.</p>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
+                            <h3>Sydney Luxury</h3>
+                            <p>Private Yacht tours and premium dining at the Opera House.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
-                            <h3>Wild Outback</h3>
-                            <p>Uncover the spiritual heart of Australia at Uluru with luxury camping.</p>
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
+                            <h3>Reef Exploration</h3>
+                            <p>World-class diving and helicopter tours over the Great Barrier Reef.</p>
                         </div>
                     </div>
                 </div>

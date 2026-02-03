@@ -5,7 +5,8 @@ import '../Destinations.css';
 export default function GoldenQuadrangle() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/taj_mahal.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero gold-hero" style={{ background: 'url("/images/taj_mahal.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>The Golden Quadrangle</h1>
                     <p>The essential Indian journey through Delhi, Agra, and Jaipur.</p>
@@ -48,18 +49,24 @@ export default function GoldenQuadrangle() {
                 <div className="container">
                     <h2 className="text-center mb-5">Iconic Landmarks</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>New Delhi</h3>
                             <p>A blend of ancient history and dynamic modernity in India's capital.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Agra</h3>
                             <p>Home to the Taj Mahal and the majestic Agra Fort.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Jaipur</h3>
                             <p>Royal heritage and vibrant culture in the capital of Rajasthan.</p>
                         </div>

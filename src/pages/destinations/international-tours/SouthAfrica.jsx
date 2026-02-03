@@ -5,12 +5,8 @@ import '../Destinations.css';
 export default function SouthAfrica() {
     return (
         <div className="destinations-page">
-            <section className="dest-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/south-africa-safari.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="dest-hero south-africa-hero" style={{ background: 'url("/images/south-africa-safari.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Spectacular South Africa Safari</h1>
                     <p>A diverse journey from the Kruger wildlife to the shores of Cape Town.</p>
@@ -53,18 +49,24 @@ export default function SouthAfrica() {
                 <div className="container">
                     <h2 className="text-center mb-5">South African Highlights</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Luxury Lodges</h3>
                             <p>Unmatched hospitality in some of the world's best safari lodges.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Globe className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Globe size={32} />
+                            </div>
                             <h3>Coastal Magic</h3>
                             <p>Breathtaking drives along one of the world's most beautiful coastlines.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Camera className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Camera size={32} />
+                            </div>
                             <h3>Diverse Wildlife</h3>
                             <p>From the Big Five to Whale watching and Penguin colonies.</p>
                         </div>

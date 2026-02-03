@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Presentation, CheckCircle, MapPin, Users, Clock } from 'lucide-react';
+import { Presentation, CheckCircle, MapPin, Users, Clock, Monitor, Shield } from 'lucide-react';
 import '../ServiceDetail.css';
 
 export default function Meetings() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/meeting_room.jpg") no-repeat center/cover' }}>
+            <section className="service-hero mice-sub-hero" style={{ background: 'url("/images/mice_meeting_premium.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container">
-                    <h1 style={{ color: "white" }}>Executive Meetings</h1>
-                    <p>High-stakes board meetings, corporate retreats, and strategic planning sessions.</p>
+                    <h1>Executive Meetings</h1>
+                    <p>Sophisticated Venues and Flawless Execution</p>
                 </div>
             </section>
 
@@ -41,20 +42,26 @@ export default function Meetings() {
                 <div className="container">
                     <h2 className="text-center mb-5">Our Approach to Meetings</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4">
-                            <MapPin className="text-primary mb-3" />
-                            <h3>Prime Locations</h3>
-                            <p>Access to India's most prestigious corporate hubs and serene retreat locations in Goa.</p>
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Clock size={40} />
+                            </div>
+                            <h3>Precision Timing</h3>
+                            <p>Meticulous schedule management to ensure every session stays on track.</p>
                         </div>
-                        <div className="card p-4">
-                            <Users className="text-primary mb-3" />
-                            <h3>Personalized Care</h3>
-                            <p>On-site coordinators to manage every detail during your meeting.</p>
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Monitor size={40} />
+                            </div>
+                            <h3>Tech Excellence</h3>
+                            <p>State-of-the-art audiovisual solutions and seamless digital integration.</p>
                         </div>
-                        <div className="card p-4">
-                            <Clock className="text-primary mb-3" />
-                            <h3>Efficiency First</h3>
-                            <p>Meticulous timing and layout planning to maximize your executive's time.</p>
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Shield size={40} />
+                            </div>
+                            <h3>Discreet Support</h3>
+                            <p>Dedicated onsite teams to handle all logistics with total confidentiality.</p>
                         </div>
                     </div>
                 </div>

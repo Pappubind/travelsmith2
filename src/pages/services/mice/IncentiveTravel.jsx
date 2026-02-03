@@ -5,14 +5,10 @@ import '../ServiceDetail.css';
 export default function IncentiveTravel() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/incentive_travel_hero.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
+            <section className="service-hero incentive-hero" style={{ background: 'url("/images/incentive_travel_hero.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
                 <div className="container">
-                    <h1 style={{ color: "white" }}>Incentive Travel</h1>
+                    <h1>Incentive Travel</h1>
                     <p>Exclusive rewards and experiential journeys for your high-achieving teams.</p>
                 </div>
             </section>
@@ -45,18 +41,24 @@ export default function IncentiveTravel() {
                 <div className="container">
                     <h2 className="text-center mb-5">Why Choose Our Incentive Programs?</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Star className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Star size={32} />
+                            </div>
                             <h3>Premium Standards</h3>
                             <p>Only the finest hotels, restaurants, and experiences make it to our catalogs.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Heart className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Heart size={32} />
+                            </div>
                             <h3>Emotional Connection</h3>
                             <p>We craft stories and memories that build loyalty and motivate teams.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Gift className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Gift size={32} />
+                            </div>
                             <h3>Unique Access</h3>
                             <p>Exclusive venues and private tours that aren't available to the general public.</p>
                         </div>

@@ -10,9 +10,10 @@ export default function CruiseHandling() {
                 description="Premier ground handling services for international cruise liners at major Indian ports. Specializing in shore excursions, turnaround operations, and port logistics."
                 keywords="Cruise Handling India, Shore Excursions Goa, Cruise Port Services India, TravelSmith Cruise"
             />
-            <section className="service-hero cruise-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/cruise-1-1024x545.jpg") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Cruise Liner Ground Handling</h1>
+            <section className="service-hero cruise-hero" style={{ background: 'url("/images/cruise-1-1024x545.jpg") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Cruise Liner Ground Handling</h1>
                     <p>Premier Port Services and Shore Excursions at Major Indian Harbors</p>
                 </div>
             </section>
@@ -53,18 +54,24 @@ export default function CruiseHandling() {
                 <div className="container">
                     <h2 className="text-center mb-5">Core Cruise Services</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4">
-                            <Anchor size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Anchor size={40} />
+                            </div>
                             <h3>Port Clearance</h3>
                             <p>Efficient handling of all port formalities and guest immigration support.</p>
                         </div>
-                        <div className="card p-4">
-                            <Navigation size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Navigation size={40} />
+                            </div>
                             <h3>Shore Excursions</h3>
                             <p>Curated local tours designed specifically for cruise passengers' timeframes.</p>
                         </div>
-                        <div className="card p-4">
-                            <Ship size={40} className="text-primary mb-3" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Ship size={40} />
+                            </div>
                             <h3>Vessel Support</h3>
                             <p>Logistical and operational support for crew members and vessel requirements.</p>
                         </div>
@@ -76,20 +83,20 @@ export default function CruiseHandling() {
                 <div className="container">
                     <h2 className="text-center mb-5">Cruises Handled By Us</h2>
                     <div className="grid grid-3 text-center">
-                        <div className="p-2 border rounded">Rhapsody of the Seas</div>
-                        <div className="p-2 border rounded">Mariner of the Seas</div>
-                        <div className="p-2 border rounded">Celebrity Constellation</div>
-                        <div className="p-2 border rounded">MSC Lirica</div>
-                        <div className="p-2 border rounded">Queen Mary 2</div>
-                        <div className="p-2 border rounded">Explorer of The Seas</div>
-                        <div className="p-2 border rounded">Rotterdam</div>
-                        <div className="p-2 border rounded">Azamara</div>
-                        <div className="p-2 border rounded">Celebrity Century</div>
-                        <div className="p-2 border rounded">Aidaaura</div>
-                        <div className="p-2 border rounded">Aida Diwa</div>
-                        <div className="p-2 border rounded">AIDA SOL</div>
-                        <div className="p-2 border rounded">Costa Deliziosa</div>
-                        <div className="p-2 border rounded">Costa Atlatica</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Rhapsody of the Seas</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Mariner of the Seas</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Celebrity Constellation</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>MSC Lirica</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Queen Mary 2</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Explorer of The Seas</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Rotterdam</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Azamara</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Celebrity Century</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Aidaaura</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Aida Diwa</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>AIDA SOL</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Costa Deliziosa</div>
+                        <div className="p-2 glass-card" style={{ border: '1px solid var(--glass-border)' }}>Costa Atlatica</div>
                     </div>
                 </div>
             </section>

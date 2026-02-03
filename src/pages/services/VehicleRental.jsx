@@ -1,4 +1,4 @@
-import { Car, Shield, Clock, Users, CheckCircle, MapPin } from 'lucide-react';
+import { Car, Shield, Clock, Users, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
 import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
@@ -10,9 +10,10 @@ export default function VehicleRental() {
                 description="Premium car and coach rental services in Goa. From luxury sedans to large capacity coaches, we provide safe and comfortable logistics for all group sizes."
                 keywords="Car Rental Goa, Coach Rental Goa, Luxury Car Hire Goa, TravelSmith Transport"
             />
-            <section className="service-hero vehicle-hero" style={{ background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/transport_fleet_management_1768319247924.png") no-repeat center/cover' }}>
-                <div className="container">
-                    <h1 style={{ color: "white" }}>Car & Coach Rental</h1>
+            <section className="service-hero vehicle-hero" style={{ background: 'url("/images/transport_fleet_management_1768319247924.png") no-repeat center/cover' }}>
+                <div className="dest-hero-overlay" />
+                <div className="service-hero-content">
+                    <h1>Car & Coach Rental</h1>
                     <p>Premium Transportation Solutions for Individual and Group Travel</p>
                 </div>
             </section>
@@ -47,18 +48,24 @@ export default function VehicleRental() {
                 <div className="container">
                     <h2 className="text-center mb-5">Our Fleet Excellence</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <Shield size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Shield size={40} />
+                            </div>
                             <h3>Safety First</h3>
                             <p>Regular maintenance and strict adherence to safety protocols for all vehicles.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Users size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Users size={40} />
+                            </div>
                             <h3>Group Travel</h3>
                             <p>Spacious and modern coaches perfect for corporate groups and wedding guests.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Clock size={40} className="text-primary mb-3 mx-auto" />
+                        <div className="service-feature-card">
+                            <div className="service-icon-box">
+                                <Clock size={40} />
+                            </div>
                             <h3>Punctuality</h3>
                             <p>Committed to timely pickups and efficient route planning for seamless travel.</p>
                         </div>
@@ -75,18 +82,16 @@ export default function VehicleRental() {
 
                             <div className="fleet-category mb-5">
                                 <h3 className="category-title mb-3 text-xl font-bold text-gray-700 border-b pb-2">Compact & Sedan</h3>
-                                <div className="vehicle-cards grid gap-4">
+                                <div className="grid grid-3 gap-3">
                                     {['Swift', 'Camry'].map((vehicle) => (
-                                        <div key={vehicle} className="vehicle-card card p-0 overflow-hidden flex flex-row items-center border rounded-lg shadow-sm hover:shadow-md transition">
-                                            <div className="vehicle-image w-1/3 bg-gray-200 h-32 flex items-center justify-center">
-                                                {/* Placeholder for actual vehicle image */}
-                                                <Car size={40} className="text-gray-400" />
+                                        <div key={vehicle} className="compact-vehicle-card">
+                                            <div className="compact-vehicle-icon">
+                                                <Car size={20} />
                                             </div>
-                                            <div className="vehicle-info w-2/3 p-4">
-                                                <h4 className="font-bold text-lg mb-1">{vehicle}</h4>
-                                                <span className="text-sm text-gray-500 block mb-2">Ideal for city tours & small families</span>
-                                                <div className="flex items-center text-primary text-sm font-semibold">
-                                                    <CheckCircle size={16} className="mr-1" /> Available
+                                            <div className="compact-vehicle-info">
+                                                <h4>{vehicle}</h4>
+                                                <div className="availability-tag">
+                                                    <CheckCircle size={10} /> Available
                                                 </div>
                                             </div>
                                         </div>
@@ -96,17 +101,16 @@ export default function VehicleRental() {
 
                             <div className="fleet-category mb-5">
                                 <h3 className="category-title mb-3 text-xl font-bold text-gray-700 border-b pb-2">SUV & Premium</h3>
-                                <div className="vehicle-cards grid gap-4">
+                                <div className="grid grid-3 gap-3">
                                     {['Fortuner', 'BMW X3', 'Audi Q5'].map((vehicle) => (
-                                        <div key={vehicle} className="vehicle-card card p-0 overflow-hidden flex flex-row items-center border rounded-lg shadow-sm hover:shadow-md transition">
-                                            <div className="vehicle-image w-1/3 bg-gray-200 h-32 flex items-center justify-center">
-                                                <Shield size={40} className="text-gray-400" />
+                                        <div key={vehicle} className="compact-vehicle-card">
+                                            <div className="compact-vehicle-icon">
+                                                <Shield size={20} />
                                             </div>
-                                            <div className="vehicle-info w-2/3 p-4">
-                                                <h4 className="font-bold text-lg mb-1">{vehicle}</h4>
-                                                <span className="text-sm text-gray-500 block mb-2">Superior comfort for long journeys</span>
-                                                <div className="flex items-center text-primary text-sm font-semibold">
-                                                    <CheckCircle size={16} className="mr-1" /> Available
+                                            <div className="compact-vehicle-info">
+                                                <h4>{vehicle}</h4>
+                                                <div className="availability-tag">
+                                                    <CheckCircle size={10} /> Available
                                                 </div>
                                             </div>
                                         </div>
@@ -116,17 +120,16 @@ export default function VehicleRental() {
 
                             <div className="fleet-category mb-5">
                                 <h3 className="category-title mb-3 text-xl font-bold text-gray-700 border-b pb-2">Luxury Class</h3>
-                                <div className="vehicle-cards grid gap-4">
+                                <div className="grid grid-3 gap-3">
                                     {['BMW', 'Audi', 'Mercedes'].map((vehicle) => (
-                                        <div key={vehicle} className="vehicle-card card p-0 overflow-hidden flex flex-row items-center border rounded-lg shadow-sm hover:shadow-md transition">
-                                            <div className="vehicle-image w-1/3 bg-gray-200 h-32 flex items-center justify-center">
-                                                <Car size={40} className="text-gold" color="#D4AF37" />
+                                        <div key={vehicle} className="compact-vehicle-card luxury">
+                                            <div className="compact-vehicle-icon">
+                                                <Car size={20} />
                                             </div>
-                                            <div className="vehicle-info w-2/3 p-4">
-                                                <h4 className="font-bold text-lg mb-1">{vehicle}</h4>
-                                                <span className="text-sm text-gray-500 block mb-2">Experience ultimate luxury</span>
-                                                <div className="flex items-center text-primary text-sm font-semibold">
-                                                    <CheckCircle size={16} className="mr-1" /> Available
+                                            <div className="compact-vehicle-info">
+                                                <h4>{vehicle}</h4>
+                                                <div className="availability-tag">
+                                                    <CheckCircle size={10} /> Available
                                                 </div>
                                             </div>
                                         </div>
@@ -136,17 +139,16 @@ export default function VehicleRental() {
 
                             <div className="fleet-category mb-5">
                                 <h3 className="category-title mb-3 text-xl font-bold text-gray-700 border-b pb-2">Group Travel</h3>
-                                <div className="vehicle-cards grid gap-4">
-                                    {['Traveller', 'Bus (35 Seater)', 'Bus (45 Seater)'].map((vehicle) => (
-                                        <div key={vehicle} className="vehicle-card card p-0 overflow-hidden flex flex-row items-center border rounded-lg shadow-sm hover:shadow-md transition">
-                                            <div className="vehicle-image w-1/3 bg-gray-200 h-32 flex items-center justify-center">
-                                                <Users size={40} className="text-gray-400" />
+                                <div className="grid grid-3 gap-3">
+                                    {['Traveller', 'Bus (35)', 'Bus (45)'].map((vehicle) => (
+                                        <div key={vehicle} className="compact-vehicle-card">
+                                            <div className="compact-vehicle-icon">
+                                                <Users size={20} />
                                             </div>
-                                            <div className="vehicle-info w-2/3 p-4">
-                                                <h4 className="font-bold text-lg mb-1">{vehicle}</h4>
-                                                <span className="text-sm text-gray-500 block mb-2">Spacious & Comfortable</span>
-                                                <div className="flex items-center text-primary text-sm font-semibold">
-                                                    <CheckCircle size={16} className="mr-1" /> Available
+                                            <div className="compact-vehicle-info">
+                                                <h4>{vehicle}</h4>
+                                                <div className="availability-tag">
+                                                    <CheckCircle size={10} /> Available
                                                 </div>
                                             </div>
                                         </div>
@@ -157,8 +159,20 @@ export default function VehicleRental() {
 
                         {/* Booking Form Column */}
                         <div className="booking-form-container sticky top-4">
-                            <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100">
-                                <h2 className="text-center mb-6 text-2xl font-bold text-primary">Book Your Ride</h2>
+                            <div className="glass-card" style={{
+                                background: 'white',
+                                padding: '2.5rem',
+                                borderRadius: '2rem',
+                                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.12)',
+                                borderTop: '4px solid var(--primary-orange)',
+                                border: 'none'
+                            }}>
+                                <h2 className="text-center" style={{
+                                    color: 'var(--primary-blue-dark)',
+                                    fontSize: '1.85rem',
+                                    fontWeight: '800',
+                                    marginBottom: '2rem'
+                                }}>Secure Your Journey</h2>
                                 <form className="booking-form space-y-4">
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
@@ -232,9 +246,24 @@ export default function VehicleRental() {
                                     <button
                                         type="submit"
                                         className="booking-btn"
+                                        style={{
+                                            width: '100%',
+                                            background: 'var(--primary-blue)',
+                                            color: 'white',
+                                            padding: '1.125rem',
+                                            borderRadius: '0.75rem',
+                                            fontWeight: '800',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            gap: '12px',
+                                            border: 'none',
+                                            marginTop: '1rem',
+                                            boxShadow: '0 10px 20px rgba(11, 60, 93, 0.15)'
+                                        }}
                                     >
-                                        BOOK YOUR RIDE
-                                        <CheckCircle size={20} />
+                                        CONFIRM BOOKING
+                                        <ArrowRight size={18} />
                                     </button>
                                 </form>
                             </div>

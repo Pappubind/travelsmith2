@@ -47,18 +47,24 @@ export default function SplendourUttarakhand() {
                 <div className="container">
                     <h2 className="text-center mb-5">Nature's Best</h2>
                     <div className="grid grid-3">
-                        <div className="card p-4 text-center">
-                            <TreePine className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <TreePine size={32} />
+                            </div>
                             <h3>Pine Forests</h3>
                             <p>Walk through ancient deodar and pine forests of Dhanaulti.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Sun className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Sun size={32} />
+                            </div>
                             <h3>Golden Sunsets</h3>
                             <p>Experience the world-famous Mussoorie winterline and golden sunsets.</p>
                         </div>
-                        <div className="card p-4 text-center">
-                            <Mountain className="text-primary mb-3 mx-auto" size={32} />
+                        <div className="dest-highlight-card">
+                            <div className="dest-icon-box">
+                                <Mountain size={32} />
+                            </div>
                             <h3>Eco Parks</h3>
                             <p>Sustainable tourism experiences in the heart of nature.</p>
                         </div>
