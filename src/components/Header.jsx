@@ -4,7 +4,8 @@ import {
   Menu, X, ChevronDown, MapPin, Globe, TreePalm, Building2, Users, Heart,
   ShieldCheck, Anchor, Monitor, Car, Hotel,
   Mountain, Snowflake, Trees, Compass, Camera, Ticket, Gift, Mic,
-  Flag, Landmark, Bird, Ship, Waves, Search, Binoculars, Phone, Mail
+  Flag, Landmark, Bird, Ship, Waves, Search, Binoculars, Phone, Mail,
+  Tent, Utensils, GlassWater, Bike, Fish, Sun, Droplets, Wind, Palmtree
 } from 'lucide-react';
 import logo from '../assets/logo.png';
 import './Header.css';
@@ -61,7 +62,37 @@ export default function Header() {
   };
 
   const destinations = [
-    { name: 'Goa', path: '/destinations/goa', icon: <TreePalm size={18} /> },
+    {
+      name: 'Goa',
+      path: '/destinations/goa',
+      icon: <TreePalm size={18} />,
+      subItems: [
+        { name: 'Bird Watching Tour', path: '/destinations/goa#bird-watching', icon: <Bird size={14} /> },
+        { name: 'Diving', path: '/destinations/goa#diving', icon: <Waves size={14} /> },
+        { name: 'Fishing Trip', path: '/destinations/goa#fishing-trip', icon: <Fish size={14} /> },
+        { name: 'Deep Sea Cruising', path: '/destinations/goa#deep-sea-cruising', icon: <Ship size={14} /> },
+        { name: 'Backwater Cruise', path: '/destinations/goa#backwater-cruise', icon: <Waves size={14} /> },
+        { name: 'Dandeli Wildlife', path: '/destinations/goa#dandeli-wildlife', icon: <Binoculars size={14} /> },
+        { name: 'Hampi Tour', path: '/destinations/goa#hampi-tour', icon: <Landmark size={14} /> },
+        { name: 'Kayaking Expeditions', path: '/destinations/goa#kayaking-expeditions', icon: <Waves size={14} /> },
+        { name: 'Dudhsagar Waterfalls', path: '/destinations/goa#dudhsagar-waterfalls', icon: <Waves size={14} /> },
+        { name: 'Art & Architecture', path: '/destinations/goa#art-architecture', icon: <Building2 size={14} /> },
+        { name: 'Hot Balloon Safari', path: '/destinations/goa#hot-balloon-safari', icon: <Wind size={14} /> },
+        { name: 'Rome of Orient', path: '/destinations/goa#rome-orient', icon: <Landmark size={14} /> },
+        { name: 'Heritage Trails', path: '/destinations/goa#heritage-trails', icon: <Landmark size={14} /> },
+        { name: 'Temple & Spice Tour', path: '/destinations/goa#spice-plantation', icon: <Palmtree size={14} /> },
+        { name: 'Cola Beach Tour', path: '/destinations/goa#cola-beach', icon: <Tent size={14} /> },
+        { name: 'Anjuna Flea Market', path: '/destinations/goa#anjuna-flea-market', icon: <Ticket size={14} /> },
+        { name: 'Secrets of Divar Island', path: '/destinations/goa#divar-island', icon: <Bike size={14} /> },
+        { name: 'Culinary Delights', path: '/destinations/goa#culinary-delights', icon: <Utensils size={14} /> },
+        { name: 'Essential Whiskey Experience', path: '/destinations/goa#whiskey-experience', icon: <GlassWater size={14} /> },
+        { name: 'Island Fantasy', path: '/destinations/goa#island-fantasy', icon: <Sun size={14} /> },
+        { name: 'Crocodile Dundee', path: '/destinations/goa#crocodile-dundee', icon: <Droplets size={14} /> },
+        { name: 'White Water Rafting', path: '/destinations/goa#white-water-rafting', icon: <Waves size={14} /> },
+        { name: 'The Goan Village Tour', path: '/destinations/goa#goan-village-tour', icon: <Users size={14} /> },
+        { name: 'Feni & Food', path: '/destinations/goa#fenni-and-food', icon: <Utensils size={14} /> },
+      ]
+    },
     {
       name: 'India',
       path: '/destinations/india',
@@ -181,7 +212,7 @@ export default function Header() {
                       </Link>
 
                       {dest.subItems && (
-                        <div className="sub-dropdown-menu">
+                        <div className={`sub-dropdown-menu ${dest.name === 'Goa' ? 'grid-2' : ''}`}>
                           {dest.subItems.map((sub) => (
                             <Link
                               key={sub.name}

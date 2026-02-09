@@ -1,11 +1,20 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
 import SEO from '../../components/SEO';
+import BookingModal from '../../components/BookingModal';
 import './Destinations.css';
 
 export default function Goa() {
     const { hash } = useLocation();
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+    const [selectedTour, setSelectedTour] = useState('');
+
+    const openBookingModal = (tourTitle) => {
+        setSelectedTour(tourTitle);
+        setIsBookingModalOpen(true);
+    };
 
     useEffect(() => {
         if (hash) {
@@ -267,10 +276,10 @@ export default function Goa() {
             <section className="section-light">
                 <div className="container">
                     <h2 className="section-title">Welcome to Goa</h2>
-                    <p className="section-subtitle">
+                    <p className="section-subtitle" style={{ textAlign: 'justify', maxWidth: '100%', margin: '0 0 var(--spacing-md)' }}>
                         A beautiful land blessed with Sun, Sea and Surf, nestled on the west coast of India with swaying palms, fabulous beaches and laid back lifestyle of the warm hearted Goans make it an unique holiday destination. Goa’s 120 kms coastline boasts of exotic Restaurants, rustic Beach Shacks which serve sumptuous cuisine and give you a front row view of Arabian Sea brimming with Water Sports and Pleasure Trips, with Night Clubs in plenty.
                     </p>
-                    <p className="section-subtitle">
+                    <p className="section-subtitle" style={{ textAlign: 'justify', maxWidth: '100%', margin: '0' }}>
                         The hinterland too beckons visitors to Spice Gardens, Serene Lakes, Waterfalls and Jungle Safaris at the Mollem and Cotigao Sanctuaries where the wildly abundant wildlife roams free. Goa also has some fabulous Portuguese – Goan heritage Mansions and Forts dating back to 1700’s. There is much to explore in Goa besides relaxing on the sun kissed beaches. Discover the most amazing Goan experience, indulge in exciting adventures and exotic excursions in and around Goa.
                     </p>
                 </div>
@@ -426,8 +435,8 @@ export default function Goa() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <Link
-                                        to="/contact"
+                                    <button
+                                        onClick={() => openBookingModal(tour.title)}
                                         className="btn btn-primary"
                                         style={{
                                             marginTop: '1.5rem',
@@ -436,16 +445,24 @@ export default function Goa() {
                                             display: 'block',
                                             padding: '0.875rem 1.5rem',
                                             fontSize: '0.95rem',
-                                            fontWeight: '600'
+                                            fontWeight: '600',
+                                            border: 'none',
+                                            cursor: 'pointer'
                                         }}
                                     >
                                         Book This Experience
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
+                <BookingModal
+                    isOpen={isBookingModalOpen}
+                    onClose={() => setIsBookingModalOpen(false)}
+                    destination={selectedTour}
+                />
             </section>
 
             {/* CTA */}
@@ -453,7 +470,13 @@ export default function Goa() {
                 <div className="container">
                     <h2>Ready to Explore Goa?</h2>
                     <p>Let us plan your perfect Goan getaway</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg">Plan Goa Trip</Link>
+                    <button
+                        onClick={() => openBookingModal('Goa Trip')}
+                        className="btn btn-primary btn-lg"
+                        style={{ border: 'none', cursor: 'pointer' }}
+                    >
+                        Plan Goa Trip
+                    </button>
                 </div>
             </section>
         </div>

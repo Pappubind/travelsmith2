@@ -1,0 +1,119 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    /* Even darker background */
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1000000;
+    /* Extremely high z-index */
+    padding: 0;
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+.modal-container {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    position: relative;
+    padding: 5rem 2.5rem 2.5rem;
+    /* Increased top padding from 3.5rem and 4rem to 5rem */
+    border-radius: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+    animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 220px 20px 100px;
+    /* Massive top margin to ensure visibility below navbar */
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #0B3C5D;
+    /* High contrast dark blue */
+    border: none;
+    color: white;
+    /* White cross icon */
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close:hover {
+    background: var(--primary-orange);
+    transform: rotate(-90deg) scale(1.1);
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 2rem;
+    /* Added side padding so title doesn't hit button if it wraps */
+}
+
+.modal-header h2 {
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.selected-destination {
+    margin-top: 1rem;
+    background: rgba(var(--primary-orange-rgb), 0.1);
+    color: var(--primary-orange);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+    border: 1px solid rgba(var(--primary-orange-rgb), 0.2);
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-container {
+        padding: 1.75rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+}
