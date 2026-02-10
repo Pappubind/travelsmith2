@@ -87,7 +87,7 @@ export default function International() {
                         </div>
                         <div className="destination-photo-card group">
                             <div className="relative overflow-hidden aspect-video">
-                                <img src="/images/greece-santorini.jpg" alt="Santorini" className="img-cover group-hover:scale-110 transition-transform duration-500" />
+                                <img src="/images/santorini.jpg" alt="Santorini" className="img-cover group-hover:scale-110 transition-transform duration-500" />
                             </div>
                             <div className="p-6">
                                 <h3>Timeless Greece</h3>
