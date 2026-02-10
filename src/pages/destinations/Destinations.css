@@ -397,129 +397,124 @@
     text-align: left;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .dest-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .dest-hero p {
-        font-size: 1.25rem;
-    }
+/* Destination Grid & Cards Overhaul */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
 }
 
+.tour-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-orange-light);
+}
+
+.tour-card-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.tour-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.tour-card:hover .tour-card-image img {
+    transform: scale(1.1);
+}
+
+.tour-card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: var(--shadow-sm);
+}
+
+.tour-card-content {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--white), var(--gray-50));
+}
+
+.tour-card-content h3 {
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.tour-card-content p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tour-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--gray-100);
+}
+
+.tour-link {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.tour-card:hover .tour-link {
+    color: var(--primary-orange-dark);
+}
+
+.tour-link svg {
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover .tour-link svg {
+    transform: translateX(5px);
+}
+
+/* Responsive Overrides */
 @media (max-width: 768px) {
-    .dest-hero {
-        min-height: 350px;
-    }
-
-    .dest-hero h1 {
-        font-size: 2rem;
-    }
-
-    .dest-hero p {
-        font-size: 1.125rem;
-    }
-
-    .dest-cta h2 {
-        font-size: 1.75rem;
-    }
-
-    .destination-photo {
-        height: 250px;
-    }
-
-    .destination-photo-large {
-        height: 300px;
-    }
-
-    .destination-photo-overlay h3 {
-        font-size: 1.25rem;
-    }
-
-    .destination-photo-overlay p {
-        font-size: 0.9rem;
-    }
-
-    .destination-photo-card {
-        margin-bottom: var(--spacing-md);
-    }
-
-    .region-card h3 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .dest-hero {
-        min-height: 300px;
-    }
-
-    .dest-hero h1 {
-        font-size: 1.75rem;
-        padding: 0 1rem;
-    }
-
-    .dest-hero p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .dest-feature-card {
-        padding: var(--spacing-md);
-    }
-
-    .dest-feature-icon {
-        font-size: 2.5rem;
-    }
-
-    .attraction-image {
-        height: 180px;
-    }
-
-    .destination-photo {
-        height: 220px;
-    }
-
-    .destination-photo-large {
-        height: 270px;
-    }
-
-    .destination-photo-overlay {
-        padding: var(--spacing-md);
-    }
-
-    .feature-highlight {
-        padding: var(--spacing-md);
-    }
-
-    .highlight-icon {
-        font-size: 2.5rem;
-    }
-
-    .dest-cta h2 {
-        font-size: 1.5rem;
-    }
-
-    .dest-cta p {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .dest-hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .dest-hero p {
-        font-size: 0.9375rem;
-    }
-
-    .destination-photo {
-        height: 200px;
-    }
-
-    .destination-photo-large {
-        height: 250px;
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
 }

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import ContactForm from './ContactForm';
 import './BookingModal.css';
 
-export default function BookingModal({ isOpen, onClose, destination }) {
+export default function BookingModal({ isOpen, onClose, prefillDestination }) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -27,13 +27,13 @@ export default function BookingModal({ isOpen, onClose, destination }) {
                     <div className="modal-header">
                         <h2>Book Your Experience</h2>
                         <p>Share your details, and we'll craft the perfect journey for you.</p>
-                        {destination && (
+                        {prefillDestination && (
                             <div className="selected-destination">
-                                Selected: <strong>{destination}</strong>
+                                Selected: <strong>{prefillDestination}</strong>
                             </div>
                         )}
                     </div>
-                    <ContactForm prefillDestination={destination} onSuccess={onClose} />
+                    <ContactForm prefillDestination={prefillDestination} onSuccess={onClose} />
                 </div>
             </div>
         </div>
