@@ -57,6 +57,11 @@ export default function International() {
 
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="International Luxury Tours"
+            />
             {/* Hero */}
             <section className="dest-hero international-hero">
                 <div className="dest-hero-overlay" />
@@ -99,6 +104,20 @@ export default function International() {
                             </Link>
                         ))}
                     </div>
+
+                    <section className="dest-cta">
+                        <div className="container">
+                            <h2>Boundless Adventures Await</h2>
+                            <p>From the glaciers of the south to the peaks of the north, let us plan your global journey.</p>
+                            <button
+                                onClick={() => setIsBookingModalOpen(true)}
+                                className="btn btn-primary btn-lg"
+                                style={{ border: 'none' }}
+                            >
+                                Inquire About International Tours
+                            </button>
+                        </div>
+                    </section>
                 </div>
             </section>
 

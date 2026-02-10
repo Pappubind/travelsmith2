@@ -324,14 +324,34 @@
     color: var(--white);
     padding: var(--spacing-3xl) 0;
     text-align: center;
-    border-top-left-radius: var(--radius-organic);
-    border-top-right-radius: var(--radius-organic);
+    border-radius: var(--radius-organic);
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--spacing-3xl);
+}
+
+.dest-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/taj_mahal.jpg') no-repeat center/cover;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.dest-cta .container {
+    position: relative;
+    z-index: 1;
 }
 
 .dest-cta h2 {
     font-size: 2.5rem;
     color: var(--white);
     margin-bottom: var(--spacing-md);
+    font-weight: 800;
 }
 
 .dest-cta p {
@@ -339,6 +359,9 @@
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-xl);
     text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Destination Photo Cards */

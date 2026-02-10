@@ -78,6 +78,11 @@ export default function India() {
 
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="India Premium Tours"
+            />
             {/* Hero */}
             <section className="dest-hero india-hero">
                 <div className="dest-hero-overlay" />
@@ -120,6 +125,20 @@ export default function India() {
                             </Link>
                         ))}
                     </div>
+
+                    <section className="dest-cta">
+                        <div className="container">
+                            <h2>Ready for a Royal Experience?</h2>
+                            <p>Let us curate your perfect luxury journey through the Indian subcontinent.</p>
+                            <button
+                                onClick={() => setIsBookingModalOpen(true)}
+                                className="btn btn-primary btn-lg"
+                                style={{ border: 'none' }}
+                            >
+                                Inquire About India Tours
+                            </button>
+                        </div>
+                    </section>
                 </div>
             </section>
         </div>

@@ -43,7 +43,7 @@ export default function Bhutan() {
                         </div>
                         <div className="detail-image-container">
                             <img
-                                src="/images/punakha-dzong.jpg"
+                                src="/images/bhutan_tigers_nest.jpg"
                                 alt="Bhutan Dzong"
                                 className="detail-image-fixed"
                             />
