@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Landmark, Map, Star, Sun, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Rajasthan() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Heartland of Rajasthan"
+            />
             <section className="dest-hero rajasthan-hero" style={{ background: 'url("/images/jaipur_palace.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -78,7 +86,13 @@ export default function Rajasthan() {
                 <div className="container text-center">
                     <h2>Your Royal Journey Awaits</h2>
                     <p>Classic 8 to 15 day itineraries tailored for luxury travelers.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About Rajasthan</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About Rajasthan
+                    </button>
                 </div>
             </section>
         </div>

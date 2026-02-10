@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Mountain, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Kashmir() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Glorious Kashmir"
+            />
             <section className="dest-hero kashmir-hero" style={{ background: 'url("/images/Kashmir-Tourism-Best-of-Kashmir.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -78,7 +86,13 @@ export default function Kashmir() {
                 <div className="container text-center">
                     <h2>Ready to Experience Paradise?</h2>
                     <p>Customizable 6 to 10 day itineraries available for families and couples.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About Kashmir Tour</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About Kashmir Tour
+                    </button>
                 </div>
             </section>
         </div>

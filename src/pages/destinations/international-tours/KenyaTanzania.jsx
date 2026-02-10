@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function KenyaTanzania() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero kenya-hero" style={{ background: 'url("/images/safari.jpg") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function KenyaTanzania() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Spectacular Kenya & Tanzania"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Go Wild with TravelSmith</h2>
                     <p>Bespoke safari itineraries starting from 7 to 14 days.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Book My African Safari</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Book My African Safari
+                    </button>
                 </div>
             </section>
         </div>

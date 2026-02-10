@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { ShieldAlert, Map, Globe, Wind, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function ChardhamYatra() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Chardham Yatra"
+            />
             <section className="dest-hero chardham-hero" style={{ background: 'url("/images/chardham-2025.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -73,7 +81,13 @@ export default function ChardhamYatra() {
                 <div className="container text-center">
                     <h2>Embark on Your Spiritual Awakening</h2>
                     <p>Limited slots available for the upcoming season. Book in advance.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire for Chardham Batch</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire for Chardham Batch
+                    </button>
                 </div>
             </section>
         </div>

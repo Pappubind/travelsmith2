@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Anchor, Shield, Target, Waves, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function HeritageUttarakhand() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Heritage of Uttarakhand"
+            />
             <section className="dest-hero heritage-hero" style={{ background: 'url("/images/rishikesh_hero.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -77,7 +85,13 @@ export default function HeritageUttarakhand() {
                 <div className="container text-center">
                     <h2>Connect with Your Inner Self</h2>
                     <p>Spiritual retreats starting from 3 to 14 days.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire Now</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire Now
+                    </button>
                 </div>
             </section>
         </div>

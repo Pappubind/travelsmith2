@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Landmark, Waves, Sun, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Greece() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero greece-hero" style={{ background: 'url("/images/greece-santorini.jpg") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function Greece() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Timeless Greece"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Your Mediterranean Dream Awaits</h2>
                     <p>Luxury island tours designed for connoisseurs of the good life.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About Greece</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About Greece
+                    </button>
                 </div>
             </section>
         </div>

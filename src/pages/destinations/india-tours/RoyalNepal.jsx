@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function RoyalNepal() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Royal Nepal"
+            />
             <section className="dest-hero royal-nepal-hero" style={{ background: 'url("/images/nepal-prayer-flags.avif") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -77,7 +85,13 @@ export default function RoyalNepal() {
                 <div className="container text-center">
                     <h2>Redefine Your Himalayan Experience</h2>
                     <p>Our premium Royal Nepal tours are fully bespoke.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Consult with Our Experts</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Consult with Our Experts
+                    </button>
                 </div>
             </section>
         </div>

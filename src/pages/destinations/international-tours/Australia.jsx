@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle, Mountain } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Australia() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero australia-hero" style={{ background: 'url("/images/australlia.jpeg") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function Australia() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Magical Australia"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Discover the Extraordinary Australia</h2>
                     <p>Inquire for 10 to 20 day premium across-continent tours.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About Australia</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About Australia
+                    </button>
                 </div>
             </section>
         </div>

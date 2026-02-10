@@ -70,15 +70,15 @@ export default function Footer() {
                         <ul className="footer-contact">
                             <li>
                                 <MapPin size={18} />
-                                <span>Madgaon, Goa 403601, India</span>
+                                <span>Margao, Goa 403601, India</span>
                             </li>
                             <li>
                                 <Phone size={18} />
-                                <span>0832 273 1438</span>
+                                <span>0832 273 1428</span>
                             </li>
                             <li>
                                 <Mail size={18} />
-                                <span>info@travelsmith.com</span>
+                                <span>info@travelsmith.in</span>
                             </li>
                         </ul>
 

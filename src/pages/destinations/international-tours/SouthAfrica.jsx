@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function SouthAfrica() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero south-africa-hero" style={{ background: 'url("/images/south-africa-safari.jpg") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function SouthAfrica() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Spectacular South Africa Safari"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Experience the Adventure of a Lifetime</h2>
                     <p>Custom South Africa packages available for families and adventurers.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About South Africa</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About South Africa
+                    </button>
                 </div>
             </section>
         </div>

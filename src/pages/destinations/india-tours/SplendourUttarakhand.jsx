@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { TreePine, Map, Sun, Mountain, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function SplendourUttarakhand() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Splendour of Uttarakhand"
+            />
             <section className="dest-hero" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/mussoorie_hero.jpg") no-repeat center/cover' }}>
                 <div className="container dest-hero-content">
                     <h1>Splendour of Uttarakhand</h1>
@@ -76,7 +84,13 @@ export default function SplendourUttarakhand() {
                 <div className="container text-center">
                     <h2>Experience the Splendour</h2>
                     <p>Weekend getaways and week-long retreats available.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Book Uttarakhand Tour</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Book Uttarakhand Tour
+                    </button>
                 </div>
             </section>
         </div>

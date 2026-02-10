@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function NorthAmerica() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero north-america-hero" style={{ background: 'url("/images/new_york.jpg") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function NorthAmerica() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="The Best of North America"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Go Big in North America</h2>
                     <p>Inquire for customized USA and Canada itineraries.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Consult with Us</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Consult with Us
+                    </button>
                 </div>
             </section>
         </div>

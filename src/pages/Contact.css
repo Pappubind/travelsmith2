@@ -1,7 +1,11 @@
+.contact-page .container {
+    padding: 0 var(--spacing-2xl);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: var(--spacing-3xl);
+    gap: 6rem;
     margin-top: var(--spacing-xl);
 }
 
@@ -109,6 +113,25 @@
     color: var(--gray-600);
     line-height: 1.7;
     text-align: justify;
+}
+
+.dept-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.dept-item {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+.dept-item strong {
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 0;
 }
 
 .contact-info-card a {

@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Cloud, MapPin, Wind, Mountain, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Himachal() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Scenic Himachal"
+            />
             <section className="dest-hero himachal-hero" style={{ background: 'url("/images/himachal_peaks.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -77,7 +85,13 @@ export default function Himachal() {
                 <div className="container text-center">
                     <h2>Escape to the Mountains</h2>
                     <p>Perfect for summer getaways and winter snow lovers.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Plan My Himachal Trip</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Plan My Himachal Trip
+                    </button>
                 </div>
             </section>
         </div>

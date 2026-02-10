@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Cloud, MapPin, Wind, Mountain, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function EnchantingNepal() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Enchanting Nepal"
+            />
             <section className="dest-hero nepal-hero" style={{ background: 'url("/images/nepal_valley.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -78,7 +86,13 @@ export default function EnchantingNepal() {
                 <div className="container text-center">
                     <h2>Experience the Magic of Nepal</h2>
                     <p>Luxury and standard packages available for all traveler segments.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire Now</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire Now
+                    </button>
                 </div>
             </section>
         </div>

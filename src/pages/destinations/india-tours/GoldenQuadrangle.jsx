@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function GoldenQuadrangle() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
     return (
         <div className="destinations-page">
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="The Golden Quadrangle"
+            />
             <section className="dest-hero gold-hero" style={{ background: 'url("/images/taj_mahal.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
@@ -78,7 +86,13 @@ export default function GoldenQuadrangle() {
                 <div className="container text-center">
                     <h2>Experience the Gold Standard</h2>
                     <p>Customizable 5 to 7 day circuits for discerning travelers.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Book Golden Triangle</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Book Golden Triangle
+                    </button>
                 </div>
             </section>
         </div>

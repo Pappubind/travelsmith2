@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Anchor, Waves, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function Mauritius() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero mauritius-hero" style={{ background: 'url("/images/maritius.jpg") no-repeat center/cover' }}>
@@ -73,11 +75,22 @@ export default function Mauritius() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Mauritius"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Escape to Your Private Paradise</h2>
                     <p>Honeymoon and family packages starting from 5 to 10 nights.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Inquire About Mauritius</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About Mauritius
+                    </button>
                 </div>
             </section>
         </div>

@@ -36,43 +36,48 @@ export default function Contact() {
                         {/* Contact Information */}
                         <div className="contact-info-section">
                             <h2>Get In Touch</h2>
-                            <p className="contact-intro">
-                                Have questions? We're here to help! Reach out to us through any of these channels.
-                            </p>
-
                             <div className="contact-info-cards">
                                 <div className="contact-info-card">
-                                    <div className="contact-icon">
-                                        <MapPin size={32} />
-                                    </div>
+                                    <div className="contact-icon"><MapPin size={24} /></div>
                                     <h3>Office Address</h3>
                                     <p>
-                                        AS-28, 2nd Floor <br /> L&L Correia's Pride, Fatorda<br />
-                                        Madgaon, Goa 403601<br />
-                                        India
+                                        Office No. AS-28, 2nd Floor,<br />
+                                        L & L Correia's Pride Building,<br />
+                                        Margao Goa, India - 403601
                                     </p>
                                 </div>
 
                                 <div className="contact-info-card">
-                                    <div className="contact-icon">
-                                        <Phone size={32} />
-                                    </div>
-                                    <h3>Phone</h3>
+                                    <div className="contact-icon"><Phone size={24} /></div>
+                                    <h3>Phone & Fax</h3>
                                     <p>
-                                        <a href="tel:+918322731438">0832 273 1438</a><br />
-                                        <a href="tel:+918322731438">+91 832 273 1438</a>
+                                        <strong>Office:</strong> <a href="tel:+918322731428">0832 2731428</a> / 38 / 18<br />
+                                        <strong>Mobile:</strong> <a href="tel:+919158371998">+91 91583 71998</a><br />
+                                        <strong>Fax:</strong> +91 0832 2710025
                                     </p>
                                 </div>
 
                                 <div className="contact-info-card">
-                                    <div className="contact-icon">
-                                        <Mail size={32} />
+                                    <div className="contact-icon"><Mail size={24} /></div>
+                                    <h3>Departmental Contact</h3>
+                                    <div className="dept-contacts">
+                                        <div className="dept-item">
+                                            <strong>Hotel Reservations:</strong>
+                                            Anish - <a href="tel:7507518653">7507518653</a> | <a href="mailto:resv@travelsmith.in">resv@travelsmith.in</a>
+                                        </div>
+                                        <div className="dept-item">
+                                            <strong>Ground Handling:</strong>
+                                            Anand - <a href="tel:9923720417">9923720417</a> | <a href="mailto:info@travelsmith.in">info@travelsmith.in</a>
+                                        </div>
+                                        <div className="dept-item">
+                                            <strong>Ground Transport:</strong>
+                                            Praveen - <a href="tel:9503761074">9503761074</a> | <a href="mailto:info@travelsmith.in">info@travelsmith.in</a>
+                                        </div>
+                                        <div className="dept-item">
+                                            <strong>CEO & MD:</strong>
+                                            Mr. Deepak Lotlikar | <a href="mailto:deepak@travelsmith.in">deepak@travelsmith.in</a>
+                                        </div>
                                     </div>
-                                    <h3>Email</h3>
-                                    <p>
-                                        <a href="mailto:info@travelsmith.com">info@travelsmith.com</a><br />
-                                        <a href="mailto:bookings@travelsmith.com">bookings@travelsmith.com</a>
-                                    </p>
                                 </div>
                             </div>
                         </div>

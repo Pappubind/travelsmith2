@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import BookingModal from '../../../components/BookingModal';
 import { Camera, Map, Star, Globe, CheckCircle } from 'lucide-react';
 import '../Destinations.css';
 
 export default function SouthAmerica() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
             <section className="dest-hero south-america-hero" style={{ background: 'url("/images/south-america.webp") no-repeat center/cover' }}>
@@ -74,11 +76,22 @@ export default function SouthAmerica() {
                 </div>
             </section>
 
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                prefillDestination="Mystical South America"
+            />
             <section className="dest-cta">
                 <div className="container text-center">
                     <h2>Embark on Your Andean Odyssey</h2>
                     <p>Luxury adventure packages for the intrepid traveler.</p>
-                    <Link to="/contact" className="btn btn-primary btn-lg mt-4">Start Your Journey</Link>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg mt-4"
+                        style={{ border: 'none' }}
+                    >
+                        Start Your Journey
+                    </button>
                 </div>
             </section>
         </div>

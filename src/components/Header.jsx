@@ -153,16 +153,16 @@ export default function Header() {
           <div className="top-bar-content">
             <div className="top-bar-item">
               <MapPin size={14} />
-              <span>Madgaon, Goa 403601, India</span>
+              <span>Margao, Goa 403601, India</span>
             </div>
             <div className="top-bar-right">
-              <a href="tel:08322731438" className="top-bar-item">
+              <a href="tel:08322731428" className="top-bar-item">
                 <Phone size={14} />
-                <span>0832 273 1438</span>
+                <span>0832 273 1428</span>
               </a>
-              <a href="mailto:info@travelsmith.com" className="top-bar-item">
+              <a href="mailto:info@travelsmith.in" className="top-bar-item">
                 <Mail size={14} />
-                <span>info@travelsmith.com</span>
+                <span>info@travelsmith.in</span>
               </a>
             </div>
           </div>
