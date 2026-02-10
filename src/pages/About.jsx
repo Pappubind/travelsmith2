@@ -113,25 +113,25 @@ export default function About() {
                     <h2 className="section-title">Recognition & Affiliations</h2>
                     <div className="grid grid-3 recognition-grid">
                         <div className="about-value-card">
-                            <div className="about-icon-circle">
-                                <Award size={48} />
+                            <div className="recognition-logo-container">
+                                <img src="/images/Goa_tourism.png" alt="Dept. of Tourism Goa Logo" className="recognition-img" />
                             </div>
                             <h3>Dept. of Tourism Goa</h3>
                             <p>Officially recognized and approved by the Department of Tourism Goa.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-icon-circle">
-                                <Shield size={48} />
+                            <div className="recognition-logo-container">
+                                <img src="/images/IATO.png" alt="IATO Logo" className="recognition-img" />
                             </div>
-                            <h3>IATO</h3>
-                            <p>Member of the Indian Association of Tour Operators.</p>
+                            <h3>IATO Member</h3>
+                            <p>Proud member of the Indian Association of Tour Operators.</p>
                         </div>
                         <div className="about-value-card">
-                            <div className="about-icon-circle">
-                                <Users size={48} />
+                            <div className="recognition-logo-container">
+                                <img src="/images/TTAG.png" alt="TTAG Logo" className="recognition-img" />
                             </div>
-                            <h3>TTAG</h3>
-                            <p>Member of the Travel & Tourism Association of Goa.</p>
+                            <h3>TTAG Member</h3>
+                            <p>Active member of the Travel & Tourism Association of Goa.</p>
                         </div>
                     </div>
                 </div>

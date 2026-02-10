@@ -141,26 +141,26 @@
 .recognition-logos {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
-.recognition-badge {
-    padding: 6px 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-pill);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--gray-300);
+.footer-recognition-img {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    filter: brightness(0.9) contrast(1.1);
     transition: all 0.3s ease;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.recognition-badge:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-orange);
-    color: var(--white);
+.footer-recognition-img:hover {
+    transform: scale(1.05);
+    background: var(--white);
+    filter: brightness(1) contrast(1);
 }
 
 /* Footer Bottom */

@@ -24,9 +24,9 @@ export default function Footer() {
                         <div className="recognition-section">
                             <h4>Recognized By:</h4>
                             <div className="recognition-logos">
-                                <div className="recognition-badge">Dept. of Tourism Goa</div>
-                                <div className="recognition-badge">IATO</div>
-                                <div className="recognition-badge">TTAG</div>
+                                <img src="/images/Goa_tourism.png" alt="Dept. of Tourism Goa" title="Dept. of Tourism Goa" className="footer-recognition-img" />
+                                <img src="/images/IATO.png" alt="IATO" title="IATO" className="footer-recognition-img" />
+                                <img src="/images/TTAG.png" alt="TTAG" title="TTAG" className="footer-recognition-img" />
                             </div>
                         </div>
                     </div>
