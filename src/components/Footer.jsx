@@ -99,7 +99,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} TravelSmith. All rights reserved. | Developed by <a href="https://www.karmaveontechnologies.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-orange)', fontWeight: '600' }}>Karmaveon Technologies</a></p>
+                    <p>&copy; {currentYear} TravelSmith Adventure Pvt. Ltd. All rights reserved. | Developed by <a href="https://www.karmaveontechnologies.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-orange)', fontWeight: '600' }}>Karmaveon Technologies</a></p>
                 </div>
             </div>
         </footer>
