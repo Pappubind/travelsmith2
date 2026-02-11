@@ -201,7 +201,7 @@
 }
 
 .about-value-card:hover .about-icon-circle {
-    transform: scale(1.1) rotateY(180deg);
+    transform: scale(1.1) ;
 }
 
 .about-value-card h3 {
@@ -311,7 +311,7 @@
 }
 
 .about-value-card:hover .recognition-logo-container {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) ;
     box-shadow: 0 12px 25px rgba(234, 113, 37, 0.15);
 }
 
