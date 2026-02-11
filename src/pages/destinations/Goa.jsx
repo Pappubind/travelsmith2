@@ -461,7 +461,7 @@ export default function Goa() {
                 <BookingModal
                     isOpen={isBookingModalOpen}
                     onClose={() => setIsBookingModalOpen(false)}
-                    destination={selectedTour}
+                    prefillDestination={selectedTour}
                 />
             </section>
 

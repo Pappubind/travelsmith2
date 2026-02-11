@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, Map, Star, Mountain, CheckCircle, Globe, Sun, ArrowRight, Shield, Heart } from 'lucide-react';
+import BookingModal from '../../components/BookingModal';
 import './Destinations.css';
 
 export default function India() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     const indiaDestinations = [
         {
             title: "Heavenly Kashmir",

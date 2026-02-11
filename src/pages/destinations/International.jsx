@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Globe, MapPin, Compass, Waves, Star, Sun, Shield, ArrowRight, Heart } from 'lucide-react';
+import BookingModal from '../../components/BookingModal';
 import './Destinations.css';
 
 export default function International() {
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     const internationalDestinations = [
         {
             title: "Kenya & Tanzania",
