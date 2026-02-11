@@ -80,11 +80,11 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Phone size={18} />
-                                <span>0832 273 1428</span>
+                                <a href="tel:08322731428" className="footer-link">0832 273 1428</a>
                             </li>
                             <li>
                                 <Mail size={18} />
-                                <span>info@travelsmith.in</span>
+                                <a href="mailto:info@travelsmith.in" className="footer-link">info@travelsmith.in</a>
                             </li>
                         </ul>
 

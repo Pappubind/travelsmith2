@@ -30,7 +30,7 @@ export default function MICE() {
                         </div>
                         <div className="detail-text">
                             <h2>Strategic Event Planning</h2>
-                            <p>
+                            <p className="justify-text">
                                 We specialize in creating high-impact corporate programs that deliver
                                 results. From board meetings to large-scale international conferences,
                                 our team handles every aspect of the event lifecycle.

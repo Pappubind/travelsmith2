@@ -23,13 +23,13 @@ export default function CruiseHandling() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>Excellence in Port Operations</h2>
-                            <p>
+                            <p className="justify-text">
                                 The Travelsmith Cruise Services team work side by side cruise ship representatives to deliver an efficient, professional and customer focused experience from shore to ship and vice versa. Every member of the team has been selected to deliver exceptional customer service, have excellent local knowledge and contacts and is very resourceful. With thorough planning and preparation and being able to work creatively and calmly when faced with the unexpected, we are confident that you will be delighted with our services.
                             </p>
-                            <p>
+                            <p className="justify-text">
                                 Our local, in-depth knowledge and experience truly enables us to design and deliver a tailor-made program of shore excursions and activities for all tastes, ages and interests.
                             </p>
-                            <p>
+                            <p className="justify-text">
                                 As well as offering the popular and traditional excursions, we believe it’s important to offer something that’s a little bit different. Our intimate, local knowledge allows us to create memorable experiences ashore and we are constantly investing resources in developing new and interesting excursion opportunities.
                             </p>
                             <ul className="check-list">

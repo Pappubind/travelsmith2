@@ -53,7 +53,7 @@ export default function DMC() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>Expert Ground Handling</h2>
-                            <p>
+                            <p className="justify-text">
                                 As a premier DMC, TravelSmith provides comprehensive ground handling services
                                 across India. Our deep local knowledge and strong vendor relationships
                                 ensure that every aspect of your destination experience is managed with

@@ -7,7 +7,7 @@ export default function Greece() {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     return (
         <div className="destinations-page">
-            <section className="dest-hero greece-hero" style={{ background: 'url("/images/greece-santorini.jpg") no-repeat center/cover' }}>
+            <section className="dest-hero greece-hero" style={{ background: 'url("/images/greece.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Timeless Greece</h1>

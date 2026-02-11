@@ -15,7 +15,7 @@ export default function BlogPost4() {
                         <h1>The Art of Bespoke Travel: Our Design Philosophy</h1>
                         <div className="post-meta">
                             <span className="meta-item"><Calendar size={16} /> Dec 20, 2023</span>
-                            <span className="meta-item"><User size={16} /> Deepak Lotlikar</span>
+                            <span className="meta-item"><User size={16} /> Travel Expert</span>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ export default function BlogPost4() {
                         </div>
 
                         <blockquote>
-                            "Luxury isn't about how much you spend—it's about how deeply you experience. True bespoke travel creates moments money alone cannot buy." — Deepak Lotlikar, Founder & CEO
+                            "Luxury isn't about how much you spend—it's about how deeply you experience. True bespoke travel creates moments money alone cannot buy." — Travel Expert
                         </blockquote>
 
                         <h2>Balancing Luxury with Authenticity</h2>

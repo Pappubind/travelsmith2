@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { Presentation, CheckCircle, MapPin, Users, Clock, Monitor, Shield } from 'lucide-react';
 import '../ServiceDetail.css';
 
+
 export default function Meetings() {
     return (
         <div className="service-detail-page">
-            <section className="service-hero mice-sub-hero" style={{ background: 'url("/images/mice_meeting_premium.png") no-repeat center/cover' }}>
+            <section className="service-hero mice-sub-hero" style={{ background: 'url("/images/mice_hero_premium_1768746289905.png") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
-                <div className="container">
+                <div className="service-hero-content">
                     <h1>Executive Meetings</h1>
                     <p>Sophisticated Venues and Flawless Execution</p>
                 </div>
@@ -25,14 +26,14 @@ export default function Meetings() {
                         </div>
                         <div className="detail-text">
                             <h2>Strategic Corporate Meetings</h2>
-                            <p>
+                            <p className="justify-text">
                                 Goa is one of the most preferred destinations for MICE tourism and it is much more than just a beach holiday destination. The new integrated airport terminal, latest technologies, the superb resorts, the best of the venues and state of the art business facilities meet the global standards which welcomes large events, incentive groups, conferences & exhibitions etc. Travelsmith is specialist in MICE services and will create a lasting impression on every meeting, incentive, convention and event handled by us. Our dedicated team will work with specific objectives and will ensure that you have an amazing experience by providing end to end services.
+                                Travelsmith team purely understands the value of time for an individual participating in a meeting travelling miles away. We will provide complete assistance on arranging meetings at the destination for different category of people, for example – clients to customers; dealers to agents or retailers, zonal gathering etc which will serve multiple needs. The services start from day one while carefully selecting the appropriate hotel / resort, venue and activities fallowed by holding accurate meeting agenda. Start to end event assistance will be provided right from the arrival services at the airport with personalized desk and special welcome. To hold the meeting with the best interest of every delegate is the key role of our experts and that’s where we step in to maximize the delegate presence by creating innovative, ideal and an elegant ambience and state of the art audio / video equipment which even can transform a boring meeting into a stimulating brainstorming and interesting session.<br></br>
                             </p>
                         </div>
                     </div>
-                    <br></br>
-                    <p>
-                        Travelsmith team purely understands the value of time for an individual participating in a meeting travelling miles away. We will provide complete assistance on arranging meetings at the destination for different category of people, for example – clients to customers; dealers to agents or retailers, zonal gathering etc which will serve multiple needs. The services start from day one while carefully selecting the appropriate hotel / resort, venue and activities fallowed by holding accurate meeting agenda. Start to end event assistance will be provided right from the arrival services at the airport with personalized desk and special welcome. To hold the meeting with the best interest of every delegate is the key role of our experts and that’s where we step in to maximize the delegate presence by creating innovative, ideal and an elegant ambience and state of the art audio / video equipment which even can transform a boring meeting into a stimulating brainstorming and interesting session.<br></br>
+
+                    <p className="justify-text">
                         <br></br> Special pre-post tours around Goa are organized by the active team of the Travelsmith desk at venue for spouse and delegates. Excellent customer service and every minute attention, tastefully designed delegate kits, an elegant ambience, immaculately attired chauffeurs in comfortable cars will add a special touch to every delegate attending the meeting. Through our exceptional relationship with airlines, airport authorities, chain resorts, celebrity artist and local vendors, we are able to handle your entire project with great care and at leading price.
                     </p>
                 </div>

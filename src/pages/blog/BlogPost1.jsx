@@ -15,7 +15,7 @@ export default function BlogPost1() {
                         <h1>Navigating the Future of Corporate Travel in Goa</h1>
                         <div className="post-meta">
                             <span className="meta-item"><Calendar size={16} /> Jan 15, 2024</span>
-                            <span className="meta-item"><User size={16} /> Deepak Lotlikar</span>
+                            <span className="meta-item"><User size={16} /> Travel Expert</span>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function BlogPost1() {
                         </p>
 
                         <blockquote>
-                            "MICE tourism in Goa isn't just about booking a venue—it's about crafting an experience that resonates with your team long after they return home." — Deepak Lotlikar, Founder & CEO
+                            "MICE tourism in Goa isn't just about booking a venue—it's about crafting an experience that resonates with your team long after they return home." — Travel Expert
                         </blockquote>
 
                         <h2>Sustainable Practices at the Forefront</h2>

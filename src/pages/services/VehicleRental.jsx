@@ -23,7 +23,7 @@ export default function VehicleRental() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>Safe & Comfortable Logistics</h2>
-                            <p>
+                            <p className="justify-text">
                                 We at Travelsmith not only provide you car rental service but also peace of mind. Our Executive is always available to assist you to select appropriate, suitable car / coach for your tour in Goa. The complete guidance with the itinerary planning will be provided to you without any hassle. We at Travelsmith are awarded to handle car / coach rental services for some of the premier and large events taking place in Goa. The most experienced team will assist you, right from the preliminary planning to the end of the event with meticulously operation plan.
                             </p>
                             <ul className="check-list">

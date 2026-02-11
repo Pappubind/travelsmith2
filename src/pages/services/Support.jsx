@@ -30,7 +30,7 @@ export default function Support() {
                         </div>
                         <div className="detail-text">
                             <h2>Expert Travel Assistance</h2>
-                            <p>
+                            <p className="justify-text">
                                 At TravelSmith, we understand that travel requires meticulous planning and
                                 reliable support. Our dedicated support team is available to handle all
                                 your ancillary travel needs with professional care.

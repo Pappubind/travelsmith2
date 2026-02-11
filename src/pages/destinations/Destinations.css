@@ -322,12 +322,12 @@
 .dest-cta {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
     color: var(--white);
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0;
     text-align: center;
     border-radius: var(--radius-organic);
     position: relative;
     overflow: hidden;
-    margin-top: var(--spacing-3xl);
+    margin-top: var(--spacing-xl);
 }
 
 .dest-cta::before {

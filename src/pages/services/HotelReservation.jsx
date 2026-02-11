@@ -23,7 +23,7 @@ export default function HotelReservation() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>Curated Accommodation Solutions</h2>
-                            <p>
+                            <p className="justify-text">
                                 Travelsmith ensures that our partners have the best rates. The process starts right from the initial contract negotiations stage to last minute offers special deals. Sourcing room allocations and making favorable conditions for our partners are some of the keys areas we focus on. Believing in commitment and passion to deliver service has built trusted relationships with a wide network of hoteliers and resort owners making us a perfect local partner for your representations. Our dedicated Reservations team with flawless planning will take special care to ensure that bookings are handled with great efficiency and effectively. We proactively manage special requests, allotments and stop sale requests. Every single booking is plays an important role for us.
                             </p>
                             <ul className="check-list">

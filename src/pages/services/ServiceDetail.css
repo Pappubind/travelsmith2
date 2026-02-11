@@ -133,6 +133,10 @@
     text-align: left;
 }
 
+.justify-text {
+    text-align: justify;
+}
+
 
 .detail-image-fixed {
     width: 100%;

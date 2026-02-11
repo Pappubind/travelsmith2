@@ -7,7 +7,7 @@ export default function IncentiveTravel() {
         <div className="service-detail-page">
             <section className="service-hero incentive-hero" style={{ background: 'url("/images/incentive_travel_hero.jpg") no-repeat center/cover' }}>
                 <div className="dest-hero-overlay" />
-                <div className="container">
+                <div className="service-hero-content">
                     <h1>Incentive Travel</h1>
                     <p>Exclusive rewards and experiential journeys for your high-achieving teams.</p>
                 </div>
@@ -18,8 +18,11 @@ export default function IncentiveTravel() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>Motivate Through Experience</h2>
-                            <p>
+                            <p className="justify-text">
                                 Goa is one of the most preferred destinations for MICE tourism and it is much more than just a beach holiday destination. The new integrated airport terminal, latest technologies, the superb resorts, the best of the venues and state of the art business facilities meet the global standards which welcomes large events, incentive groups, conferences & exhibitions etc. Travelsmith is specialist in MICE services and will create a lasting impression on every meeting, incentive, convention and event handled by us. Our dedicated team will work with specific objectives and will ensure that you have amazing experiences by providing end to end services.
+                            </p>
+                            <p className="justify-text">
+                                We at Travelsmith are specialized in handling incentive travel for Goa and go an extra mile while developing an incentive program that will surely create a lasting impression for every guest that travels. We constantly innovate and create new ideas for our client which in turn is an incredible experience than just a normal holiday. Our unique fun and creative team buildling activities, mental challenges and physical actions can help you to address your team in a new way of inspiration. Exclusive accommodation options, deluxe transport, creative theme dinners, imaginative and stimulating excursion with the meticulously planned operation play a key role in handling successful incentive travel with us.
                             </p>
                         </div>
                         <div className="detail-image-container">
@@ -30,10 +33,8 @@ export default function IncentiveTravel() {
                             />
                         </div>
                     </div>
-                    <br></br>
-                    <p>
-                        We at Travelsmith are specialized in handling incentive travel for Goa and go an extra mile while developing an incentive program that will surely create a lasting impression for every guest that travels. We constantly innovate and create new ideas for our client which in turn is an incredible experience than just a normal holiday. Our unique fun and creative team buildling activities, mental challenges and physical actions can help you to address your team in a new way of inspiration. Exclusive accommodation options, deluxe transport, creative theme dinners, imaginative and stimulating excursion with the meticulously planned operation play a key role in handling successful incentive travel with us.
-                    </p>
+
+
                 </div>
             </section>
 

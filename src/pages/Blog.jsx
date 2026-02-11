@@ -9,7 +9,7 @@ export default function Blog() {
             title: "Navigating the Future of Corporate Travel in Goa",
             excerpt: "How TravelSmith is redefining MICE experiences with sustainable practices and local immersion.",
             date: "Jan 15, 2024",
-            author: "Deepak Lotlikar",
+            author: "Travel Expert",
             image: "/images/blog_mice_hero.png",
             category: "MICE"
         },
@@ -36,7 +36,7 @@ export default function Blog() {
             title: "The Art of Bespoke Travel: Our Design Philosophy",
             excerpt: "How we craft personalized itineraries that balance luxury with authentic local experiences.",
             date: "Dec 20, 2023",
-            author: "Deepak Lotlikar",
+            author: "Travel Expert",
             image: "/images/india_hero_premium.png",
             category: "Insights"
         }
