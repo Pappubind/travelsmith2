@@ -24,9 +24,15 @@ export default function Footer() {
                         <div className="recognition-section">
                             <h4>Recognized By:</h4>
                             <div className="recognition-logos">
-                                <img src="/images/Goa_tourism.png" alt="Dept. of Tourism Goa" title="Dept. of Tourism Goa" className="footer-recognition-img" />
-                                <img src="/images/IATO.png" alt="IATO" title="IATO" className="footer-recognition-img" />
-                                <img src="/images/TTAG.png" alt="TTAG" title="TTAG" className="footer-recognition-img" />
+                                <a href="https://tourism.gov.in/" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/Ministry_of_Tourism.png" alt="Ministry of Tourism govt of India" title="Ministry of Tourism govt of India" className="footer-recognition-img" />
+                                </a>
+                                <a href="https://iato.in/" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/IATO.png" alt="IATO" title="IATO" className="footer-recognition-img" />
+                                </a>
+                                <a href="https://www.ttag.in/" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/TTAG.png" alt="TTAG" title="TTAG" className="footer-recognition-img" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -87,14 +93,13 @@ export default function Footer() {
                             <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
                             <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
                             <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
-                            <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
                         </div>
                     </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} TravelSmith. All rights reserved. | Developed by <a href="https://karmaveon.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-orange)', fontWeight: '600' }}>Karmaveon Technologies</a></p>
+                    <p>&copy; {currentYear} TravelSmith. All rights reserved. | Developed by <a href="https://www.karmaveontechnologies.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-orange)', fontWeight: '600' }}>Karmaveon Technologies</a></p>
                 </div>
             </div>
         </footer>

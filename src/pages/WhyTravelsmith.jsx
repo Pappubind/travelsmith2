@@ -124,10 +124,10 @@ export default function WhyTravelsmith() {
                     <div className="grid grid-3 recognition-grid">
                         <div className="about-value-card">
                             <div className="recognition-logo-container">
-                                <img src="/images/Goa_tourism.png" alt="Dept. of Tourism Goa Logo" className="recognition-img" />
+                                <img src="/images/Ministry_of_Tourism.png" alt="Ministry of Tourism govt of India" className="recognition-img" />
                             </div>
-                            <h3>Dept. of Tourism Goa</h3>
-                            <p>Officially recognized and approved by the Department of Tourism Goa.</p>
+                            <h3>Ministry of Tourism</h3>
+                            <p>Officially recognized and approved by the Ministry of Tourism, Govt. of India.</p>
                         </div>
                         <div className="about-value-card">
                             <div className="recognition-logo-container">

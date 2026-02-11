@@ -49,11 +49,11 @@ export default function Contact() {
 
                                 <div className="contact-info-card">
                                     <div className="contact-icon"><Phone size={24} /></div>
-                                    <h3>Phone & Fax</h3>
+                                    <h3>Phone & WhatsApp</h3>
                                     <p>
+                                        <strong>WhatsApp:</strong> <a href="https://wa.me/917972156290" target="_blank" rel="noopener noreferrer">+91 79721 56290</a><br />
                                         <strong>Office:</strong> <a href="tel:+918322731428">0832 2731428</a> / 38 / 18<br />
-                                        <strong>Mobile:</strong> <a href="tel:+919158371998">+91 91583 71998</a><br />
-                                        <strong>Fax:</strong> +91 0832 2710025
+                                        <strong>Mobile:</strong> <a href="tel:+919158371998">+91 91583 71998</a>
                                     </p>
                                 </div>
 

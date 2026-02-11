@@ -156,9 +156,9 @@ export default function Header() {
               <span>Margao, Goa 403601, India</span>
             </div>
             <div className="top-bar-right">
-              <a href="tel:08322731428" className="top-bar-item">
+              <a href="tel:+91 79721 56290" className="top-bar-item">
                 <Phone size={14} />
-                <span>0832 273 1428</span>
+                <span>+91 79721 56290</span>
               </a>
               <a href="mailto:info@travelsmith.in" className="top-bar-item">
                 <Mail size={14} />
@@ -300,7 +300,7 @@ export default function Header() {
         </nav>
       </div>
       <a
-        href="https://wa.me/918322731438?text=Hi%20TravelSmith%2C%20I'm%20interested%20in%20planning%20a%20trip."
+        href="https://wa.me/917972156290?text=Hi%20TravelSmith%2C%20I'm%20interested%20in%20planning%20a%20trip."
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
