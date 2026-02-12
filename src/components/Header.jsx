@@ -49,9 +49,14 @@ export default function Header() {
 
   const handleSubMenu = (e, menu) => {
     if (window.innerWidth <= 1200) {
-      e.preventDefault();
-      e.stopPropagation();
-      setActiveSubMenu(activeSubMenu === menu ? null : menu);
+      if (activeSubMenu !== menu) {
+        e.preventDefault();
+        e.stopPropagation();
+        setActiveSubMenu(menu);
+      } else {
+        // If already open, allow navigation and close the mobile menu
+        closeMenu();
+      }
     }
   };
 
