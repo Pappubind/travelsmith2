@@ -49,7 +49,7 @@ export default function TourOperators() {
                 </div>
             </section>
 
-            <section className="section-gray">
+            <section className="section-gray pb-0">
                 <div className="container">
                     <h2 className="text-center mb-5">Our Value Proposition</h2>
                     <div className="grid grid-3">

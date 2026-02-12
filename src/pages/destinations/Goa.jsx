@@ -276,17 +276,17 @@ export default function Goa() {
             <section className="section-light">
                 <div className="container">
                     <h2 className="section-title">Welcome to Goa</h2>
-                    <p className="section-subtitle" style={{ textAlign: 'justify', maxWidth: '100%', margin: '0 0 var(--spacing-md)' }}>
+                    <p className="section-subtitle text-justify" style={{ maxWidth: '100%', margin: '0 0 var(--spacing-md)' }}>
                         A beautiful land blessed with Sun, Sea and Surf, nestled on the west coast of India with swaying palms, fabulous beaches and laid back lifestyle of the warm hearted Goans make it an unique holiday destination. Goa’s 120 kms coastline boasts of exotic Restaurants, rustic Beach Shacks which serve sumptuous cuisine and give you a front row view of Arabian Sea brimming with Water Sports and Pleasure Trips, with Night Clubs in plenty.
                     </p>
-                    <p className="section-subtitle" style={{ textAlign: 'justify', maxWidth: '100%', margin: '0' }}>
+                    <p className="section-subtitle text-justify" style={{ maxWidth: '100%', margin: '0' }}>
                         The hinterland too beckons visitors to Spice Gardens, Serene Lakes, Waterfalls and Jungle Safaris at the Mollem and Cotigao Sanctuaries where the wildly abundant wildlife roams free. Goa also has some fabulous Portuguese – Goan heritage Mansions and Forts dating back to 1700’s. There is much to explore in Goa besides relaxing on the sun kissed beaches. Discover the most amazing Goan experience, indulge in exciting adventures and exotic excursions in and around Goa.
                     </p>
                 </div>
             </section>
 
             {/* Tours Grid */}
-            <section className="section-gray">
+            <section className="section-gray pb-0">
                 <div className="container">
                     <h2 className="section-title">Tours & Experiences</h2>
                     <div className="grid grid-2" style={{ gap: '2.5rem' }}>
@@ -349,11 +349,10 @@ export default function Goa() {
                                     flexDirection: 'column',
                                     flexGrow: 1
                                 }}>
-                                    <p style={{
+                                    <p className="text-justify" style={{
                                         color: 'var(--gray-700)',
                                         marginBottom: '1.5rem',
                                         flexGrow: 1,
-                                        textAlign: 'center',
                                         lineHeight: '1.7',
                                         fontSize: '0.95rem'
                                     }}>

@@ -96,7 +96,7 @@ export default function India() {
             </section>
 
             {/* Sub-Destinations Grid */}
-            <section className="section-gray">
+            <section className="section-gray pb-0">
                 <div className="container">
                     <div className="text-center mb-10">
                         <h2 className="title-md">Explore Our Indian Destinations</h2>

@@ -490,10 +490,11 @@
 .cta-section {
     background: var(--primary-blue);
     color: var(--white);
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0;
     text-align: center;
     border-top-left-radius: var(--radius-organic);
     border-top-right-radius: var(--radius-organic);
+    margin-bottom: 0px;
 }
 
 .cta-content {

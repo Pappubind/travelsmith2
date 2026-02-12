@@ -3,7 +3,7 @@
     position: relative;
     background-color: var(--gray-900);
     color: var(--white);
-    padding: var(--spacing-sm) 0 var(--spacing-sm);
+    padding: 0 0 var(--spacing-sm);
     margin-top: 0px;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -198,6 +198,6 @@
     }
 
     .footer {
-        padding: var(--spacing-2xl) 0 var(--spacing-sm);
+        padding: var(--spacing-lg) 0 var(--spacing-sm);
     }
 }

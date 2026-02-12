@@ -64,7 +64,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <section className="section-light">
+            <section className="section-light pb-0">
                 <div className="container">
                     <div className="grid grid-2">
                         {serviceCategories.map((service) => (
