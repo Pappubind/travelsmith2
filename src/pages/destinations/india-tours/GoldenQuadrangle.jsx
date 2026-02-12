@@ -33,12 +33,12 @@ export default function GoldenQuadrangle() {
                         </div>
                         <div className="detail-text">
                             <h2>The Ultimate Cultural Circuit</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 The Golden Quadrangle is the most iconic travel circuit in India. We elevate this
                                 classic trip with private luxury transport, expert scholarly guides, and
                                 world-class accommodation.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 From the Mughal grandeur of New Delhi and the eternal white marble of the Taj Mahal
                                 to the royal forts of the Pink City, this tour captures the heart of India's heritage.
                             </p>

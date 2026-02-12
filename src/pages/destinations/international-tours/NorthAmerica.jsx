@@ -27,12 +27,12 @@ export default function NorthAmerica() {
                         </div>
                         <div className="detail-text">
                             <h2>Land of the Free Tour</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 North America is a massive landscape of diverse cities and incredible nature. Our
                                 tour curates the very best—from the high-energy lights of Manhattan to the
                                 cinematic majesty of the Grand Canyon.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Stay in legendary luxury hotels like The Plaza or go glamping in private desert
                                 reserves in Utah for a truly unique American experience.
                             </p>

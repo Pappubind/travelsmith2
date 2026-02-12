@@ -20,12 +20,12 @@ export default function SouthAmerica() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Spirit of the Andes</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 South America is a continent of mystery and passion. Our tour takes you from the
                                 high-altitude wonder of Machu Picchu in Peru to the energetic beaches of
                                 Rio de Janeiro in Brazil.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Experience stay in high-end eco-lodges in the Amazon or luxury boutique hotels
                                 in the heart of Cusco, all with expert-led private excursions.
                             </p>

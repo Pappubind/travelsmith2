@@ -26,11 +26,11 @@ export default function Himachal() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Land of Snowy Peaks</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Himachal Pradesh offers a refreshing escape into the heart of the Himalayas. Our Scenic Himachal
                                 tour is perfect for those seeking adventure, spiritual peace, or simply a cool mountain breeze.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Explore the colonial charm of Shimla, the vibrant hippie culture of Kasol, and the
                                 majestic snow-frontiers of Manali and Rohtang Pass.
                             </p>

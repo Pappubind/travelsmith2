@@ -27,12 +27,12 @@ export default function KenyaTanzania() {
                         </div>
                         <div className="detail-text">
                             <h2>The Ultimate Safari Experience</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Experience the raw beauty of the African savannah. Our tour takes you through the
                                 Maasai Mara in Kenya and the Serengeti in Tanzania for an unparalleled wildlife
                                 viewing experience.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Stay in luxury tented camps and lodges that offer the perfect blend of adventure
                                 and comfort, with private game drives led by expert naturalists.
                             </p>

@@ -26,11 +26,11 @@ export default function Bhutan() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Last Shangri-La</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Bhutan is a kingdom where Gross National Happiness is more important than Gross Domestic Product.
                                 Our tour takes you through the stunning valleys of Paro, Thimphu, and Punakha.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Hike to the iconic Tiger's Nest Monastery, explore ancient Dzongs (fortresses), and
                                 immerse yourself in a culture that has remained preserved for centuries.
                             </p>

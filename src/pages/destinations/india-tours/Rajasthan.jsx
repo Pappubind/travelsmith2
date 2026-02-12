@@ -26,12 +26,12 @@ export default function Rajasthan() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>A Royal Extravaganza</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Rajasthan is a vibrant tapestry of culture, history, and architectural marvels. Our Heartland
                                 of Rajasthan tour takes you through the Pink City of Jaipur, the Blue City of Jodhpur,
                                 and the City of Lakes, Udaipur.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Experience stay in authentic palace-turned-hotels, camel safaris in the Thar Desert,
                                 and private heritage walks through ancient alleys rich with storytelling.
                             </p>

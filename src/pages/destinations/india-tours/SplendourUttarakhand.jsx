@@ -32,11 +32,11 @@ export default function SplendourUttarakhand() {
                         </div>
                         <div className="detail-text">
                             <h2>The Queen of Hills</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Mussoorie and Dhanaulti represent the gentle splendour of the Himalayas. Our tour is designed
                                 for families and couples seeking a peaceful mountain retreat with premium comforts.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 From the cascading Kempty Falls to the mist-covered peaks of Dhanaulti, experience the
                                 raw beauty of Devbhoomi in style.
                             </p>

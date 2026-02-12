@@ -26,11 +26,11 @@ export default function HeritageUttarakhand() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Spiritual Heart of India</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Immerse yourself in the sacred heritage of Rishikesh and Haridwar. This tour is a journey
                                 through ancient temples, sacred ghats, and the rejuvenating energy of the River Ganges.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Stay in world-class yoga retreats and heritage riverfront hotels while witnessing
                                 the world-famous Ganga Aarti and exploring Ashrams of global significance.
                             </p>

@@ -27,11 +27,11 @@ export default function Mauritius() {
                         </div>
                         <div className="detail-text">
                             <h2>The Ultimate Island Escape</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Mauritius is renowned for its sapphire-blue waters, powder-white beaches, and luxury
                                 resorts. Our tour is designed for total relaxation and premium island exploration.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Enjoy world-class spas, private catamaran cruises, and hidden waterfall treks while
                                 staying at the island's most prestigious beachfront properties.
                             </p>

@@ -33,12 +33,12 @@ export default function Kashmir() {
                         </div>
                         <div className="detail-text">
                             <h2>The Jewel of the North</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Kashmir is not just a destination; it's a sensory experience. Our Glorious Kashmir tour
                                 takes you through the serene Dal Lake, the snow-capped peaks of Gulmarg, and the
                                 breathtaking meadows of Pahalgam.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Stay in luxury houseboats and heritage resorts while exploring the rich culture,
                                 warm hospitality, and world-famous cuisine of the valley.
                             </p>

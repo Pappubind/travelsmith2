@@ -33,12 +33,12 @@ export default function ChardhamYatra() {
                         </div>
                         <div className="detail-text">
                             <h2>The Divine Journey</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Chardham Yatra is the most sacred pilgrimage in India, covering Yamunotri, Gangotri,
                                 Kedarnath, and Badrinath. We provide a professionally managed, high-comfort experience
                                 for pilgrims of all ages.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 With our premium Chardham packages, we handle all permits, VIP darshans, luxury transport,
                                 and high-altitude accommodation so you can focus on your spiritual journey.
                             </p>

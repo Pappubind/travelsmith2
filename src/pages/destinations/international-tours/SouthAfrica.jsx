@@ -11,7 +11,7 @@ export default function SouthAfrica() {
                 <div className="dest-hero-overlay" />
                 <div className="container dest-hero-content">
                     <h1>Spectacular South Africa Safari</h1>
-                    <p>A diverse journey from the Kruger wildlife to the shores of Cape Town.</p>
+                    <p style={{ textAlign: 'justify' }}>A diverse journey from the Kruger wildlife to the shores of Cape Town.</p>
                 </div>
             </section>
 
@@ -20,7 +20,7 @@ export default function SouthAfrica() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Rainbow Nation Tours</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 South Africa offers an incredible variety of experiences. Our safari tour combines
                                 the world-famous Kruger National Park with the scenic beauty of the Garden Route
                                 and the cosmopolitan charm of Cape Town.

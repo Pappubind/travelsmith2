@@ -27,12 +27,12 @@ export default function Australia() {
                         </div>
                         <div className="detail-text">
                             <h2>The Land Down Under</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Australia is a continent of epic scale and unique beauty. Our tour brings you the
                                 highlights—from private bridge climbs in Sydney to luxury island hopping on
                                 the Great Barrier Reef.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Stay in world-famous luxury lodges in the Outback or ultra-modern luxury apartments
                                 with harbor views in Sydney and Melbourne.
                             </p>

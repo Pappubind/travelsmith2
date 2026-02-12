@@ -26,12 +26,12 @@ export default function EnchantingNepal() {
                     <div className="grid grid-2">
                         <div className="detail-text">
                             <h2>The Roof of the World</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Nepal is a land where ancient history meets majestic nature. Our Enchanting Nepal tour
                                 offers a perfect blend of the spiritual depth of Kathmandu and the serene natural
                                 beauty of Pokhara.
                             </p>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Explore UNESCO heritage temples, witness the first light on the Himalayas, and
                                 experience the tranquil lakes of the valley with premium service and safety.
                             </p>
