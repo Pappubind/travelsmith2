@@ -128,20 +128,20 @@ export default function India() {
                             </Link>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    <section className="dest-cta">
-                        <div className="container">
-                            <h2>Ready for a Royal Experience?</h2>
-                            <p>Let us curate your perfect luxury journey through the Indian subcontinent.</p>
-                            <button
-                                onClick={() => setIsBookingModalOpen(true)}
-                                className="btn btn-primary btn-lg"
-                                style={{ border: 'none' }}
-                            >
-                                Inquire About India Tours
-                            </button>
-                        </div>
-                    </section>
+            <section className="dest-cta">
+                <div className="container text-center">
+                    <h2>Ready for a Royal Experience?</h2>
+                    <p>Let us curate your perfect luxury journey through the Indian subcontinent.</p>
+                    <button
+                        onClick={() => setIsBookingModalOpen(true)}
+                        className="btn btn-primary btn-lg"
+                        style={{ border: 'none' }}
+                    >
+                        Inquire About India Tours
+                    </button>
                 </div>
             </section>
         </div>
