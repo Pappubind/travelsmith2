@@ -19,21 +19,21 @@ export default function Footer() {
                             Your trusted Destination Management Company crafting safe, personalized,
                             and premium travel experiences across Goa, India, and international destinations since 2012.
                         </p>
+                    </div>
 
-                        {/* Recognition Logos */}
-                        <div className="recognition-section">
-                            <h4>Recognized By:</h4>
-                            <div className="recognition-logos">
-                                <a href="https://tourism.gov.in/" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/Ministry_of_Tourism.png" alt="Ministry of Tourism govt of India" title="Ministry of Tourism govt of India" className="footer-recognition-img" />
-                                </a>
-                                <a href="https://iato.in/" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/IATO.png" alt="IATO" title="IATO" className="footer-recognition-img" />
-                                </a>
-                                <a href="https://www.ttag.in/" target="_blank" rel="noopener noreferrer">
-                                    <img src="/images/TTAG.png" alt="TTAG" title="TTAG" className="footer-recognition-img" />
-                                </a>
-                            </div>
+                    {/* Recognition Logos */}
+                    <div className="footer-section">
+                        <h4 className="footer-title">Recognized By</h4>
+                        <div className="recognition-logos">
+                            <a href="https://tourism.gov.in/" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/Ministry_of_Tourism.png" alt="Ministry of Tourism govt of India" title="Ministry of Tourism govt of India" className="footer-recognition-img" />
+                            </a>
+                            <a href="https://iato.in/" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/IATO.png" alt="IATO" title="IATO" className="footer-recognition-img" />
+                            </a>
+                            <a href="https://www.ttag.in/" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/TTAG.png" alt="TTAG" title="TTAG" className="footer-recognition-img" />
+                            </a>
                         </div>
                     </div>
 
@@ -65,8 +65,13 @@ export default function Footer() {
                     <div className="footer-section">
                         <h4 className="footer-title">Services</h4>
                         <ul className="footer-links">
-                            <li><Link to="/services#mice">M.I.C.E Management</Link></li>
-                            <li><Link to="/services#weddings">Destination Weddings</Link></li>
+                            <li><Link to="/services/dmc">DMC Services</Link></li>
+                            <li><Link to="/services/tour-operators">Tour Operations</Link></li>
+                            <li><Link to="/services/cruise-handling">Cruise Handling</Link></li>
+                            <li><Link to="/services/mice">M.I.C.E Management</Link></li>
+                            <li><Link to="/services/weddings">Destination Weddings</Link></li>
+                            <li><Link to="/services/vehicle-rental">Vehicle Rentals</Link></li>
+                            <li><Link to="/services/hotel-reservation">Hotel Bookings</Link></li>
                         </ul>
                     </div>
 

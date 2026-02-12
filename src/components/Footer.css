@@ -31,8 +31,8 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr repeat(4, 1fr);
-    gap: var(--spacing-xl);
+    grid-template-columns: 1.5fr repeat(5, 1fr);
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-2xl);
     padding: 0 20px;
 }
@@ -82,6 +82,16 @@
 .footer-links a:hover {
     color: var(--primary-orange);
     padding-left: 5px;
+}
+
+.footer-link-category {
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    opacity: 0.9;
 }
 
 .footer-contact {
@@ -135,16 +145,6 @@
 }
 
 /* Recognition Section */
-.recognition-section {
-    margin-top: var(--spacing-sm);
-}
-
-.recognition-section h4 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: var(--gray-300);
-}
-
 .recognition-logos {
     display: flex;
     flex-wrap: wrap;
@@ -194,7 +194,7 @@
 @media (max-width: 600px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
     }
 
     .footer {
