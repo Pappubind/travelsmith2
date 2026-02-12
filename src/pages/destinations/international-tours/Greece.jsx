@@ -25,7 +25,7 @@ export default function Greece() {
                                 Athens with the iconic blue-domed vistas of Santorini and the vibrant luxury
                                 of Mykonos.
                             </p>
-                            <p style={{ textAlign: 'justify' }}>>
+                            <p style={{ textAlign: 'justify' }}>
                                 Experience stay in caldera-view boutique hotels and enjoy private sailing trips
                                 through the Greek islands while savoring the world's best Mediterranean cuisine.
                             </p>
