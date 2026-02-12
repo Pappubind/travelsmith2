@@ -24,12 +24,32 @@ export default function DMC() {
             answer: "While we are headquartered in Goa, TravelSmith provides comprehensive DMC services across all major Indian destinations, including the Golden Triangle (Delhi, Agra, Jaipur), Kerala, Rajasthan, and major port cities for cruise handling."
         },
         {
+            question: "How do you ensure quality control for transport and accommodation?",
+            answer: "We perform regular inspections of our vehicle fleet and partner properties. All drivers undergo background checks and personality training, and hotels are vetted for safety, cleanliness, and service standards before being recommended to our clients."
+        },
+        {
+            question: "Can TravelSmith provide customized itineraries for niche interests?",
+            answer: "Yes, customization is our forte. Whether it's culinary tours, architectural walks, spiritual journeys, or wildlife photography expeditions, our local experts design itineraries that cater to the specific interests and preferences of your travelers."
+        },
+        {
+            question: "What kind of support do you provide to tour operators and travel agents?",
+            answer: "We offer white-label services, competitive B2B rates, 24/7 dedicated support for their clients on the ground, and detailed local insights to help agents sell the destination more effectively."
+        },
+        {
+            question: "How does TravelSmith handle emergency situations or last-minute changes?",
+            answer: "Our 24/7 operations team is always on standby. We have contingency plans for weather-related disruptions, medical emergencies, and last-minute itinerary adjustments, ensuring minimal impact on the traveler's experience."
+        },
+        {
             question: "Do you handle logistics for international cruise liners?",
             answer: "Yes, specialized cruise ground handling is one of our core strengths. We manage port clearances, shore excursions, turnarounds, and VIP transfers for international cruise brands visiting Indian ports."
         },
         {
             question: "Can you assist with MICE and large group logistics?",
             answer: "Absolutely. We specialize in Meetings, Incentives, Conferences, and Exhibitions. From venue selection and hotel room blocks to themed gala dinners and multi-vehicle transportation logistics, we manage everything for groups of any size."
+        },
+        {
+            question: "Does TravelSmith provide sustainable and responsible travel options?",
+            answer: "Absolutely. We are committed to promoting local communities and minimizing environmental impact. We recommend eco-friendly accommodations, support local artisans, and follow sustainable practices in all our ground operations."
         }
     ];
 
