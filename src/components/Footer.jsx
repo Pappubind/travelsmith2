@@ -95,9 +95,9 @@ export default function Footer() {
 
                         {/* Social Media */}
                         <div className="social-media">
-                            <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-                            <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
-                            <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
+                            <a href="https://www.facebook.com/TravelsmithAdventuresPvtLtd/about/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+                            <a href="https://www.linkedin.com/company/travelsmith-adventures-goa/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                            <a href="https://www.instagram.com/travelsmith_adventures_goa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
                         </div>
                     </div>
                 </div>

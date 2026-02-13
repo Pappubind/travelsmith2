@@ -11,6 +11,8 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
         message: ''
     });
 
+    const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+
     useEffect(() => {
         if (prefillDestination) {
             setFormData(prev => ({
@@ -27,18 +29,51 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission
-        alert('Thank you for your message! We will contact you soon.');
-        if (onSuccess) onSuccess();
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            destination: '',
-            message: ''
-        });
+        setStatus('loading');
+
+        try {
+            const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+
+            if (!scriptUrl) {
+                console.error('VITE_GOOGLE_SCRIPT_URL is missing!');
+                throw new Error('Google Script URL not found in environment variables.');
+            }
+
+            await fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            setStatus('success');
+
+            if (onSuccess) {
+                setTimeout(() => onSuccess(), 2000);
+            }
+
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                destination: '',
+                message: ''
+            });
+
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('error');
+            alert('Something went wrong. Please try again later.');
+        } finally {
+            if (status !== 'error') {
+                setTimeout(() => setStatus('idle'), 5000);
+            }
+        }
     };
 
     return (
@@ -107,10 +142,28 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
                 ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-full">
-                <Send size={20} />
-                Get a Quote
+            <button
+                type="submit"
+                className={`btn btn-primary btn-full ${status === 'loading' ? 'loading' : ''}`}
+                disabled={status === 'loading' || status === 'success'}
+            >
+                {status === 'loading' ? (
+                    'Sending...'
+                ) : status === 'success' ? (
+                    'Sent Successfully!'
+                ) : (
+                    <>
+                        <Send size={20} />
+                        Get a Quote
+                    </>
+                )}
             </button>
+
+            {status === 'success' && (
+                <div className="form-success-message">
+                    Thank you! Your message has been sent to Travelsmith. We'll contact you soon.
+                </div>
+            )}
         </form>
     );
 }
