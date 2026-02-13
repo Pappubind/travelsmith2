@@ -15,7 +15,7 @@ export default function Footer() {
                         <Link to="/" className="footer-logo-link">
                             <img src={logo} alt="TravelSmith Logo" className="footer-logo-img" style={{ maxHeight: '130px', marginBottom: '1.5rem', width: 'auto' }} />
                         </Link>
-                        <p className="footer-description">
+                        <p style={{ textAlign: 'justify' }} className="footer-description"> 
                             Your trusted Destination Management Company crafting safe, personalized,
                             and premium travel experiences across Goa, India, and international destinations since 2012.
                         </p>
