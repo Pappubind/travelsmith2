@@ -105,7 +105,7 @@
 .dropdown-toggle {
     color: var(--gray-800);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     text-decoration: none;
     padding: 8px 0;
     border-bottom: 2px solid transparent;
@@ -133,7 +133,7 @@
 .nav-menu>li>a:hover,
 .nav-menu>li>a.active,
 .dropdown-toggle:hover {
-    color: var(--primary-blue);
+    color: var(--primary-orange);
 }
 
 /* Dropdown & Mega Menu */
@@ -243,11 +243,11 @@
 }
 
 .sub-dropdown-item:hover {
-    color: var(--primary-blue);
+    color: var(--primary-orange);
 }
 
 .sub-dropdown-item:hover .sub-mega-icon {
-    color: var(--primary-blue);
+    color: var(--primary-orange);
 }
 
 /* Buttons */
@@ -444,7 +444,7 @@
 
     .nav-menu>li>a:hover,
     .dropdown-toggle:hover {
-        color: var(--primary-blue);
+        color: var(--primary-orange);
         transform: translateX(5px);
     }
 
