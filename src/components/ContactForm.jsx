@@ -34,11 +34,11 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
         setStatus('loading');
 
         try {
-            const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+            const scriptUrl = import.meta.env.VITE_CONTACT_SCRIPT_URL;
 
             if (!scriptUrl) {
-                console.error('VITE_GOOGLE_SCRIPT_URL is missing!');
-                throw new Error('Google Script URL not found in environment variables.');
+                console.error('VITE_CONTACT_SCRIPT_URL is missing!');
+                throw new Error('Contact Script URL not found in environment variables.');
             }
 
             await fetch(scriptUrl, {

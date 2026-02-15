@@ -1,8 +1,79 @@
-import { Car, Shield, Clock, Users, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Car, Shield, Clock, Users, CheckCircle, MapPin, ArrowRight, Loader2 } from 'lucide-react';
 import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function VehicleRental() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        country: '',
+        fromDate: '',
+        toDate: '',
+        vehicle: '',
+        serviceType: ''
+    });
+
+    const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('loading');
+
+        try {
+            // Using the existing script URL if a new one isn't provided yet
+            // The user mentioned they will provide a script, but I can set up the infrastructure first
+            const scriptUrl = import.meta.env.VITE_VEHICLE_SCRIPT_URL;
+
+            if (!scriptUrl) {
+                console.error('VITE_VEHICLE_SCRIPT_URL is missing!');
+                throw new Error('Vehicle Booking Script URL not found in environment variables.');
+            }
+
+            await fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    formType: 'Vehicle Rental Booking'
+                }),
+            });
+
+            setStatus('success');
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                country: '',
+                fromDate: '',
+                toDate: '',
+                vehicle: '',
+                serviceType: ''
+            });
+
+            // Reset status after 5 seconds
+            setTimeout(() => setStatus('idle'), 5000);
+
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('error');
+            alert('Something went wrong. Please try again later.');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
+    };
+
     return (
         <div className="service-detail-page">
             <SEO
@@ -173,82 +244,141 @@ export default function VehicleRental() {
                                     fontWeight: '800',
                                     marginBottom: '2rem'
                                 }}>Secure Your Journey</h2>
-                                <form className="booking-form space-y-4">
+                                <form className="booking-form space-y-4" onSubmit={handleSubmit}>
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
-                                        <input type="text" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition" placeholder="John Doe" />
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                            placeholder="John Doe"
+                                        />
                                     </div>
 
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
-                                        <input type="email" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition" placeholder="john@example.com" />
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                            placeholder="john@example.com"
+                                        />
                                     </div>
 
                                     <div className="grid grid-2 gap-4">
                                         <div className="form-group">
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">Phone</label>
-                                            <input type="tel" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg" placeholder="+91..." />
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                                placeholder="+91..."
+                                            />
                                         </div>
                                         <div className="form-group">
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">Country</label>
-                                            <input type="text" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg" placeholder="India" />
+                                            <input
+                                                type="text"
+                                                name="country"
+                                                value={formData.country}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                                placeholder="India"
+                                            />
                                         </div>
                                     </div>
 
                                     <div className="grid grid-2 gap-4">
                                         <div className="form-group">
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">From Date</label>
-                                            <input type="date" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg" />
+                                            <input
+                                                type="date"
+                                                name="fromDate"
+                                                value={formData.fromDate}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                            />
                                         </div>
                                         <div className="form-group">
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">To Date</label>
-                                            <input type="date" className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg" />
+                                            <input
+                                                type="date"
+                                                name="toDate"
+                                                value={formData.toDate}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                            />
                                         </div>
                                     </div>
 
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Preferred Vehicle</label>
-                                        <select className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none">
-                                            <option value="" disabled selected>Select a vehicle</option>
+                                        <select
+                                            name="vehicle"
+                                            value={formData.vehicle}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none"
+                                        >
+                                            <option value="" disabled>Select a vehicle</option>
                                             <optgroup label="Compact & Sedan">
-                                                <option value="swift">Swift</option>
-                                                <option value="camry">Camry</option>
+                                                <option value="Swift">Swift</option>
+                                                <option value="Camry">Camry</option>
                                             </optgroup>
                                             <optgroup label="SUV & Premium">
-                                                <option value="fortuner">Fortuner</option>
-                                                <option value="bmw_x3">BMW X3</option>
-                                                <option value="audi_q5">Audi Q5</option>
+                                                <option value="Fortuner">Fortuner</option>
+                                                <option value="BMW X3">BMW X3</option>
+                                                <option value="Audi Q5">Audi Q5</option>
                                             </optgroup>
                                             <optgroup label="Luxury">
-                                                <option value="bmw">BMW</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="mercedes">Mercedes</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="Mercedes">Mercedes</option>
                                             </optgroup>
                                             <optgroup label="Large Groups">
-                                                <option value="traveller">Traveller</option>
-                                                <option value="bus_35">Bus (35 Seater)</option>
-                                                <option value="bus_45">Bus (45 Seater)</option>
+                                                <option value="Traveller">Traveller</option>
+                                                <option value="Bus (35 Seater)">Bus (35 Seater)</option>
+                                                <option value="Bus (45 Seater)">Bus (45 Seater)</option>
                                             </optgroup>
                                         </select>
                                     </div>
 
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Service Type</label>
-                                        <select className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none">
-                                            <option value="" disabled selected>Select service type</option>
-                                            <option value="airport">Airport Transfer</option>
-                                            <option value="sightseeing">Sightseeing Tour</option>
-                                            <option value="outstation">Outstation Trip</option>
-                                            <option value="wedding">Wedding/Event Logistics</option>
+                                        <select
+                                            name="serviceType"
+                                            value={formData.serviceType}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none"
+                                        >
+                                            <option value="" disabled>Select service type</option>
+                                            <option value="Airport Transfer">Airport Transfer</option>
+                                            <option value="Sightseeing Tour">Sightseeing Tour</option>
+                                            <option value="Outstation Trip">Outstation Trip</option>
+                                            <option value="Wedding/Event Logistics">Wedding/Event Logistics</option>
                                         </select>
                                     </div>
 
                                     <button
                                         type="submit"
-                                        className="booking-btn"
+                                        disabled={status === 'loading' || status === 'success'}
+                                        className={`booking-btn ${status === 'success' ? 'success' : ''}`}
                                         style={{
                                             width: '100%',
-                                            background: 'var(--primary-blue)',
+                                            background: status === 'success' ? '#10b981' : 'var(--primary-blue)',
                                             color: 'white',
                                             padding: '1.125rem',
                                             borderRadius: '0.75rem',
@@ -259,12 +389,34 @@ export default function VehicleRental() {
                                             gap: '12px',
                                             border: 'none',
                                             marginTop: '1rem',
-                                            boxShadow: '0 10px 20px rgba(11, 60, 93, 0.15)'
+                                            boxShadow: '0 10px 20px rgba(11, 60, 93, 0.15)',
+                                            cursor: (status === 'loading' || status === 'success') ? 'not-allowed' : 'pointer',
+                                            transition: 'all 0.3s ease'
                                         }}
                                     >
-                                        CONFIRM BOOKING
-                                        <ArrowRight size={18} />
+                                        {status === 'loading' ? (
+                                            <>
+                                                <Loader2 className="animate-spin" size={18} />
+                                                PROCESSING...
+                                            </>
+                                        ) : status === 'success' ? (
+                                            <>
+                                                <CheckCircle size={18} />
+                                                CONFIRMED!
+                                            </>
+                                        ) : (
+                                            <>
+                                                CONFIRM BOOKING
+                                                <ArrowRight size={18} />
+                                            </>
+                                        )}
                                     </button>
+
+                                    {status === 'success' && (
+                                        <p className="text-center mt-3 text-green-600 font-medium animate-fade-in">
+                                            Booking request sent successfully!
+                                        </p>
+                                    )}
                                 </form>
                             </div>
                         </div>
@@ -274,3 +426,4 @@ export default function VehicleRental() {
         </div>
     );
 }
+
