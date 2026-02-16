@@ -3,6 +3,7 @@ import { Send } from 'lucide-react';
 import './ContactForm.css';
 
 export default function ContactForm({ prefillDestination = '', onSuccess }) {
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -11,51 +12,102 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
         message: ''
     });
 
-    const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+    const [errors, setErrors] = useState({});
+    const [touched, setTouched] = useState({});
+    const [status, setStatus] = useState('idle');
 
     useEffect(() => {
         if (prefillDestination) {
-            setFormData(prev => ({
-                ...prev,
-                destination: prefillDestination
-            }));
+            setFormData(prev => ({ ...prev, destination: prefillDestination }));
         }
     }, [prefillDestination]);
 
+    // ---------- VALIDATION FUNCTION ----------
+    const validateField = (name, value) => {
+        let error = '';
+
+        if (name === 'name') {
+            if (!value.trim()) error = 'Name is required';
+            else if (value.length < 3) error = 'Min 3 characters';
+        }
+
+        if (name === 'email') {
+            if (!value.trim()) error = 'Email required';
+            else if (!/^\S+@\S+\.\S+$/.test(value)) error = 'Invalid email';
+        }
+
+        if (name === 'phone') {
+            if (!value.trim()) error = 'Phone required';
+            else if (!/^[0-9+ ]{10,15}$/.test(value)) error = 'Invalid phone';
+        }
+
+        if (name === 'message') {
+            if (!value.trim()) error = 'Message required';
+            else if (value.length < 10) error = 'Min 10 characters';
+        }
+
+        return error;
+    };
+
+    // ---------- HANDLE CHANGE ----------
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
+        const { name, value } = e.target;
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
+        // if field already touched → revalidate live
+        if (touched[name]) {
+            const error = validateField(name, value);
+            setErrors(prev => ({ ...prev, [name]: error }));
+        }
+    };
+
+    // ---------- ON BLUR ----------
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+
+        setTouched(prev => ({ ...prev, [name]: true }));
+
+        const error = validateField(name, value);
+        setErrors(prev => ({ ...prev, [name]: error }));
+    };
+
+    // ---------- FINAL SUBMIT VALIDATION ----------
+    const validateAll = () => {
+        let newErrors = {};
+
+        Object.keys(formData).forEach(field => {
+            if (field === 'destination') return;
+
+            const error = validateField(field, formData[field]);
+            if (error) newErrors[field] = error;
         });
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validateAll()) return;
+
         setStatus('loading');
 
         try {
             const scriptUrl = import.meta.env.VITE_CONTACT_SCRIPT_URL;
 
-            if (!scriptUrl) {
-                console.error('VITE_CONTACT_SCRIPT_URL is missing!');
-                throw new Error('Contact Script URL not found in environment variables.');
-            }
-
             await fetch(scriptUrl, {
                 method: 'POST',
                 mode: 'no-cors',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'text/plain',
-                },
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(formData),
             });
 
             setStatus('success');
-
-            if (onSuccess) {
-                setTimeout(() => onSuccess(), 2000);
-            }
 
             setFormData({
                 name: '',
@@ -65,93 +117,78 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
                 message: ''
             });
 
-        } catch (error) {
-            console.error('Submission error:', error);
+            setTouched({});
+            setErrors({});
+
+        } catch {
             setStatus('error');
-            alert('Something went wrong. Please try again later.');
-        } finally {
-            if (status !== 'error') {
-                setTimeout(() => setStatus('idle'), 5000);
-            }
+            alert("Something went wrong");
         }
     };
 
     return (
         <form onSubmit={handleSubmit} className="contact-form-component">
+
             <div className="form-group">
-                <label htmlFor="name">Name *</label>
+                <label>Name *</label>
                 <input
-                    type="text"
-                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    placeholder="Your full name"
+                    onBlur={handleBlur}
                 />
+                {touched.name && errors.name && <span className="error">{errors.name}</span>}
             </div>
 
             <div className="form-group">
-                <label htmlFor="email">Email *</label>
+                <label>Email *</label>
                 <input
-                    type="email"
-                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    placeholder="your@email.com"
+                    onBlur={handleBlur}
                 />
+                {touched.email && errors.email && <span className="error">{errors.email}</span>}
             </div>
 
             <div className="form-group">
-                <label htmlFor="phone">Phone *</label>
+                <label>Phone *</label>
                 <input
-                    type="tel"
-                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    required
-                    placeholder="+91 1234567890"
+                    onBlur={handleBlur}
                 />
+                {touched.phone && errors.phone && <span className="error">{errors.phone}</span>}
             </div>
 
             <div className="form-group">
-                <label htmlFor="destination">Destination Interest</label>
+                <label>Destination</label>
                 <input
-                    type="text"
-                    id="destination"
                     name="destination"
                     value={formData.destination}
                     onChange={handleChange}
-                    placeholder="e.g. Goa, Kashmir, International"
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="message">Message *</label>
+                <label>Message *</label>
                 <textarea
-                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    required
+                    onBlur={handleBlur}
                     rows="4"
-                    placeholder="Tell us about your travel plans..."
-                ></textarea>
+                />
+                {touched.message && errors.message && <span className="error">{errors.message}</span>}
             </div>
 
             <button
                 type="submit"
-                className={`btn btn-primary btn-full ${status === 'loading' ? 'loading' : ''}`}
-                disabled={status === 'loading' || status === 'success'}
+                className="btn btn-primary btn-full"
+                disabled={status === 'loading'}
             >
-                {status === 'loading' ? (
-                    'Sending...'
-                ) : status === 'success' ? (
-                    'Sent Successfully!'
-                ) : (
+                {status === 'loading' ? 'Sending...' : (
                     <>
                         <Send size={20} />
                         Get a Quote
@@ -161,7 +198,7 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
 
             {status === 'success' && (
                 <div className="form-success-message">
-                    Thank you! Your message has been sent to Travelsmith. We'll contact you soon.
+                    Message sent successfully!
                 </div>
             )}
         </form>

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Car, Shield, Clock, Users, CheckCircle, MapPin, ArrowRight, Loader2 } from 'lucide-react';
+import { Car, Shield, Clock, Users, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
 import SEO from '../../components/SEO';
 import './ServiceDetail.css';
 
 export default function VehicleRental() {
+
+    const today = new Date().toISOString().split("T")[0];
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -15,43 +18,108 @@ export default function VehicleRental() {
         serviceType: ''
     });
 
-    const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+    const [status, setStatus] = useState('idle');
+    const [errors, setErrors] = useState({});
+    const [touched, setTouched] = useState({});
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    // ---------------- VALIDATION ----------------
+    const validateField = (name, value) => {
+        let error = '';
+
+        if (name === 'name') {
+            if (!value.trim()) error = 'Name required';
+            else if (value.length < 3) error = 'Min 3 characters';
+        }
+
+        if (name === 'email') {
+            if (!value.trim()) error = 'Email required';
+            else if (!/^\S+@\S+\.\S+$/.test(value)) error = 'Invalid email';
+        }
+
+        if (name === 'phone') {
+            if (!value.trim()) error = 'Phone required';
+            else if (!/^[0-9+ ]{10,15}$/.test(value)) error = 'Invalid phone';
+        }
+
+        if (name === 'country') {
+            if (!value.trim()) error = 'Country required';
+        }
+
+        if (name === 'fromDate') {
+            if (!value) error = 'Select start date';
+            else if (value < today) error = 'Cannot select past date';
+        }
+
+        if (name === 'toDate') {
+            if (!value) error = 'Select end date';
+            else if (value < formData.fromDate) error = 'End date must be after start';
+        }
+
+        if (name === 'vehicle') {
+            if (!value) error = 'Select vehicle';
+        }
+
+        if (name === 'serviceType') {
+            if (!value) error = 'Select service';
+        }
+
+        return error;
     };
 
+    const validateAll = () => {
+        let newErrors = {};
+        Object.keys(formData).forEach(field => {
+            const err = validateField(field, formData[field]);
+            if (err) newErrors[field] = err;
+        });
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    // ---------------- CHANGE ----------------
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: value,
+            ...(name === "fromDate" ? { toDate: '' } : {})
+        }));
+
+        if (touched[name]) {
+            const err = validateField(name, value);
+            setErrors(prev => ({ ...prev, [name]: err }));
+        }
+    };
+
+    // ---------------- BLUR ----------------
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+        setTouched(prev => ({ ...prev, [name]: true }));
+        const err = validateField(name, value);
+        setErrors(prev => ({ ...prev, [name]: err }));
+    };
+
+    // ---------------- SUBMIT ----------------
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validateAll()) return;
+
         setStatus('loading');
 
         try {
-            // Using the existing script URL if a new one isn't provided yet
-            // The user mentioned they will provide a script, but I can set up the infrastructure first
             const scriptUrl = import.meta.env.VITE_VEHICLE_SCRIPT_URL;
-
-            if (!scriptUrl) {
-                console.error('VITE_VEHICLE_SCRIPT_URL is missing!');
-                throw new Error('Vehicle Booking Script URL not found in environment variables.');
-            }
 
             await fetch(scriptUrl, {
                 method: 'POST',
                 mode: 'no-cors',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'text/plain',
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    formType: 'Vehicle Rental Booking'
-                }),
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({ ...formData, formType: 'Vehicle Rental Booking' }),
             });
 
             setStatus('success');
+
             setFormData({
                 name: '',
                 email: '',
@@ -63,14 +131,13 @@ export default function VehicleRental() {
                 serviceType: ''
             });
 
-            // Reset status after 5 seconds
+            setTouched({});
+            setErrors({});
             setTimeout(() => setStatus('idle'), 5000);
 
-        } catch (error) {
-            console.error('Submission error:', error);
+        } catch {
             setStatus('error');
-            alert('Something went wrong. Please try again later.');
-            setTimeout(() => setStatus('idle'), 5000);
+            alert("Something went wrong");
         }
     };
 
@@ -245,90 +312,97 @@ export default function VehicleRental() {
                                     marginBottom: '2rem'
                                 }}>Secure Your Journey</h2>
                                 <form className="booking-form space-y-4" onSubmit={handleSubmit}>
-                                    <div className="form-group">
-                                        <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+
+                                    {/* NAME */}
+                                   <div className="form-group">
+                                        <label>Full Name</label>
                                         <input
-                                            type="text"
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            required
-                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                                            placeholder="John Doe"
+                                            onBlur={handleBlur}
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
                                         />
+                                        {touched.name && errors.name && <span className="error">{errors.name}</span>}
                                     </div>
 
+                                   {/* EMAIL */}
                                     <div className="form-group">
-                                        <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                                        <label>Email</label>
                                         <input
-                                            type="email"
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            required
-                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                                            placeholder="john@example.com"
+                                            onBlur={handleBlur}
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
                                         />
+                                        {touched.email && errors.email && <span className="error">{errors.email}</span>}
                                     </div>
 
-                                    <div className="grid grid-2 gap-4">
-                                        <div className="form-group">
-                                            <label className="block text-sm font-semibold text-gray-700 mb-1">Phone</label>
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
-                                                placeholder="+91..."
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <label className="block text-sm font-semibold text-gray-700 mb-1">Country</label>
-                                            <input
-                                                type="text"
-                                                name="country"
-                                                value={formData.country}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
-                                                placeholder="India"
-                                            />
-                                        </div>
+                                    {/* PHONE */}
+                                    <div className="form-group">
+                                        <label>Phone</label>
+                                        <input
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                        />
+                                        {touched.phone && errors.phone && <span className="error">{errors.phone}</span>}
                                     </div>
 
+                                         {/* COUNTRY */}
+                                    <div className="form-group">
+                                        <label>Country</label>
+                                        <input
+                                            name="country"
+                                            value={formData.country}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
+                                        />
+                                        {touched.country && errors.country && <span className="error">{errors.country}</span>}
+                                    </div>
+
+                                    {/* DATES */}
                                     <div className="grid grid-2 gap-4">
                                         <div className="form-group">
-                                            <label className="block text-sm font-semibold text-gray-700 mb-1">From Date</label>
+                                            <label>From Date</label>
                                             <input
                                                 type="date"
                                                 name="fromDate"
+                                                min={today}
                                                 value={formData.fromDate}
                                                 onChange={handleChange}
-                                                required
+                                                onBlur={handleBlur}
                                                 className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
                                             />
+                                            {touched.fromDate && errors.fromDate && <span className="error">{errors.fromDate}</span>}
                                         </div>
+
                                         <div className="form-group">
-                                            <label className="block text-sm font-semibold text-gray-700 mb-1">To Date</label>
+                                            <label>To Date</label>
                                             <input
                                                 type="date"
                                                 name="toDate"
+                                                min={formData.fromDate || today}
                                                 value={formData.toDate}
                                                 onChange={handleChange}
-                                                required
+                                                onBlur={handleBlur}
                                                 className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg"
                                             />
+                                            {touched.toDate && errors.toDate && <span className="error">{errors.toDate}</span>}
                                         </div>
                                     </div>
-
+                                    {/* VEHICLE */}
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Preferred Vehicle</label>
                                         <select
                                             name="vehicle"
                                             value={formData.vehicle}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             required
                                             className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none"
                                         >
@@ -353,14 +427,16 @@ export default function VehicleRental() {
                                                 <option value="Bus (45 Seater)">Bus (45 Seater)</option>
                                             </optgroup>
                                         </select>
+                                         {touched.vehicle && errors.vehicle && <span className="error">{errors.vehicle}</span>}
                                     </div>
-
+                                    {/* SERVICE */}
                                     <div className="form-group">
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Service Type</label>
                                         <select
                                             name="serviceType"
                                             value={formData.serviceType}
                                             onChange={handleChange}
+                                             onBlur={handleBlur}
                                             required
                                             className="w-full p-3 bg-gray-50 border border-gray-300 rounded-lg appearance-none"
                                         >
@@ -370,6 +446,7 @@ export default function VehicleRental() {
                                             <option value="Outstation Trip">Outstation Trip</option>
                                             <option value="Wedding/Event Logistics">Wedding/Event Logistics</option>
                                         </select>
+                                         {touched.serviceType && errors.serviceType && <span className="error">{errors.serviceType}</span>}
                                     </div>
 
                                     <button
