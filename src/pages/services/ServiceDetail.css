@@ -497,3 +497,8 @@
         font-size: 1.05rem;
     }
 }
+.error{
+  color:#ef4444;
+  font-size:12px;
+  margin-top:4px;
+}
