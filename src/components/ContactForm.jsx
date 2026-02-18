@@ -98,7 +98,7 @@ export default function ContactForm({ prefillDestination = '', onSuccess }) {
         setStatus('loading');
 
         try {
-            const scriptUrl = import.meta.env.VITE_CONTACT_SCRIPT_URL;
+            const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
             await fetch(scriptUrl, {
                 method: 'POST',
